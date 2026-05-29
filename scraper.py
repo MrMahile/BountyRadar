@@ -1,11 +1,4 @@
 #!/usr/bin/env python3
-"""
-Playwright-based X.com scraper.
-
-Usage:
-    python scraper.py --hashtags bugbounty CVE --search-interval-mins 60
-    python scraper.py --on-demand --query "bounty awarded >$5000"
-"""
 
 import asyncio
 import json
@@ -19,9 +12,8 @@ from datetime import datetime, timezone, timedelta
 from typing import Optional, List
 from urllib.parse import urlparse
 
-import httpx
+from playwright.async_api import async_playwright, Page
 
-# ─── Config ────────────────────────────────────────────────────────────
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
@@ -42,19 +34,20 @@ class ScraperConfig:
         "proof of concept", "CVE", "disclosure", "responsible disclosure",
         "triage", "severity critical", "pwned", "bounty paid", "CVSS"
     ])
-    search_mode: str = "top"  # "top" | "latest" | "people"
+    search_mode: str = "top"
     search_interval_mins: int = 30
     max_tweets_per_search: int = 50
 
     # Auth
-    x_auth_token: Optional[str] = None  # X.com auth_token cookie
-    x_csrf_token: Optional[str] = None  # ct0 cookie
+    x_auth_token: Optional[str] = None
+    x_csrf_token: Optional[str] = None
+    x_kdt: Optional[str] = None
 
     # Storage
     db_path: str = "sentinel.db"
 
     # Scoring
-    award_threshold_immediate: float = 1000.0  # $1,000
+    award_threshold_immediate: float = 1000.0
     score_threshold_immediate: float = 0.80
     reputable_authors: List[str] = field(default_factory=lambda: [
         "sehacure", "renaudragen", "samwcyo", "naglinagli", "hackerone",
@@ -62,8 +55,6 @@ class ScraperConfig:
     ])
     min_award_for_cve_alert: float = 500.0
 
-
-# ─── Data Models ───────────────────────────────────────────────────────
 
 @dataclass
 class TweetItem:
@@ -88,122 +79,14 @@ class TweetItem:
     source_query: str = ""
 
 
-# ─── X.com API Client ──────────────────────────────────────────────────
-
-X_BEARER = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs=1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
-GUEST_TOKEN_URL = "https://api.twitter.com/1.1/guest/activate.json"
-GRAPHQL_BASE = "https://x.com/i/api/graphql"
-ADAPTIVE_URLS = [
-    ("https://twitter.com/i/api/2/search/adaptive.json", "twitter.com"),
-    ("https://x.com/i/api/2/search/adaptive.json", "x.com"),
-]
-
 class XScraper:
+    SEARCH_URL = "https://x.com/search?q={query}&src=typed_query&f={mode}"
+
     def __init__(self, config: ScraperConfig):
         self.config = config
         self.db = SQLiteStore(config.db_path)
         self.seen_ids: set = set()
         self._load_seen_ids()
-        self._query_id: str = ""
-        self._client = httpx.AsyncClient(
-            timeout=30.0,
-            follow_redirects=True,
-            headers={
-                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-                "origin": "https://x.com",
-                "referer": "https://x.com/search",
-                "content-type": "application/json",
-                "x-twitter-client-language": "en",
-                "authorization": f"Bearer {X_BEARER}",
-            },
-        )
-
-    async def _guest_token(self) -> str:
-        log.info("Getting guest token")
-        resp = await self._client.post(GUEST_TOKEN_URL)
-        log.info(f"Guest token: {resp.status_code} {resp.text[:150]}")
-        if resp.status_code == 200:
-            gt = resp.json().get("guest_token", "")
-            if gt:
-                self._client.headers["x-guest-token"] = gt
-                return gt
-        log.warning("Failed to get guest token")
-        return ""
-
-    async def _discover_query_id(self) -> str:
-        """Fetch X.com homepage JS bundle and extract SearchTimeline query ID."""
-        log.info("Discovering SearchTimeline query ID...")
-        try:
-            async with httpx.AsyncClient(follow_redirects=True, timeout=15.0) as c:
-                html = await c.get("https://x.com/", headers={
-                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-                })
-                if html.status_code != 200:
-                    log.warning(f"Homepage {html.status_code}")
-                    return ""
-                m = re.search(r'<script[^>]*src="([^"]*(?:main|bundle)\.[^"]*\.js)"', html.text, re.I)
-                if not m:
-                    log.warning("No JS bundle found in homepage")
-                    return ""
-                js_url = m.group(1)
-                if js_url.startswith("//"):
-                    js_url = "https:" + js_url
-                elif js_url.startswith("/"):
-                    js_url = "https://x.com" + js_url
-                log.info(f"Fetching JS bundle: {js_url.split('/')[-1][:40]}")
-                js = await c.get(js_url, headers={
-                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-                })
-                if js.status_code != 200:
-                    log.warning(f"JS bundle {js.status_code}")
-                    return ""
-
-                idx = js.text.find("SearchTimeline")
-                if idx >= 0:
-                    snippet = js.text[max(0,idx-40):idx+120]
-                    log.info(f"Found SearchTimeline at offset {idx}: ...{snippet}...")
-                # Find ALL query IDs near (word-boundarized) SearchTimeline
-                for op in re.finditer(r'operationName:"(\w*SearchTimeline\w*)"[^}]*?queryId:"([a-zA-Z0-9_-]+)"', js.text):
-                    log.info(f"  operation '{op.group(1)}' -> query ID: {op.group(2)}")
-                    if op.group(1) == "SearchTimeline":
-                        log.info(f"  -> EXACT MATCH for SearchTimeline!")
-                        return op.group(2)
-                for op in re.finditer(r'queryId:"([a-zA-Z0-9_-]+)"[^}]*?operationName:"(\w*SearchTimeline\w*)"', js.text):
-                    log.info(f"  query ID {op.group(1)} -> operation '{op.group(2)}'")
-                    if op.group(2) == "SearchTimeline":
-                        log.info(f"  -> EXACT MATCH for SearchTimeline!")
-                        return op.group(1)
-                for op in re.finditer(r'\b(\w*SearchTimeline\w*)\b\s*:\s*\{[^}]*?queryId:\s*"([a-zA-Z0-9_-]+)"', js.text):
-                    log.info(f"  operation '{op.group(1)}' -> query ID: {op.group(2)}")
-                    if op.group(1) == "SearchTimeline":
-                        log.info(f"  -> EXACT MATCH for SearchTimeline!")
-                        return op.group(2)
-
-                if idx == -1:
-                    log.warning("SearchTimeline not found anywhere in JS bundle")
-                    # Try alternative search: look for all query IDs near operation names
-                    for op_name in ["SearchTimeline", "search_timeline", "searchTimeline"]:
-                        if op_name in js.text:
-                            log.info(f"Found variant '{op_name}' instead")
-                return ""
-        except Exception as e:
-            log.warning(f"Query ID discovery failed: {e}")
-            return ""
-
-    async def _ensure_auth(self):
-        """Set up auth — user cookies if available, otherwise guest token."""
-        if self.config.x_auth_token and self.config.x_csrf_token:
-            log.info("Using auth_token + ct0 for API access")
-            self._client.headers.update({
-                "authorization": f"Bearer {X_BEARER}",
-                "x-csrf-token": self.config.x_csrf_token,
-                "cookie": f"auth_token={self.config.x_auth_token}; ct0={self.config.x_csrf_token}",
-            })
-        else:
-            log.info("No auth tokens, getting guest token")
-            await self._guest_token()
-        if not self._query_id:
-            self._query_id = await self._discover_query_id()
 
     def _load_seen_ids(self):
         rows = self.db.execute("SELECT tweet_id FROM tweets")
@@ -220,7 +103,7 @@ class XScraper:
         date_filter = f"since:{since_date}"
         exclude = "-filter:retweets -filter:replies lang:en"
         full_query = f"({query}) {date_filter} {exclude}" if clauses else f"{date_filter} {exclude}"
-        return full_query
+        return full_query.replace(" ", "%20").replace("#", "%23").replace('"', "%22")
 
     def _extract_award_amount(self, text: str) -> Optional[float]:
         patterns = [
@@ -266,236 +149,195 @@ class XScraper:
                 break
         return min(round(score, 2), 1.0)
 
-    def _parse_adaptive_tweet(self, t: dict, users: dict) -> Optional[dict]:
+    async def _get_metric(self, article, metric_type: str) -> int:
         try:
-            tweet_id = t.get("id_str", "")
-            if not tweet_id:
-                return None
+            selector = f'[data-testid="{metric_type}"] span[data-testid="app-text-transition-container"]'
+            el = await article.query_selector(selector)
+            if el:
+                text = await el.inner_text()
+                text = text.replace(",", "")
+                if "K" in text:
+                    return int(float(text.replace("K", "")) * 1000)
+                elif "M" in text:
+                    return int(float(text.replace("M", "")) * 1_000_000)
+                return int(text) if text.isdigit() else 0
+        except:
+            pass
+        return 0
 
-            created = t.get("created_at", "")
+    async def _extract_tweet(self, article) -> Optional[dict]:
+        time_el = await article.query_selector("time")
+        if not time_el:
+            return None
+        timestamp_str = await time_el.get_attribute("datetime")
+        timestamp = datetime.fromisoformat(timestamp_str.replace("Z", "+00:00"))
+
+        handle_el = await article.query_selector('[data-testid="User-Name"] a')
+        handle = ""
+        if handle_el:
+            href = await handle_el.get_attribute("href")
+            handle = href.lstrip("/").split("/")[0] if href else ""
+
+        name_el = await article.query_selector('[data-testid="User-Name"] span')
+        display_name = await name_el.inner_text() if name_el else ""
+
+        text_el = await article.query_selector('[data-testid="tweetText"]')
+        text = await text_el.inner_text() if text_el else ""
+
+        permalink_el = await article.query_selector('a[href*="/status/"]')
+        tweet_id = ""
+        if permalink_el:
+            href = await permalink_el.get_attribute("href")
+            match = re.search(r"/status/(\d+)", href or "")
+            if match:
+                tweet_id = match.group(1)
+        if not tweet_id:
+            return None
+
+        links = []
+        link_els = await article.query_selector_all('a[href*="http"]')
+        for el in link_els:
+            href = await el.get_attribute("href")
+            if href and "x.com" not in href and "twitter.com" not in href:
+                links.append(href)
+
+        media_urls = []
+        img_els = await article.query_selector_all('img[src*="media"]')
+        for img in img_els:
+            src = await img.get_attribute("src")
+            if src:
+                media_urls.append(src)
+        has_image = len(media_urls) > 0
+        has_video = await article.query_selector("video") is not None
+
+        likes = await self._get_metric(article, "like")
+        retweets = await self._get_metric(article, "retweet")
+        replies = await self._get_metric(article, "reply")
+
+        hashtags = re.findall(r"#(\w+)", text)
+        cve_ids = re.findall(r"CVE-\d{4}-\d{4,}", text, re.IGNORECASE)
+        award_amount = self._extract_award_amount(text)
+
+        thread_id = None
+        if permalink_el:
+            href = await permalink_el.get_attribute("href") or ""
+            m = re.search(r"/status/(\d+)", href)
+            if m:
+                thread_id = m.group(1)
+
+        return {
+            "tweet_id": tweet_id,
+            "author_handle": handle,
+            "author_display_name": display_name,
+            "text": text[:500],
+            "timestamp": timestamp.isoformat(),
+            "hashtags": list(set(hashtags)),
+            "links": list(set(links)),
+            "media_urls": media_urls,
+            "has_image": has_image,
+            "has_video": has_video,
+            "like_count": likes,
+            "retweet_count": retweets,
+            "reply_count": replies,
+            "is_thread": False,
+            "thread_id": thread_id,
+            "cve_ids": cve_ids,
+            "award_amount": award_amount,
+            "source_query": "",
+        }
+
+    async def _navigate_and_extract(self, page: Page, query: str) -> List[dict]:
+        url = self.SEARCH_URL.format(query=query, mode=self.config.search_mode)
+        log.info(f"Navigating to: {url}")
+        await page.goto(url, wait_until="domcontentloaded", timeout=90000)
+        try:
+            await page.wait_for_selector('div[data-testid="primaryColumn"]', timeout=20000)
+            log.info("Primary column loaded")
+        except:
+            log.warning("Timed out — likely login wall")
             try:
-                ts = datetime.strptime(created, "%a %b %d %H:%M:%S %z %Y")
+                page_text = await page.inner_text("body") if await page.query_selector("body") else ""
+                log.warning(f"Page text (first 200): {page_text[:200]}")
             except:
-                ts = datetime.now(timezone.utc)
-
-            text = t.get("full_text", t.get("text", ""))
-            user = users.get(t.get("user_id_str", ""), {})
-            entities = t.get("entities", {})
-            ext_media = t.get("extended_entities", {}).get("media", []) or entities.get("media", [])
-
-            hashtags = [h["text"] for h in entities.get("hashtags", [])]
-            urls = [u["expanded_url"] for u in entities.get("urls", []) if not u.get("display_url", "").startswith("pic.")]
-            media_urls = [m["media_url_https"] for m in ext_media]
-            has_image = any(m.get("type") == "photo" for m in ext_media)
-            has_video = any(m.get("type") in ("video", "animated_gif") for m in ext_media)
-            cve_ids = re.findall(r"CVE-\d{4}-\d{4,}", text, re.IGNORECASE)
-
-            return {
-                "tweet_id": tweet_id,
-                "author_handle": user.get("screen_name", ""),
-                "author_display_name": user.get("name", ""),
-                "text": text[:500],
-                "timestamp": ts.isoformat(),
-                "hashtags": list(set(hashtags)),
-                "links": list(set(urls)),
-                "media_urls": media_urls,
-                "has_image": has_image,
-                "has_video": has_video,
-                "like_count": int(t.get("favorite_count", 0)),
-                "retweet_count": int(t.get("retweet_count", 0)),
-                "reply_count": int(t.get("reply_count", 0)),
-                "is_thread": bool(t.get("self_thread")),
-                "thread_id": str(t.get("conversation_id_str", "")),
-                "cve_ids": cve_ids,
-                "award_amount": self._extract_award_amount(text),
-                "source_query": "",
-            }
-        except Exception as e:
-            log.debug(f"Parse error: {e}")
-            return None
-
-    def _parse_graphql_tweet(self, entry: dict, users: dict) -> Optional[dict]:
-        try:
-            result = entry.get("content", {}).get("itemContent", {}).get("tweet_results", {}).get("result", {})
-            if not result:
-                return None
-            tweet_id = result.get("rest_id", "")
-            if not tweet_id:
-                return None
-            legacy = result.get("legacy", {})
-            core = result.get("core", {}).get("user_results", {}).get("result", {})
-            created = legacy.get("created_at", "")
+                pass
             try:
-                ts = datetime.strptime(created, "%a %b %d %H:%M:%S %z %Y")
-            except Exception:
-                ts = datetime.now(timezone.utc)
-            text = legacy.get("full_text", legacy.get("text", ""))
-            entities = legacy.get("entities", {})
-            ext_media = legacy.get("extended_entities", {}).get("media", []) or entities.get("media", [])
-            hashtags = [h["text"] for h in entities.get("hashtags", [])]
-            urls = [u["expanded_url"] for u in entities.get("urls", []) if not u.get("display_url", "").startswith("pic.")]
-            screen_name = core.get("legacy", {}).get("screen_name", "")
-            display_name = core.get("legacy", {}).get("name", "")
-            return {
-                "tweet_id": tweet_id,
-                "author_handle": screen_name,
-                "author_display_name": display_name,
-                "text": text[:500],
-                "timestamp": ts.isoformat(),
-                "hashtags": list(set(hashtags)),
-                "links": list(set(urls)),
-                "media_urls": [m["media_url_https"] for m in ext_media],
-                "has_image": any(m.get("type") == "photo" for m in ext_media),
-                "has_video": any(m.get("type") in ("video", "animated_gif") for m in ext_media),
-                "like_count": int(legacy.get("favorite_count", 0)),
-                "retweet_count": int(legacy.get("retweet_count", 0)),
-                "reply_count": int(legacy.get("reply_count", 0)),
-                "is_thread": bool(result.get("self_thread")),
-                "thread_id": str(legacy.get("conversation_id_str", "")),
-                "cve_ids": re.findall(r"CVE-\d{4}-\d{4,}", text, re.IGNORECASE),
-                "award_amount": self._extract_award_amount(text),
-                "source_query": "",
-            }
-        except Exception as e:
-            log.debug(f"GraphQL parse error: {e}")
-            return None
+                await page.screenshot(path="data/x_login_wall.png")
+                log.info("Screenshot saved")
+            except:
+                pass
+            return []
 
-    async def _search_graphql(self, raw_query: str) -> Optional[List[dict]]:
-        if not self._query_id:
-            log.warning("No query ID discovered, skipping GraphQL")
-            return None
-        features = {
-            "rweb_lists_timeline_redesign_enabled": True,
-            "responsive_web_graphql_exclude_directive_enabled": True,
-            "verified_phone_label_enabled": False,
-            "creator_subscriptions_tweet_preview_api_enabled": True,
-            "responsive_web_graphql_timeline_navigation_enabled": True,
-            "responsive_web_graphql_skip_user_profile_image_extensions_enabled": False,
-            "tweetypie_unmention_optimization_enabled": True,
-            "responsive_web_edit_tweet_api_enabled": True,
-            "graphql_is_translatable_rweb_tweet_is_translatable_enabled": True,
-            "view_counts_everywhere_api_enabled": True,
-            "longform_notetweets_consumption_enabled": True,
-            "tweet_awards_web_tipping_enabled": False,
-            "freedom_of_speech_not_reach_fetch_enabled": True,
-            "standardized_nudges_misinfo": True,
-            "tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled": True,
-            "longform_notetweets_rich_text_read_enabled": True,
-            "longform_notetweets_inline_media_enabled": True,
-            "responsive_web_media_download_video_enabled": False,
-            "responsive_web_enhance_cards_enabled": False,
-        }
-        variables = {
-            "rawQuery": raw_query,
-            "count": self.config.max_tweets_per_search,
-            "querySource": "typed_query",
-            "product": "Top",
-        }
-        payload = {"variables": json.dumps(variables), "features": json.dumps(features)}
-        url = f"{GRAPHQL_BASE}/{self._query_id}/SearchTimeline"
-        try:
-            resp = await self._client.get(url, params=payload)
-            log.info(f"GraphQL {resp.status_code}: {len(resp.text)} bytes (ID: {self._query_id[:16]}...)")
-            if resp.status_code != 200 or not resp.text:
-                return None
-            data = resp.json()
-            instructions = (data.get("data", {})
-                           .get("search_by_raw_query", {})
-                           .get("search_timeline", {})
-                           .get("timeline", {})
-                           .get("instructions", []))
-            entries = []
-            for inst in instructions:
-                if inst.get("type") == "TimelineAddEntries":
-                    entries = inst.get("entries", [])
-                    break
-            if not entries:
-                log.warning("GraphQL response has no TimelineAddEntries")
-                return None
-            results = []
-            for entry in entries:
-                content = entry.get("content", {})
-                if content.get("entryType") == "TimelineTimelineItem":
-                    tweet_result = content.get("itemContent", {}).get("tweet_results", {}).get("result", {})
-                    tid = tweet_result.get("rest_id", "")
-                    if tid and tid not in self.seen_ids:
-                        tweet = self._parse_graphql_tweet(entry, {})
-                        if tweet:
-                            results.append(tweet)
-                            self.seen_ids.add(tid)
-            return results
-        except Exception as e:
-            log.warning(f"GraphQL search failed: {e}")
-            return None
-
-    async def _search_adaptive(self, raw_query: str) -> List[dict]:
-        params = {
-            "q": raw_query,
-            "count": self.config.max_tweets_per_search,
-            "pc": 1,
-            "spelling_corrections": 1,
-            "include_ext_alt_text": "true",
-            "include_ext_media_availability": "true",
-            "include_ext_media_color": "true",
-            "include_ext_media_forward_identifier": "true",
-            "include_ext_media_business_labels": "true",
-        }
-        for url, domain in ADAPTIVE_URLS:
-            try:
-                resp = await self._client.get(url, params=params,
-                    headers={"origin": f"https://{domain}", "referer": f"https://{domain}/search"})
-                log.info(f"Adaptive {resp.status_code} from {url}: text={len(resp.text)}b content={len(resp.content)}b")
-                if resp.status_code != 200:
-                    continue
-                if not resp.content:
-                    log.warning("Empty adaptive response (0 bytes content)")
-                    continue
+        await asyncio.sleep(3)
+        tweets_raw = []
+        for scroll in range(3):
+            articles = await page.query_selector_all('article[data-testid="tweet"]')
+            log.info(f"Scroll {scroll + 1}: {len(articles)} articles")
+            for article in articles:
                 try:
-                    data = resp.json()
+                    data = await self._extract_tweet(article)
+                    if data and data["tweet_id"] not in self.seen_ids:
+                        tweets_raw.append(data)
+                        self.seen_ids.add(data["tweet_id"])
                 except Exception as e:
-                    log.warning(f"Adaptive response not JSON: {resp.content[:200]}")
-                    continue
-                global_objects = data.get("globalObjects", {})
-                tweets_map = global_objects.get("tweets", {})
-                users_map = global_objects.get("users", {})
-                if not tweets_map:
-                    log.info("Adaptive returned 200 but no tweets in response")
-                    continue
-                results = []
-                for tid, tweet_data in tweets_map.items():
-                    if tid in self.seen_ids:
-                        continue
-                    tweet = self._parse_adaptive_tweet(tweet_data, users_map)
-                    if tweet:
-                        tweet["confidence_score"] = self._score_tweet(tweet)
-                        tweet["source_query"] = "scheduled_search"
-                        results.append(tweet)
-                        self.seen_ids.add(tid)
+                    log.debug(f"Extract error: {e}")
+            if len(tweets_raw) >= self.config.max_tweets_per_search:
+                break
+            await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            await asyncio.sleep(2)
+        return tweets_raw[: self.config.max_tweets_per_search]
+
+    async def _search_browser(self, search_query: str) -> List[dict]:
+        try:
+            async with async_playwright() as pw:
+                browser = await pw.chromium.launch(
+                    headless=True,
+                    args=[
+                        "--no-sandbox",
+                        "--disable-dev-shm-usage",
+                        "--disable-blink-features=AutomationControlled",
+                    ],
+                )
+                context = await browser.new_context(
+                    viewport={"width": 1280, "height": 1024},
+                    user_agent=(
+                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                        "AppleWebKit/537.36 (KHTML, like Gecko) "
+                        "Chrome/125.0.0.0 Safari/537.36"
+                    ),
+                )
+                cookies = []
+                if self.config.x_auth_token and self.config.x_csrf_token:
+                    cookies.append({"name": "auth_token", "value": self.config.x_auth_token, "domain": ".x.com", "path": "/"})
+                    cookies.append({"name": "ct0", "value": self.config.x_csrf_token, "domain": ".x.com", "path": "/"})
+                    if self.config.x_kdt:
+                        cookies.append({"name": "kdt", "value": self.config.x_kdt, "domain": ".x.com", "path": "/"})
+                if cookies:
+                    await context.add_cookies(cookies)
+                page = await context.new_page()
+                results = await self._navigate_and_extract(page, search_query)
+                await browser.close()
                 return results
-            except Exception as e:
-                log.debug(f"Adaptive ({url}) failed: {e}")
-                continue
-        return []
+        except Exception as e:
+            log.warning(f"Browser scraping failed: {e}")
+            return []
 
     async def search(self, query: str = "") -> List[dict]:
         search_query = query or self._build_search_query()
-        await self._ensure_auth()
-        log.info(f"Searching: {search_query[:80]}...")
-        results = await self._search_graphql(search_query)
-        if results is None:
-            log.info("GraphQL failed, trying adaptive endpoint...")
-            results = await self._search_adaptive(search_query)
-        for r in results:
-            r["confidence_score"] = self._score_tweet(r)
+        tweets_raw = await self._search_browser(search_query)
+
+        results = []
+        for t in tweets_raw:
+            t["confidence_score"] = self._score_tweet(t)
+            t["source_query"] = query or "scheduled_search"
+            results.append(t)
+
         results.sort(key=lambda x: x["confidence_score"], reverse=True)
-        log.info(f"Found {len(results)} new tweets")
+        log.info(f"Found {len(results)} new tweets (max score: {results[0]['confidence_score'] if results else 0})")
         return results
 
     def close(self):
         self.db.close()
 
-
-# ─── SQLite Storage ────────────────────────────────────────────────────
 
 class SQLiteStore:
     def __init__(self, db_path: str):
@@ -511,9 +353,9 @@ class SQLiteStore:
                 author_display_name TEXT,
                 text TEXT,
                 timestamp TEXT,
-                hashtags TEXT,          -- JSON array
-                links TEXT,            -- JSON array
-                media_urls TEXT,       -- JSON array
+                hashtags TEXT,
+                links TEXT,
+                media_urls TEXT,
                 has_image INTEGER DEFAULT 0,
                 has_video INTEGER DEFAULT 0,
                 like_count INTEGER DEFAULT 0,
@@ -521,13 +363,12 @@ class SQLiteStore:
                 reply_count INTEGER DEFAULT 0,
                 is_thread INTEGER DEFAULT 0,
                 thread_id TEXT,
-                cve_ids TEXT,          -- JSON array
+                cve_ids TEXT,
                 award_amount REAL,
                 confidence_score REAL DEFAULT 0,
                 source_query TEXT,
                 created_at TEXT DEFAULT (datetime('now'))
             );
-
             CREATE INDEX IF NOT EXISTS idx_tweets_hashtags ON tweets(hashtags);
             CREATE INDEX IF NOT EXISTS idx_tweets_cve ON tweets(cve_ids);
             CREATE INDEX IF NOT EXISTS idx_tweets_award ON tweets(award_amount);
@@ -543,7 +384,6 @@ class SQLiteStore:
                 last_seen TEXT,
                 tweet_count INTEGER DEFAULT 0
             );
-
             CREATE TABLE IF NOT EXISTS cvEs (
                 cve_id TEXT PRIMARY KEY,
                 tweet_id TEXT,
@@ -553,33 +393,29 @@ class SQLiteStore:
                 first_seen TEXT,
                 FOREIGN KEY (tweet_id) REFERENCES tweets(tweet_id)
             );
-
             CREATE TABLE IF NOT EXISTS alerts (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 tweet_id TEXT NOT NULL,
-                alert_type TEXT NOT NULL,  -- 'immediate', 'daily_digest', 'weekly_report'
-                channel TEXT NOT NULL,     -- 'slack', 'telegram', 'email', 'webhook'
+                alert_type TEXT NOT NULL,
+                channel TEXT NOT NULL,
                 sent_at TEXT,
                 delivery_status TEXT DEFAULT 'pending',
                 FOREIGN KEY (tweet_id) REFERENCES tweets(tweet_id)
             );
-
             CREATE TABLE IF NOT EXISTS digests (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                digest_type TEXT NOT NULL,  -- 'daily', 'weekly'
+                digest_type TEXT NOT NULL,
                 generated_at TEXT,
-                content TEXT,               -- JSON
+                content TEXT,
                 delivered INTEGER DEFAULT 0
             );
-
             CREATE TABLE IF NOT EXISTS user_feedback (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 tweet_id TEXT NOT NULL,
-                feedback TEXT NOT NULL,     -- 'useful', 'not_useful'
+                feedback TEXT NOT NULL,
                 created_at TEXT DEFAULT (datetime('now')),
                 FOREIGN KEY (tweet_id) REFERENCES tweets(tweet_id)
             );
-
             CREATE TABLE IF NOT EXISTS cache (
                 cache_key TEXT PRIMARY KEY,
                 data TEXT,
@@ -593,7 +429,6 @@ class SQLiteStore:
         return cursor.fetchall()
 
     def insert_tweet(self, item: dict) -> bool:
-        """Returns True if inserted, False if duplicate."""
         try:
             self.conn.execute("""
                 INSERT OR IGNORE INTO tweets (
@@ -634,7 +469,6 @@ class SQLiteStore:
         for item in items:
             if self.insert_tweet(item):
                 count += 1
-        db_name = getattr(self.conn, "database", self.conn.__db_path if hasattr(self.conn, "__db_path") else "sentinel.db")
         log.info(f"Inserted {count}/{len(items)} new tweets")
         return count
 
@@ -668,8 +502,6 @@ class SQLiteStore:
     def close(self):
         self.conn.close()
 
-
-# ─── Main Entry Point ──────────────────────────────────────────────────
 
 async def main():
     import argparse
@@ -710,12 +542,10 @@ async def main():
         while True:
             results = await scraper.search()
             scraper.db.insert_tweets_batch(results)
-            # Check for immediate alerts
             for r in results:
                 if r["confidence_score"] >= config.score_threshold_immediate or \
                    (r.get("award_amount") or 0) >= config.award_threshold_immediate:
                     log.info(f"HIGH SEVERITY: @{r['author_handle']} — {r['text'][:100]}...")
-                    # Dispatch to configured channels (see dispatcher.py)
             log.info(f"Sleeping for {config.search_interval_mins} minutes...")
             await asyncio.sleep(config.search_interval_mins * 60)
     else:
@@ -723,7 +553,7 @@ async def main():
         scraper.db.insert_tweets_batch(results)
         stats = scraper.db.get_stats()
         print(f"Stats: {json.dumps(stats, indent=2)}")
-        print(json.dumps(results[:5], indent=2, default=str))  # Top 5
+        print(json.dumps(results[:5], indent=2, default=str))
 
     scraper.db.close()
 
