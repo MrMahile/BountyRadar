@@ -91,32 +91,7 @@ class TweetItem:
 # ─── X.com API Client ──────────────────────────────────────────────────
 
 X_BEARER = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs=1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
-SEARCH_QUERY_ID = "7NB0pPBS1yoZL6PrC5IMNQ"
-
-API_FEATURES = {
-    "profile_label_improvements_pcf_label_in_post_enabled": True,
-    "rweb_tipjar_consumption_enabled": True,
-    "responsive_web_graphql_exclude_directive_enabled": True,
-    "verified_phone_label_enabled": False,
-    "creator_subscriptions_tweet_preview_api_enabled": True,
-    "responsive_web_graphql_timeline_navigation_enabled": True,
-    "responsive_web_graphql_skip_user_profile_image_extensions_enabled": False,
-    "communities_web_enable_tweet_community_results_fetch": True,
-    "c9s_tweet_anatomy_moderator_badge_enabled": True,
-    "articles_preview_enabled": True,
-    "responsive_web_edit_tweet_api_enabled": True,
-    "graphql_is_translatable_rweb_tweet_is_translatable_enabled": True,
-    "view_counts_everywhere_api_enabled": True,
-    "longform_notetweets_consumption_enabled": True,
-    "responsive_web_twitter_article_tweet_consumption_enabled": True,
-    "tweet_awards_web_tipping_enabled": False,
-    "creator_subscriptions_quote_tweet_preview_enabled": False,
-    "freedom_of_speech_not_reach_fetch_enabled": True,
-    "standardized_nudges_misinfo": True,
-    "tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled": True,
-    "responsive_web_media_download_video_enabled": False,
-    "responsive_web_enhance_cards_enabled": False,
-}
+SEARCH_URL = "https://api.x.com/1.1/search/tweets.json"
 
 class XScraper:
     def __init__(self, config: ScraperConfig):
@@ -203,48 +178,35 @@ class XScraper:
                 break
         return min(round(score, 2), 1.0)
 
-    def _parse_tweet(self, entry: dict) -> Optional[dict]:
+    def _parse_status(self, s: dict) -> Optional[dict]:
         try:
-            item = entry.get("content", {}).get("itemContent", {})
-            result = item.get("tweet_results", {}).get("result", {})
-            if not result:
-                return None
-            legacy = result.get("legacy", result)
-            user = result.get("core", {}).get("user_results", {}).get("result", {}).get("legacy", {})
-
-            if not legacy.get("id_str") and not legacy.get("id"):
+            tweet_id = s.get("id_str", "")
+            if not tweet_id or tweet_id in self.seen_ids:
                 return None
 
-            tweet_id = str(legacy.get("id_str") or legacy.get("id", ""))
-            if tweet_id in self.seen_ids:
-                return None
-
-            created = legacy.get("created_at", "")
+            created = s.get("created_at", "")
             try:
-                ts = datetime.strptime(created, "%a %b %d %H:%M:%S %z %Y") if created else datetime.now(timezone.utc)
+                ts = datetime.strptime(created, "%a %b %d %H:%M:%S %z %Y")
             except:
-                try:
-                    ts = datetime.fromisoformat(created.replace("Z", "+00:00")) if created else datetime.now(timezone.utc)
-                except:
-                    ts = datetime.now(timezone.utc)
+                ts = datetime.now(timezone.utc)
 
-            text = legacy.get("full_text", legacy.get("text", ""))
-            hashtags = [h["text"] for h in legacy.get("entities", {}).get("hashtags", [])]
-            urls = [u["expanded_url"] for u in legacy.get("entities", {}).get("urls", []) if not u.get("display_url", "").startswith("pic.")]
-            media = legacy.get("extended_entities", {}).get("media", []) or legacy.get("entities", {}).get("media", [])
-            media_urls = [m["media_url_https"] for m in media]
-            has_image = any(m.get("type") == "photo" for m in media)
-            has_video = any(m.get("type") in ("video", "animated_gif") for m in media)
+            text = s.get("full_text", s.get("text", ""))
+            user = s.get("user", {})
+            entities = s.get("entities", {})
+            ext_media = s.get("extended_entities", {}).get("media", []) or entities.get("media", [])
+
+            hashtags = [h["text"] for h in entities.get("hashtags", [])]
+            urls = [u["expanded_url"] for u in entities.get("urls", []) if not u.get("display_url", "").startswith("pic.")]
+            media_urls = [m["media_url_https"] for m in ext_media]
+            has_image = any(m.get("type") == "photo" for m in ext_media)
+            has_video = any(m.get("type") in ("video", "animated_gif") for m in ext_media)
 
             cve_ids = re.findall(r"CVE-\d{4}-\d{4,}", text, re.IGNORECASE)
 
-            handle = user.get("screen_name", "") or legacy.get("screen_name", "")
-            display_name = user.get("name", "") or legacy.get("name", "")
-
             return {
                 "tweet_id": tweet_id,
-                "author_handle": handle,
-                "author_display_name": display_name,
+                "author_handle": user.get("screen_name", ""),
+                "author_display_name": user.get("name", ""),
                 "text": text[:500],
                 "timestamp": ts.isoformat(),
                 "hashtags": list(set(hashtags)),
@@ -252,11 +214,11 @@ class XScraper:
                 "media_urls": media_urls,
                 "has_image": has_image,
                 "has_video": has_video,
-                "like_count": int(legacy.get("favorite_count", 0)),
-                "retweet_count": int(legacy.get("retweet_count", 0)),
-                "reply_count": int(legacy.get("reply_count", 0)),
-                "is_thread": bool(legacy.get("self_thread")),
-                "thread_id": str(legacy.get("conversation_id_str", "")),
+                "like_count": int(s.get("favorite_count", 0)),
+                "retweet_count": int(s.get("retweet_count", 0)),
+                "reply_count": int(s.get("reply_count", 0)),
+                "is_thread": bool(s.get("self_thread")),
+                "thread_id": str(s.get("conversation_id_str", "")),
                 "cve_ids": cve_ids,
                 "award_amount": self._extract_award_amount(text),
                 "source_query": "",
@@ -265,45 +227,29 @@ class XScraper:
             log.debug(f"Parse error: {e}")
             return None
 
-    async def _call_search_api(self, raw_query: str, count: int = 20) -> List[dict]:
-        variables = {
-            "rawQuery": raw_query,
-            "count": count,
-            "querySource": "typed_query",
-            "product": "Top",
-        }
+    async def search(self, query: str = "") -> List[dict]:
+        search_query = query or self._build_search_query()
+        log.info(f"Searching API: {search_query[:120]}...")
         params = {
-            "variables": json.dumps(variables),
-            "features": json.dumps(API_FEATURES),
+            "q": search_query,
+            "count": self.config.max_tweets_per_search,
+            "result_type": "top",
+            "tweet_mode": "extended",
         }
-        url = f"https://x.com/i/api/graphql/{SEARCH_QUERY_ID}/SearchTimeline"
         try:
-            resp = await self._client.get(url, params=params)
+            resp = await self._client.get(SEARCH_URL, params=params)
             if resp.status_code != 200:
                 log.warning(f"API returned {resp.status_code}: {resp.text[:200]}")
                 return []
             data = resp.json()
-            instructions = (data.get("data", {})
-                           .get("search_by_raw_query", {})
-                           .get("search_timeline", {})
-                           .get("timeline", {})
-                           .get("instructions", []))
-            entries = []
-            for instr in instructions:
-                if instr.get("type") in ("TimelineAddEntries", "TimelineReplaceEntry"):
-                    entries.extend(instr.get("entries", []))
-            return entries
+            statuses = data.get("statuses", [])
         except Exception as e:
             log.warning(f"API call failed: {e}")
             return []
 
-    async def search(self, query: str = "") -> List[dict]:
-        search_query = query or self._build_search_query()
-        log.info(f"Searching API: {search_query[:120]}...")
-        entries = await self._call_search_api(search_query, count=self.config.max_tweets_per_search)
         results = []
-        for entry in entries:
-            tweet = self._parse_tweet(entry)
+        for s in statuses:
+            tweet = self._parse_status(s)
             if tweet:
                 tweet["confidence_score"] = self._score_tweet(tweet)
                 tweet["source_query"] = query or "scheduled_search"
@@ -313,8 +259,7 @@ class XScraper:
         log.info(f"Found {len(results)} new tweets (max score: {results[0]['confidence_score'] if results else 0})")
         return results
 
-    async def close(self):
-        await self._client.aclose()
+    def close(self):
         self.db.close()
 
 
