@@ -91,8 +91,8 @@ class TweetItem:
 # ─── X.com API Client ──────────────────────────────────────────────────
 
 X_BEARER = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs=1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
-GUEST_TOKEN_URL = "https://api.twitter.com/1.1/guest/activate.json"
-SEARCH_URL = "https://twitter.com/i/api/2/search/adaptive.json"
+GUEST_TOKEN_URL = "https://api.x.com/1.1/guest/activate.json"
+SEARCH_URL = "https://x.com/i/api/2/search/adaptive.json"
 
 class XScraper:
     def __init__(self, config: ScraperConfig):
@@ -106,27 +106,31 @@ class XScraper:
         )
 
     async def _ensure_auth(self):
-        """Get a guest token or use auth cookies for API access."""
         if self.config.x_auth_token and self.config.x_csrf_token:
+            log.info("Using auth_token + ct0 for API access")
             self._client.headers.update({
                 "authorization": f"Bearer {X_BEARER}",
                 "x-csrf-token": self.config.x_csrf_token,
                 "cookie": f"auth_token={self.config.x_auth_token}; ct0={self.config.x_csrf_token}",
             })
         else:
-            resp = await self._client.post(GUEST_TOKEN_URL, headers={"authorization": f"Bearer {X_BEARER}"})
+            log.info("Getting guest token for API access")
+            resp = await self._client.post(
+                GUEST_TOKEN_URL,
+                headers={"authorization": f"Bearer {X_BEARER}"},
+            )
+            log.info(f"Guest token response: {resp.status_code} {resp.text[:200]}")
             if resp.status_code == 200:
                 gt = resp.json().get("guest_token", "")
+                log.info(f"Got guest token: {gt[:20]}...")
                 self._client.headers.update({
                     "authorization": f"Bearer {X_BEARER}",
                     "x-guest-token": gt,
                 })
-            else:
-                log.warning(f"Failed to get guest token: {resp.status_code}")
         self._client.headers.update({
             "content-type": "application/json",
-            "origin": "https://twitter.com",
-            "referer": "https://twitter.com/search",
+            "origin": "https://x.com",
+            "referer": "https://x.com/search",
             "x-twitter-client-language": "en",
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
         })
