@@ -91,8 +91,9 @@ class TweetItem:
 # ─── X.com API Client ──────────────────────────────────────────────────
 
 X_BEARER = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs=1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
-GUEST_TOKEN_URL = "https://api.x.com/1.1/guest/activate.json"
-SEARCH_URL = "https://x.com/i/api/2/search/adaptive.json"
+GUEST_TOKEN_URL = "https://api.twitter.com/1.1/guest/activate.json"
+GRAPHQL_BASE = "https://x.com/i/api/graphql"
+ADAPTIVE_URL = "https://x.com/i/api/2/search/adaptive.json"
 
 class XScraper:
     def __init__(self, config: ScraperConfig):
@@ -100,40 +101,47 @@ class XScraper:
         self.db = SQLiteStore(config.db_path)
         self.seen_ids: set = set()
         self._load_seen_ids()
+        self._query_id: str = ""
         self._client = httpx.AsyncClient(
             timeout=30.0,
             follow_redirects=True,
+            headers={
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                "origin": "https://x.com",
+                "referer": "https://x.com/search",
+                "content-type": "application/json",
+                "x-twitter-client-language": "en",
+                "authorization": f"Bearer {X_BEARER}",
+            },
         )
 
+    # Known SearchTimeline query IDs (try in order until one works)
+    _KNOWN_QUERY_IDS = [
+        "7NB0pPBS1yoZL6PrC5IMNQ",
+        "Fq9Q5qYW3v3I4q8r7qWzVA",
+        "1Di6jWyoD9RQFZCkGJWzOQ",
+        "kvj6bR3t0XXGkXmN5jq6Qg",
+        "Yj0O4qXBn3lJcDPk70BwFg",
+        "FSgLqpkRiGzgMlVlOl5RSg",
+        "Tjc7xBPkK1Y3Td5HD4yL1A",
+        "Gf4oGgRMJX5kL5kF6lz3Og",
+    ]
+
+    async def _guest_token(self) -> str:
+        log.info("Getting guest token")
+        resp = await self._client.post(GUEST_TOKEN_URL)
+        log.info(f"Guest token: {resp.status_code} {resp.text[:150]}")
+        if resp.status_code == 200:
+            gt = resp.json().get("guest_token", "")
+            if gt:
+                self._client.headers["x-guest-token"] = gt
+                return gt
+        log.warning("Failed to get guest token")
+        return ""
+
     async def _ensure_auth(self):
-        if self.config.x_auth_token and self.config.x_csrf_token:
-            log.info("Using auth_token + ct0 for API access")
-            self._client.headers.update({
-                "authorization": f"Bearer {X_BEARER}",
-                "x-csrf-token": self.config.x_csrf_token,
-                "cookie": f"auth_token={self.config.x_auth_token}; ct0={self.config.x_csrf_token}",
-            })
-        else:
-            log.info("Getting guest token for API access")
-            resp = await self._client.post(
-                GUEST_TOKEN_URL,
-                headers={"authorization": f"Bearer {X_BEARER}"},
-            )
-            log.info(f"Guest token response: {resp.status_code} {resp.text[:200]}")
-            if resp.status_code == 200:
-                gt = resp.json().get("guest_token", "")
-                log.info(f"Got guest token: {gt[:20]}...")
-                self._client.headers.update({
-                    "authorization": f"Bearer {X_BEARER}",
-                    "x-guest-token": gt,
-                })
-        self._client.headers.update({
-            "content-type": "application/json",
-            "origin": "https://x.com",
-            "referer": "https://x.com/search",
-            "x-twitter-client-language": "en",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        })
+        """Set up guest token for API requests."""
+        await self._guest_token()
 
     def _load_seen_ids(self):
         rows = self.db.execute("SELECT tweet_id FROM tweets")
@@ -244,12 +252,121 @@ class XScraper:
             log.debug(f"Parse error: {e}")
             return None
 
-    async def search(self, query: str = "") -> List[dict]:
-        search_query = query or self._build_search_query()
-        await self._ensure_auth()
-        log.info(f"Searching API: {search_query[:80]}...")
+    def _parse_graphql_tweet(self, entry: dict, users: dict) -> Optional[dict]:
+        try:
+            result = entry.get("content", {}).get("itemContent", {}).get("tweet_results", {}).get("result", {})
+            if not result:
+                return None
+            tweet_id = result.get("rest_id", "")
+            if not tweet_id:
+                return None
+            legacy = result.get("legacy", {})
+            core = result.get("core", {}).get("user_results", {}).get("result", {})
+            created = legacy.get("created_at", "")
+            try:
+                ts = datetime.strptime(created, "%a %b %d %H:%M:%S %z %Y")
+            except Exception:
+                ts = datetime.now(timezone.utc)
+            text = legacy.get("full_text", legacy.get("text", ""))
+            entities = legacy.get("entities", {})
+            ext_media = legacy.get("extended_entities", {}).get("media", []) or entities.get("media", [])
+            hashtags = [h["text"] for h in entities.get("hashtags", [])]
+            urls = [u["expanded_url"] for u in entities.get("urls", []) if not u.get("display_url", "").startswith("pic.")]
+            screen_name = core.get("legacy", {}).get("screen_name", "")
+            display_name = core.get("legacy", {}).get("name", "")
+            return {
+                "tweet_id": tweet_id,
+                "author_handle": screen_name,
+                "author_display_name": display_name,
+                "text": text[:500],
+                "timestamp": ts.isoformat(),
+                "hashtags": list(set(hashtags)),
+                "links": list(set(urls)),
+                "media_urls": [m["media_url_https"] for m in ext_media],
+                "has_image": any(m.get("type") == "photo" for m in ext_media),
+                "has_video": any(m.get("type") in ("video", "animated_gif") for m in ext_media),
+                "like_count": int(legacy.get("favorite_count", 0)),
+                "retweet_count": int(legacy.get("retweet_count", 0)),
+                "reply_count": int(legacy.get("reply_count", 0)),
+                "is_thread": bool(result.get("self_thread")),
+                "thread_id": str(legacy.get("conversation_id_str", "")),
+                "cve_ids": re.findall(r"CVE-\d{4}-\d{4,}", text, re.IGNORECASE),
+                "award_amount": self._extract_award_amount(text),
+                "source_query": "",
+            }
+        except Exception as e:
+            log.debug(f"GraphQL parse error: {e}")
+            return None
+
+    async def _search_graphql(self, raw_query: str) -> Optional[List[dict]]:
+        features = {
+            "rweb_lists_timeline_redesign_enabled": True,
+            "responsive_web_graphql_exclude_directive_enabled": True,
+            "verified_phone_label_enabled": False,
+            "creator_subscriptions_tweet_preview_api_enabled": True,
+            "responsive_web_graphql_timeline_navigation_enabled": True,
+            "responsive_web_graphql_skip_user_profile_image_extensions_enabled": False,
+            "tweetypie_unmention_optimization_enabled": True,
+            "responsive_web_edit_tweet_api_enabled": True,
+            "graphql_is_translatable_rweb_tweet_is_translatable_enabled": True,
+            "view_counts_everywhere_api_enabled": True,
+            "longform_notetweets_consumption_enabled": True,
+            "tweet_awards_web_tipping_enabled": False,
+            "freedom_of_speech_not_reach_fetch_enabled": True,
+            "standardized_nudges_misinfo": True,
+            "tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled": True,
+            "longform_notetweets_rich_text_read_enabled": True,
+            "longform_notetweets_inline_media_enabled": True,
+            "responsive_web_media_download_video_enabled": False,
+            "responsive_web_enhance_cards_enabled": False,
+        }
+        variables = {
+            "rawQuery": raw_query,
+            "count": self.config.max_tweets_per_search,
+            "querySource": "typed_query",
+            "product": "Top",
+        }
+        payload = {"variables": json.dumps(variables), "features": json.dumps(features)}
+        for qid in self._KNOWN_QUERY_IDS:
+            url = f"{GRAPHQL_BASE}/{qid}/SearchTimeline"
+            try:
+                resp = await self._client.get(url, params=payload)
+                log.info(f"GraphQL ({qid[:12]}...) {resp.status_code}: {len(resp.text)} bytes")
+                if resp.status_code != 200 or not resp.text:
+                    continue
+                data = resp.json()
+                instructions = (data.get("data", {})
+                               .get("search_by_raw_query", {})
+                               .get("search_timeline", {})
+                               .get("timeline", {})
+                               .get("instructions", []))
+                entries = []
+                for inst in instructions:
+                    if inst.get("type") == "TimelineAddEntries":
+                        entries = inst.get("entries", [])
+                        break
+                if not entries:
+                    log.warning(f"No TimelineAddEntries for {qid[:12]}")
+                    continue
+                self._query_id = qid
+                results = []
+                for entry in entries:
+                    if entry.get("content", {}).get("entryType") == "TimelineTimelineItem":
+                        tid = entry.get("content", {}).get("itemContent", {}).get("tweet_results", {}).get("result", {}).get("rest_id", "")
+                        if tid and tid not in self.seen_ids:
+                            tweet = self._parse_graphql_tweet(entry, {})
+                            if tweet:
+                                results.append(tweet)
+                                self.seen_ids.add(tid)
+                return results
+            except Exception as e:
+                log.debug(f"GraphQL ({qid[:12]}...) failed: {e}")
+                continue
+        return None
+
+    async def _search_adaptive(self, raw_query: str) -> List[dict]:
         params = {
-            "q": search_query,
+            "q": raw_query,
             "count": self.config.max_tweets_per_search,
             "pc": 1,
             "spelling_corrections": 1,
@@ -260,35 +377,41 @@ class XScraper:
             "include_ext_media_business_labels": "true",
         }
         try:
-            resp = await self._client.get(SEARCH_URL, params=params, follow_redirects=True)
-            body = resp.text
-            log.info(f"API response {resp.status_code} from {resp.url}: {len(body)} bytes")
-            if resp.status_code != 200:
-                log.warning(f"Body: {body[:300]}")
-                return []
-            if not body:
-                log.warning("Empty response body")
+            resp = await self._client.get(ADAPTIVE_URL, params=params)
+            log.info(f"Adaptive {resp.status_code} from {resp.url}: {len(resp.text)} bytes")
+            if resp.status_code != 200 or not resp.text:
                 return []
             data = resp.json()
             global_objects = data.get("globalObjects", {})
             tweets_map = global_objects.get("tweets", {})
             users_map = global_objects.get("users", {})
+            results = []
+            for tid, tweet_data in tweets_map.items():
+                if tid in self.seen_ids:
+                    continue
+                tweet = self._parse_adaptive_tweet(tweet_data, users_map)
+                if tweet:
+                    tweet["confidence_score"] = self._score_tweet(tweet)
+                    tweet["source_query"] = "scheduled_search"
+                    results.append(tweet)
+                    self.seen_ids.add(tid)
+            return results
         except Exception as e:
-            log.warning(f"API call failed: {e}")
+            log.warning(f"Adaptive search failed: {e}")
             return []
 
-        results = []
-        for tid, tweet_data in tweets_map.items():
-            if tid in self.seen_ids:
-                continue
-            tweet = self._parse_adaptive_tweet(tweet_data, users_map)
-            if tweet:
-                tweet["confidence_score"] = self._score_tweet(tweet)
-                tweet["source_query"] = query or "scheduled_search"
-                results.append(tweet)
-                self.seen_ids.add(tid)
+    async def search(self, query: str = "") -> List[dict]:
+        search_query = query or self._build_search_query()
+        await self._ensure_auth()
+        log.info(f"Searching: {search_query[:80]}...")
+        results = await self._search_graphql(search_query)
+        if results is None:
+            log.info("GraphQL failed, trying adaptive endpoint...")
+            results = await self._search_adaptive(search_query)
+        for r in results:
+            r["confidence_score"] = self._score_tweet(r)
         results.sort(key=lambda x: x["confidence_score"], reverse=True)
-        log.info(f"Found {len(results)} new tweets (max score: {results[0]['confidence_score'] if results else 0})")
+        log.info(f"Found {len(results)} new tweets")
         return results
 
     def close(self):
