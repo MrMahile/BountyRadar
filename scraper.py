@@ -91,7 +91,7 @@ class TweetItem:
 # ─── X.com API Client ──────────────────────────────────────────────────
 
 X_BEARER = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs=1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
-SEARCH_URL = "https://api.x.com/1.1/search/tweets.json"
+SEARCH_URL = "https://x.com/i/api/2/search/adaptive.json"
 
 class XScraper:
     def __init__(self, config: ScraperConfig):
@@ -178,29 +178,28 @@ class XScraper:
                 break
         return min(round(score, 2), 1.0)
 
-    def _parse_status(self, s: dict) -> Optional[dict]:
+    def _parse_adaptive_tweet(self, t: dict, users: dict) -> Optional[dict]:
         try:
-            tweet_id = s.get("id_str", "")
-            if not tweet_id or tweet_id in self.seen_ids:
+            tweet_id = t.get("id_str", "")
+            if not tweet_id:
                 return None
 
-            created = s.get("created_at", "")
+            created = t.get("created_at", "")
             try:
                 ts = datetime.strptime(created, "%a %b %d %H:%M:%S %z %Y")
             except:
                 ts = datetime.now(timezone.utc)
 
-            text = s.get("full_text", s.get("text", ""))
-            user = s.get("user", {})
-            entities = s.get("entities", {})
-            ext_media = s.get("extended_entities", {}).get("media", []) or entities.get("media", [])
+            text = t.get("full_text", t.get("text", ""))
+            user = users.get(t.get("user_id_str", ""), {})
+            entities = t.get("entities", {})
+            ext_media = t.get("extended_entities", {}).get("media", []) or entities.get("media", [])
 
             hashtags = [h["text"] for h in entities.get("hashtags", [])]
             urls = [u["expanded_url"] for u in entities.get("urls", []) if not u.get("display_url", "").startswith("pic.")]
             media_urls = [m["media_url_https"] for m in ext_media]
             has_image = any(m.get("type") == "photo" for m in ext_media)
             has_video = any(m.get("type") in ("video", "animated_gif") for m in ext_media)
-
             cve_ids = re.findall(r"CVE-\d{4}-\d{4,}", text, re.IGNORECASE)
 
             return {
@@ -214,11 +213,11 @@ class XScraper:
                 "media_urls": media_urls,
                 "has_image": has_image,
                 "has_video": has_video,
-                "like_count": int(s.get("favorite_count", 0)),
-                "retweet_count": int(s.get("retweet_count", 0)),
-                "reply_count": int(s.get("reply_count", 0)),
-                "is_thread": bool(s.get("self_thread")),
-                "thread_id": str(s.get("conversation_id_str", "")),
+                "like_count": int(t.get("favorite_count", 0)),
+                "retweet_count": int(t.get("retweet_count", 0)),
+                "reply_count": int(t.get("reply_count", 0)),
+                "is_thread": bool(t.get("self_thread")),
+                "thread_id": str(t.get("conversation_id_str", "")),
                 "cve_ids": cve_ids,
                 "award_amount": self._extract_award_amount(text),
                 "source_query": "",
@@ -229,12 +228,17 @@ class XScraper:
 
     async def search(self, query: str = "") -> List[dict]:
         search_query = query or self._build_search_query()
-        log.info(f"Searching API: {search_query[:120]}...")
+        log.info(f"Searching API: {search_query[:80]}...")
         params = {
             "q": search_query,
             "count": self.config.max_tweets_per_search,
-            "result_type": "top",
-            "tweet_mode": "extended",
+            "pc": 1,
+            "spelling_corrections": 1,
+            "include_ext_alt_text": "true",
+            "include_ext_media_availability": "true",
+            "include_ext_media_color": "true",
+            "include_ext_media_forward_identifier": "true",
+            "include_ext_media_business_labels": "true",
         }
         try:
             resp = await self._client.get(SEARCH_URL, params=params)
@@ -242,19 +246,23 @@ class XScraper:
                 log.warning(f"API returned {resp.status_code}: {resp.text[:200]}")
                 return []
             data = resp.json()
-            statuses = data.get("statuses", [])
+            global_objects = data.get("globalObjects", {})
+            tweets_map = global_objects.get("tweets", {})
+            users_map = global_objects.get("users", {})
         except Exception as e:
             log.warning(f"API call failed: {e}")
             return []
 
         results = []
-        for s in statuses:
-            tweet = self._parse_status(s)
+        for tid, tweet_data in tweets_map.items():
+            if tid in self.seen_ids:
+                continue
+            tweet = self._parse_adaptive_tweet(tweet_data, users_map)
             if tweet:
                 tweet["confidence_score"] = self._score_tweet(tweet)
                 tweet["source_query"] = query or "scheduled_search"
                 results.append(tweet)
-                self.seen_ids.add(tweet["tweet_id"])
+                self.seen_ids.add(tid)
         results.sort(key=lambda x: x["confidence_score"], reverse=True)
         log.info(f"Found {len(results)} new tweets (max score: {results[0]['confidence_score'] if results else 0})")
         return results
