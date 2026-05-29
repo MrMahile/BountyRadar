@@ -94,8 +94,8 @@ X_BEARER = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs=1Zv7ttfk
 GUEST_TOKEN_URL = "https://api.twitter.com/1.1/guest/activate.json"
 GRAPHQL_BASE = "https://x.com/i/api/graphql"
 ADAPTIVE_URLS = [
-    "https://twitter.com/i/api/2/search/adaptive.json",
-    "https://x.com/i/api/2/search/adaptive.json",
+    ("https://twitter.com/i/api/2/search/adaptive.json", "twitter.com"),
+    ("https://x.com/i/api/2/search/adaptive.json", "x.com"),
 ]
 
 class XScraper:
@@ -157,17 +157,31 @@ class XScraper:
                 if js.status_code != 200:
                     log.warning(f"JS bundle {js.status_code}")
                     return ""
-                m2 = re.search(r'"SearchTimeline"\s*:\s*"([a-zA-Z0-9_-]{20,30})"', js.text)
-                if m2:
-                    qid = m2.group(1)
-                    log.info(f"Found SearchTimeline query ID: {qid}")
-                    return qid
-                log.warning("SearchTimeline not found in JS bundle (checking for alternative patterns)...")
-                m3 = re.search(r'([a-zA-Z0-9_-]{20,30})\s*:\s*\{[^}]*"operationName"\s*:\s*"SearchTimeline"', js.text)
-                if m3:
-                    qid = m3.group(1)
-                    log.info(f"Found SearchTimeline via operationName: {qid}")
-                    return qid
+
+                idx = js.text.find("SearchTimeline")
+                if idx >= 0:
+                    snippet = js.text[max(0,idx-40):idx+120]
+                    log.info(f"Found SearchTimeline at offset {idx}: ...{snippet}...")
+
+                patterns = [
+                    r'"SearchTimeline"\s*:\s*"([a-zA-Z0-9_-]{20,30})"',
+                    r'SearchTimeline:"([a-zA-Z0-9_-]{20,30})"',
+                    r'SearchTimeline:\s*\{[^}]*?queryId:\s*"([a-zA-Z0-9_-]+)"',
+                    r'operationName:"SearchTimeline"[^}]*?queryId:"([a-zA-Z0-9_-]+)"',
+                    r'queryId:"([a-zA-Z0-9_-]{20,30})"[^}]*?operationName:"SearchTimeline"',
+                ]
+                for i, pat in enumerate(patterns):
+                    m2 = re.search(pat, js.text)
+                    if m2:
+                        qid = m2.group(1)
+                        log.info(f"Pattern {i} matched: {qid}")
+                        return qid
+                if idx == -1:
+                    log.warning("SearchTimeline not found anywhere in JS bundle")
+                    # Try alternative search: look for all query IDs near operation names
+                    for op_name in ["SearchTimeline", "search_timeline", "searchTimeline"]:
+                        if op_name in js.text:
+                            log.info(f"Found variant '{op_name}' instead")
                 return ""
         except Exception as e:
             log.warning(f"Query ID discovery failed: {e}")
@@ -423,16 +437,21 @@ class XScraper:
             "include_ext_media_forward_identifier": "true",
             "include_ext_media_business_labels": "true",
         }
-        for url in ADAPTIVE_URLS:
+        for url, domain in ADAPTIVE_URLS:
             try:
-                resp = await self._client.get(url, params=params)
-                log.info(f"Adaptive {resp.status_code} from {url}: {len(resp.text)} bytes")
+                resp = await self._client.get(url, params=params,
+                    headers={"origin": f"https://{domain}", "referer": f"https://{domain}/search"})
+                log.info(f"Adaptive {resp.status_code} from {url}: text={len(resp.text)}b content={len(resp.content)}b")
                 if resp.status_code != 200:
                     continue
-                if not resp.text:
-                    log.warning("Empty adaptive response")
+                if not resp.content:
+                    log.warning("Empty adaptive response (0 bytes content)")
                     continue
-                data = resp.json()
+                try:
+                    data = resp.json()
+                except Exception as e:
+                    log.warning(f"Adaptive response not JSON: {resp.content[:200]}")
+                    continue
                 global_objects = data.get("globalObjects", {})
                 tweets_map = global_objects.get("tweets", {})
                 users_map = global_objects.get("users", {})
