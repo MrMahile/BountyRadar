@@ -93,7 +93,10 @@ class TweetItem:
 X_BEARER = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs=1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
 GUEST_TOKEN_URL = "https://api.twitter.com/1.1/guest/activate.json"
 GRAPHQL_BASE = "https://x.com/i/api/graphql"
-ADAPTIVE_URL = "https://x.com/i/api/2/search/adaptive.json"
+ADAPTIVE_URLS = [
+    "https://twitter.com/i/api/2/search/adaptive.json",
+    "https://x.com/i/api/2/search/adaptive.json",
+]
 
 class XScraper:
     def __init__(self, config: ScraperConfig):
@@ -115,18 +118,6 @@ class XScraper:
             },
         )
 
-    # Known SearchTimeline query IDs (try in order until one works)
-    _KNOWN_QUERY_IDS = [
-        "7NB0pPBS1yoZL6PrC5IMNQ",
-        "Fq9Q5qYW3v3I4q8r7qWzVA",
-        "1Di6jWyoD9RQFZCkGJWzOQ",
-        "kvj6bR3t0XXGkXmN5jq6Qg",
-        "Yj0O4qXBn3lJcDPk70BwFg",
-        "FSgLqpkRiGzgMlVlOl5RSg",
-        "Tjc7xBPkK1Y3Td5HD4yL1A",
-        "Gf4oGgRMJX5kL5kF6lz3Og",
-    ]
-
     async def _guest_token(self) -> str:
         log.info("Getting guest token")
         resp = await self._client.post(GUEST_TOKEN_URL)
@@ -139,9 +130,63 @@ class XScraper:
         log.warning("Failed to get guest token")
         return ""
 
+    async def _discover_query_id(self) -> str:
+        """Fetch X.com homepage JS bundle and extract SearchTimeline query ID."""
+        log.info("Discovering SearchTimeline query ID...")
+        try:
+            async with httpx.AsyncClient(follow_redirects=True, timeout=15.0) as c:
+                html = await c.get("https://x.com/", headers={
+                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                })
+                if html.status_code != 200:
+                    log.warning(f"Homepage {html.status_code}")
+                    return ""
+                m = re.search(r'<script[^>]*src="([^"]*(?:main|bundle)\.[^"]*\.js)"', html.text, re.I)
+                if not m:
+                    log.warning("No JS bundle found in homepage")
+                    return ""
+                js_url = m.group(1)
+                if js_url.startswith("//"):
+                    js_url = "https:" + js_url
+                elif js_url.startswith("/"):
+                    js_url = "https://x.com" + js_url
+                log.info(f"Fetching JS bundle: {js_url.split('/')[-1][:40]}")
+                js = await c.get(js_url, headers={
+                    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+                })
+                if js.status_code != 200:
+                    log.warning(f"JS bundle {js.status_code}")
+                    return ""
+                m2 = re.search(r'"SearchTimeline"\s*:\s*"([a-zA-Z0-9_-]{20,30})"', js.text)
+                if m2:
+                    qid = m2.group(1)
+                    log.info(f"Found SearchTimeline query ID: {qid}")
+                    return qid
+                log.warning("SearchTimeline not found in JS bundle (checking for alternative patterns)...")
+                m3 = re.search(r'([a-zA-Z0-9_-]{20,30})\s*:\s*\{[^}]*"operationName"\s*:\s*"SearchTimeline"', js.text)
+                if m3:
+                    qid = m3.group(1)
+                    log.info(f"Found SearchTimeline via operationName: {qid}")
+                    return qid
+                return ""
+        except Exception as e:
+            log.warning(f"Query ID discovery failed: {e}")
+            return ""
+
     async def _ensure_auth(self):
-        """Set up guest token for API requests."""
-        await self._guest_token()
+        """Set up auth — user cookies if available, otherwise guest token."""
+        if self.config.x_auth_token and self.config.x_csrf_token:
+            log.info("Using auth_token + ct0 for API access")
+            self._client.headers.update({
+                "authorization": f"Bearer {X_BEARER}",
+                "x-csrf-token": self.config.x_csrf_token,
+                "cookie": f"auth_token={self.config.x_auth_token}; ct0={self.config.x_csrf_token}",
+            })
+        else:
+            log.info("No auth tokens, getting guest token")
+            await self._guest_token()
+        if not self._query_id:
+            self._query_id = await self._discover_query_id()
 
     def _load_seen_ids(self):
         rows = self.db.execute("SELECT tweet_id FROM tweets")
@@ -299,6 +344,9 @@ class XScraper:
             return None
 
     async def _search_graphql(self, raw_query: str) -> Optional[List[dict]]:
+        if not self._query_id:
+            log.warning("No query ID discovered, skipping GraphQL")
+            return None
         features = {
             "rweb_lists_timeline_redesign_enabled": True,
             "responsive_web_graphql_exclude_directive_enabled": True,
@@ -327,42 +375,41 @@ class XScraper:
             "product": "Top",
         }
         payload = {"variables": json.dumps(variables), "features": json.dumps(features)}
-        for qid in self._KNOWN_QUERY_IDS:
-            url = f"{GRAPHQL_BASE}/{qid}/SearchTimeline"
-            try:
-                resp = await self._client.get(url, params=payload)
-                log.info(f"GraphQL ({qid[:12]}...) {resp.status_code}: {len(resp.text)} bytes")
-                if resp.status_code != 200 or not resp.text:
-                    continue
-                data = resp.json()
-                instructions = (data.get("data", {})
-                               .get("search_by_raw_query", {})
-                               .get("search_timeline", {})
-                               .get("timeline", {})
-                               .get("instructions", []))
-                entries = []
-                for inst in instructions:
-                    if inst.get("type") == "TimelineAddEntries":
-                        entries = inst.get("entries", [])
-                        break
-                if not entries:
-                    log.warning(f"No TimelineAddEntries for {qid[:12]}")
-                    continue
-                self._query_id = qid
-                results = []
-                for entry in entries:
-                    if entry.get("content", {}).get("entryType") == "TimelineTimelineItem":
-                        tid = entry.get("content", {}).get("itemContent", {}).get("tweet_results", {}).get("result", {}).get("rest_id", "")
-                        if tid and tid not in self.seen_ids:
-                            tweet = self._parse_graphql_tweet(entry, {})
-                            if tweet:
-                                results.append(tweet)
-                                self.seen_ids.add(tid)
-                return results
-            except Exception as e:
-                log.debug(f"GraphQL ({qid[:12]}...) failed: {e}")
-                continue
-        return None
+        url = f"{GRAPHQL_BASE}/{self._query_id}/SearchTimeline"
+        try:
+            resp = await self._client.get(url, params=payload)
+            log.info(f"GraphQL {resp.status_code}: {len(resp.text)} bytes (ID: {self._query_id[:16]}...)")
+            if resp.status_code != 200 or not resp.text:
+                return None
+            data = resp.json()
+            instructions = (data.get("data", {})
+                           .get("search_by_raw_query", {})
+                           .get("search_timeline", {})
+                           .get("timeline", {})
+                           .get("instructions", []))
+            entries = []
+            for inst in instructions:
+                if inst.get("type") == "TimelineAddEntries":
+                    entries = inst.get("entries", [])
+                    break
+            if not entries:
+                log.warning("GraphQL response has no TimelineAddEntries")
+                return None
+            results = []
+            for entry in entries:
+                content = entry.get("content", {})
+                if content.get("entryType") == "TimelineTimelineItem":
+                    tweet_result = content.get("itemContent", {}).get("tweet_results", {}).get("result", {})
+                    tid = tweet_result.get("rest_id", "")
+                    if tid and tid not in self.seen_ids:
+                        tweet = self._parse_graphql_tweet(entry, {})
+                        if tweet:
+                            results.append(tweet)
+                            self.seen_ids.add(tid)
+            return results
+        except Exception as e:
+            log.warning(f"GraphQL search failed: {e}")
+            return None
 
     async def _search_adaptive(self, raw_query: str) -> List[dict]:
         params = {
@@ -376,29 +423,37 @@ class XScraper:
             "include_ext_media_forward_identifier": "true",
             "include_ext_media_business_labels": "true",
         }
-        try:
-            resp = await self._client.get(ADAPTIVE_URL, params=params)
-            log.info(f"Adaptive {resp.status_code} from {resp.url}: {len(resp.text)} bytes")
-            if resp.status_code != 200 or not resp.text:
-                return []
-            data = resp.json()
-            global_objects = data.get("globalObjects", {})
-            tweets_map = global_objects.get("tweets", {})
-            users_map = global_objects.get("users", {})
-            results = []
-            for tid, tweet_data in tweets_map.items():
-                if tid in self.seen_ids:
+        for url in ADAPTIVE_URLS:
+            try:
+                resp = await self._client.get(url, params=params)
+                log.info(f"Adaptive {resp.status_code} from {url}: {len(resp.text)} bytes")
+                if resp.status_code != 200:
                     continue
-                tweet = self._parse_adaptive_tweet(tweet_data, users_map)
-                if tweet:
-                    tweet["confidence_score"] = self._score_tweet(tweet)
-                    tweet["source_query"] = "scheduled_search"
-                    results.append(tweet)
-                    self.seen_ids.add(tid)
-            return results
-        except Exception as e:
-            log.warning(f"Adaptive search failed: {e}")
-            return []
+                if not resp.text:
+                    log.warning("Empty adaptive response")
+                    continue
+                data = resp.json()
+                global_objects = data.get("globalObjects", {})
+                tweets_map = global_objects.get("tweets", {})
+                users_map = global_objects.get("users", {})
+                if not tweets_map:
+                    log.info("Adaptive returned 200 but no tweets in response")
+                    continue
+                results = []
+                for tid, tweet_data in tweets_map.items():
+                    if tid in self.seen_ids:
+                        continue
+                    tweet = self._parse_adaptive_tweet(tweet_data, users_map)
+                    if tweet:
+                        tweet["confidence_score"] = self._score_tweet(tweet)
+                        tweet["source_query"] = "scheduled_search"
+                        results.append(tweet)
+                        self.seen_ids.add(tid)
+                return results
+            except Exception as e:
+                log.debug(f"Adaptive ({url}) failed: {e}")
+                continue
+        return []
 
     async def search(self, query: str = "") -> List[dict]:
         search_query = query or self._build_search_query()
