@@ -129,7 +129,7 @@ class XScraper:
         # Wait for the page to render (X.com is an SPA)
         try:
             await page.wait_for_selector('div[data-testid="primaryColumn"]', timeout=20000)
-            log.info("Primary column loaded")
+            log.info(f"Primary column loaded — title: {await page.title()} | url: {page.url}")
         except:
             log.warning("Timed out waiting for primary column — likely login wall")
             page_text = await page.inner_text("body") if await page.query_selector("body") else ""
@@ -144,7 +144,20 @@ class XScraper:
                 pass
             return []
 
-        await asyncio.sleep(5)
+        # Wait for tweet articles to render
+        await asyncio.sleep(3)
+        try:
+            await page.wait_for_selector('article[data-testid="tweet"]', timeout=15000)
+            log.info("Tweet articles found on page")
+        except:
+            log.warning("No tweet articles appeared — dumping page body for debug")
+            body_text = await page.inner_text("body") if await page.query_selector("body") else ""
+            log.warning(f"Page body (first 500): {body_text[:500]}")
+            try:
+                await page.screenshot(path="data/x_debug.png")
+                log.info("Debug screenshot saved")
+            except:
+                pass
 
         tweets_raw = []
         for scroll in range(10):
