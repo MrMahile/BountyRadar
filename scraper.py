@@ -91,6 +91,7 @@ class TweetItem:
 # ─── X.com API Client ──────────────────────────────────────────────────
 
 X_BEARER = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs=1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
+GUEST_TOKEN_URL = "https://api.twitter.com/1.1/guest/activate.json"
 SEARCH_URL = "https://twitter.com/i/api/2/search/adaptive.json"
 
 class XScraper:
@@ -100,28 +101,39 @@ class XScraper:
         self.seen_ids: set = set()
         self._load_seen_ids()
         self._client = httpx.AsyncClient(
-            headers=self._build_headers(),
             timeout=30.0,
             follow_redirects=True,
         )
 
-    def _load_seen_ids(self):
-        rows = self.db.execute("SELECT tweet_id FROM tweets")
-        self.seen_ids = {r[0] for r in rows}
-
-    def _build_headers(self) -> dict:
-        headers = {
-            "authorization": f"Bearer {X_BEARER}",
+    async def _ensure_auth(self):
+        """Get a guest token or use auth cookies for API access."""
+        if self.config.x_auth_token and self.config.x_csrf_token:
+            self._client.headers.update({
+                "authorization": f"Bearer {X_BEARER}",
+                "x-csrf-token": self.config.x_csrf_token,
+                "cookie": f"auth_token={self.config.x_auth_token}; ct0={self.config.x_csrf_token}",
+            })
+        else:
+            resp = await self._client.post(GUEST_TOKEN_URL, headers={"authorization": f"Bearer {X_BEARER}"})
+            if resp.status_code == 200:
+                gt = resp.json().get("guest_token", "")
+                self._client.headers.update({
+                    "authorization": f"Bearer {X_BEARER}",
+                    "x-guest-token": gt,
+                })
+            else:
+                log.warning(f"Failed to get guest token: {resp.status_code}")
+        self._client.headers.update({
             "content-type": "application/json",
             "origin": "https://twitter.com",
             "referer": "https://twitter.com/search",
             "x-twitter-client-language": "en",
-            "x-csrf-token": self.config.x_csrf_token or "",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-        }
-        if self.config.x_auth_token and self.config.x_csrf_token:
-            headers["cookie"] = f"auth_token={self.config.x_auth_token}; ct0={self.config.x_csrf_token}"
-        return headers
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        })
+
+    def _load_seen_ids(self):
+        rows = self.db.execute("SELECT tweet_id FROM tweets")
+        self.seen_ids = {r[0] for r in rows}
 
     def _build_search_query(self, since_days: int = 7) -> str:
         clauses = []
@@ -230,6 +242,7 @@ class XScraper:
 
     async def search(self, query: str = "") -> List[dict]:
         search_query = query or self._build_search_query()
+        await self._ensure_auth()
         log.info(f"Searching API: {search_query[:80]}...")
         params = {
             "q": search_query,
