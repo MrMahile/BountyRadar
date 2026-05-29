@@ -144,10 +144,10 @@ class XScraper:
                 pass
             return []
 
-        await asyncio.sleep(3)
+        await asyncio.sleep(5)
 
         tweets_raw = []
-        for scroll in range(3):
+        for scroll in range(10):
             articles = await page.query_selector_all('article[data-testid="tweet"]')
             log.info(f"Scroll {scroll + 1}: {len(articles)} articles found")
             for article in articles:
