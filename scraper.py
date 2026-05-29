@@ -91,7 +91,7 @@ class TweetItem:
 # ─── X.com API Client ──────────────────────────────────────────────────
 
 X_BEARER = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs=1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
-SEARCH_URL = "https://x.com/i/api/2/search/adaptive.json"
+SEARCH_URL = "https://twitter.com/i/api/2/search/adaptive.json"
 
 class XScraper:
     def __init__(self, config: ScraperConfig):
@@ -102,6 +102,7 @@ class XScraper:
         self._client = httpx.AsyncClient(
             headers=self._build_headers(),
             timeout=30.0,
+            follow_redirects=True,
         )
 
     def _load_seen_ids(self):
@@ -112,12 +113,13 @@ class XScraper:
         headers = {
             "authorization": f"Bearer {X_BEARER}",
             "content-type": "application/json",
-            "origin": "https://x.com",
-            "referer": "https://x.com/search",
+            "origin": "https://twitter.com",
+            "referer": "https://twitter.com/search",
+            "x-twitter-client-language": "en",
+            "x-csrf-token": self.config.x_csrf_token or "",
             "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
         }
-        if self.config.x_csrf_token:
-            headers["x-csrf-token"] = self.config.x_csrf_token
+        if self.config.x_auth_token and self.config.x_csrf_token:
             headers["cookie"] = f"auth_token={self.config.x_auth_token}; ct0={self.config.x_csrf_token}"
         return headers
 
@@ -241,9 +243,14 @@ class XScraper:
             "include_ext_media_business_labels": "true",
         }
         try:
-            resp = await self._client.get(SEARCH_URL, params=params)
+            resp = await self._client.get(SEARCH_URL, params=params, follow_redirects=True)
+            body = resp.text
+            log.info(f"API response {resp.status_code} from {resp.url}: {len(body)} bytes")
             if resp.status_code != 200:
-                log.warning(f"API returned {resp.status_code}: {resp.text[:200]}")
+                log.warning(f"Body: {body[:300]}")
+                return []
+            if not body:
+                log.warning("Empty response body")
                 return []
             data = resp.json()
             global_objects = data.get("globalObjects", {})
