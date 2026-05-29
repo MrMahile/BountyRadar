@@ -5,6 +5,9 @@ on:
     - cron: '*/30 * * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
@@ -32,4 +35,5 @@ jobs:
           git config user.email "bot@bountyradar.dev"
           git add data/tweets.json
           git diff --staged --quiet || git commit -m "auto: update tweets [skip ci]"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git push
