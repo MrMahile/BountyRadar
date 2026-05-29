@@ -3,7 +3,7 @@
 Local HTTP Server
 Serves index.html + API endpoint (reads SQLite directly).
 
-Usage:  python server.py
+Usage:  python serve_local.py
 Then open http://localhost:8081
 """
 
