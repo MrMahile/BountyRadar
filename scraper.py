@@ -20,7 +20,6 @@ from typing import Optional, List
 from urllib.parse import urlparse
 
 import httpx
-from playwright.async_api import async_playwright, Page
 
 # ─── Config ────────────────────────────────────────────────────────────
 logging.basicConfig(
@@ -89,25 +88,65 @@ class TweetItem:
     source_query: str = ""
 
 
-# ─── Scraper Engine ────────────────────────────────────────────────────
+# ─── X.com API Client ──────────────────────────────────────────────────
+
+X_BEARER = "AAAAAAAAAAAAAAAAAAAAANRILgAAAAAAnNwIzUejRCOuH5E6I8xnZz4puTs=1Zv7ttfk8LF81IUq16cHjhLTvJu4FA33AGWWjCpTnA"
+SEARCH_QUERY_ID = "7NB0pPBS1yoZL6PrC5IMNQ"
+
+API_FEATURES = {
+    "profile_label_improvements_pcf_label_in_post_enabled": True,
+    "rweb_tipjar_consumption_enabled": True,
+    "responsive_web_graphql_exclude_directive_enabled": True,
+    "verified_phone_label_enabled": False,
+    "creator_subscriptions_tweet_preview_api_enabled": True,
+    "responsive_web_graphql_timeline_navigation_enabled": True,
+    "responsive_web_graphql_skip_user_profile_image_extensions_enabled": False,
+    "communities_web_enable_tweet_community_results_fetch": True,
+    "c9s_tweet_anatomy_moderator_badge_enabled": True,
+    "articles_preview_enabled": True,
+    "responsive_web_edit_tweet_api_enabled": True,
+    "graphql_is_translatable_rweb_tweet_is_translatable_enabled": True,
+    "view_counts_everywhere_api_enabled": True,
+    "longform_notetweets_consumption_enabled": True,
+    "responsive_web_twitter_article_tweet_consumption_enabled": True,
+    "tweet_awards_web_tipping_enabled": False,
+    "creator_subscriptions_quote_tweet_preview_enabled": False,
+    "freedom_of_speech_not_reach_fetch_enabled": True,
+    "standardized_nudges_misinfo": True,
+    "tweet_with_visibility_results_prefer_gql_limited_actions_policy_enabled": True,
+    "responsive_web_media_download_video_enabled": False,
+    "responsive_web_enhance_cards_enabled": False,
+}
 
 class XScraper:
-    SEARCH_URL = "https://x.com/search?q={query}&src=typed_query&f={mode}"
-
     def __init__(self, config: ScraperConfig):
         self.config = config
         self.db = SQLiteStore(config.db_path)
         self.seen_ids: set = set()
         self._load_seen_ids()
+        self._client = httpx.AsyncClient(
+            headers=self._build_headers(),
+            timeout=30.0,
+        )
 
     def _load_seen_ids(self):
         rows = self.db.execute("SELECT tweet_id FROM tweets")
         self.seen_ids = {r[0] for r in rows}
 
+    def _build_headers(self) -> dict:
+        headers = {
+            "authorization": f"Bearer {X_BEARER}",
+            "content-type": "application/json",
+            "origin": "https://x.com",
+            "referer": "https://x.com/search",
+            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+        }
+        if self.config.x_csrf_token:
+            headers["x-csrf-token"] = self.config.x_csrf_token
+            headers["cookie"] = f"auth_token={self.config.x_auth_token}; ct0={self.config.x_csrf_token}"
+        return headers
+
     def _build_search_query(self, since_days: int = 7) -> str:
-        """Build an X.com advanced search query from config.
-        since_days: only fetch tweets from the last N days.
-        """
         clauses = []
         for ht in self.config.hashtags:
             clauses.append(f"#{ht}")
@@ -118,190 +157,11 @@ class XScraper:
         date_filter = f"since:{since_date}"
         exclude = "-filter:retweets -filter:replies lang:en"
         full_query = f"({query}) {date_filter} {exclude}" if clauses else f"{date_filter} {exclude}"
-        return full_query.replace(" ", "%20").replace("#", "%23").replace('"', "%22")
-
-    async def _navigate_and_extract(self, page: Page, query: str) -> List[dict]:
-        """Navigate to X.com search and extract tweet data."""
-        url = self.SEARCH_URL.format(query=query, mode=self.config.search_mode)
-        log.info(f"Navigating to: {url}")
-        await page.goto(url, wait_until="domcontentloaded", timeout=90000)
-
-        # Wait for the page to render (X.com is an SPA)
-        try:
-            await page.wait_for_selector('div[data-testid="primaryColumn"]', timeout=20000)
-            log.info(f"Primary column loaded — title: {await page.title()} | url: {page.url}")
-        except:
-            log.warning("Timed out waiting for primary column — likely login wall")
-            page_text = await page.inner_text("body") if await page.query_selector("body") else ""
-            log.warning(f"Page text (first 200): {page_text[:200]}")
-            log.warning("X.com requires auth. Set auth_token and ct0 in config.yaml")
-            log.warning("How to get tokens: 1) Log into x.com in browser 2) Open DevTools → Application → Cookies")
-            log.warning("  Copy auth_token and ct0 values into config.yaml")
-            try:
-                await page.screenshot(path="data/x_login_wall.png")
-                log.info("Screenshot saved to data/x_login_wall.png")
-            except:
-                pass
-            return []
-
-        # Wait for tweet articles to render
-        await asyncio.sleep(3)
-        try:
-            await page.wait_for_selector('article[data-testid="tweet"]', timeout=15000)
-            log.info("Tweet articles found on page")
-        except:
-            log.warning("No tweet articles appeared — dumping page body for debug")
-            body_text = await page.inner_text("body") if await page.query_selector("body") else ""
-            log.warning(f"Page body (first 500): {body_text[:500]}")
-            try:
-                await page.screenshot(path="data/x_debug.png")
-                log.info("Debug screenshot saved")
-            except:
-                pass
-
-        tweets_raw = []
-        for scroll in range(10):
-            articles = await page.query_selector_all('article[data-testid="tweet"]')
-            log.info(f"Scroll {scroll + 1}: {len(articles)} articles found")
-            for article in articles:
-                try:
-                    data = await self._extract_tweet(article)
-                    if data and data["tweet_id"] not in self.seen_ids:
-                        tweets_raw.append(data)
-                        self.seen_ids.add(data["tweet_id"])
-                except Exception as e:
-                    log.warning(f"Failed to extract tweet: {e}")
-            if len(tweets_raw) >= self.config.max_tweets_per_search:
-                break
-            await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-            await asyncio.sleep(2)
-        return tweets_raw[: self.config.max_tweets_per_search]
-
-    async def _extract_tweet(self, article) -> Optional[dict]:
-        """Extract structured data from a tweet article element."""
-        # Tweet ID from permalink
-        time_el = await article.query_selector("time")
-        if not time_el:
-            return None
-        timestamp_str = await time_el.get_attribute("datetime")
-        timestamp = datetime.fromisoformat(timestamp_str.replace("Z", "+00:00"))
-
-        # Author handle
-        handle_el = await article.query_selector('[data-testid="User-Name"] a')
-        handle = ""
-        if handle_el:
-            href = await handle_el.get_attribute("href")
-            handle = href.lstrip("/").split("/")[0] if href else ""
-
-        # Display name
-        name_el = await article.query_selector('[data-testid="User-Name"] span')
-        display_name = await name_el.inner_text() if name_el else ""
-
-        # Tweet text
-        text_el = await article.query_selector('[data-testid="tweetText"]')
-        text = await text_el.inner_text() if text_el else ""
-
-        # Tweet ID from permalink
-        permalink_el = await article.query_selector('a[href*="/status/"]')
-        tweet_id = ""
-        if permalink_el:
-            href = await permalink_el.get_attribute("href")
-            match = re.search(r"/status/(\d+)", href or "")
-            if match:
-                tweet_id = match.group(1)
-
-        if not tweet_id:
-            return None
-
-        # Links
-        links = []
-        link_els = await article.query_selector_all('a[href*="http"]')
-        for el in link_els:
-            href = await el.get_attribute("href")
-            if href and "x.com" not in href and "twitter.com" not in href:
-                links.append(href)
-
-        # Media
-        media_urls = []
-        img_els = await article.query_selector_all('img[src*="media"]')
-        for img in img_els:
-            src = await img.get_attribute("src")
-            if src:
-                media_urls.append(src)
-
-        has_image = len(media_urls) > 0
-        has_video = await article.query_selector("video") is not None
-
-        # Engagement
-        likes = await self._get_metric(article, "like")
-        retweets = await self._get_metric(article, "retweet")
-        replies = await self._get_metric(article, "reply")
-
-        # Hashtags
-        hashtags = re.findall(r"#(\w+)", text)
-
-        # CVE IDs
-        cve_ids = re.findall(r"CVE-\d{4}-\d{4,}", text, re.IGNORECASE)
-
-        # Award amount
-        award_amount = self._extract_award_amount(text)
-
-        # Thread detection
-        thread_id = None
-        is_thread = False
-        thread_el = await article.query_selector('[data-testid="tweet"]')
-        # Simplified thread detection: check if tweet is part of a thread
-        if permalink_el:
-            href = await permalink_el.get_attribute("href") or ""
-            # If the tweet link contains a thread indicator
-            if "/status/" in href:
-                thread_match = re.search(r"/status/(\d+)", href)
-                if thread_match:
-                    thread_id = thread_match.group(1)
-
-        return {
-            "tweet_id": tweet_id,
-            "author_handle": handle,
-            "author_display_name": display_name,
-            "text": text[:500],  # Trim to avoid token limits
-            "timestamp": timestamp.isoformat(),
-            "hashtags": list(set(hashtags)),
-            "links": list(set(links)),
-            "media_urls": media_urls,
-            "has_image": has_image,
-            "has_video": has_video,
-            "like_count": likes,
-            "retweet_count": retweets,
-            "reply_count": replies,
-            "is_thread": is_thread,
-            "thread_id": thread_id,
-            "cve_ids": cve_ids,
-            "award_amount": award_amount,
-            "source_query": "",
-        }
-
-    async def _get_metric(self, article, metric_type: str) -> int:
-        """Get engagement metric (like, retweet, reply) from a tweet."""
-        try:
-            selector = f'[data-testid="{metric_type}"] span[data-testid="app-text-transition-container"]'
-            el = await article.query_selector(selector)
-            if el:
-                text = await el.inner_text()
-                # Handle "10K" format
-                text = text.replace(",", "")
-                if "K" in text:
-                    return int(float(text.replace("K", "")) * 1000)
-                elif "M" in text:
-                    return int(float(text.replace("M", "")) * 1_000_000)
-                return int(text) if text.isdigit() else 0
-        except:
-            pass
-        return 0
+        return full_query
 
     def _extract_award_amount(self, text: str) -> Optional[float]:
-        """Extract dollar award amounts from text."""
         patterns = [
-            r"\$(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)",  # $1,000 or $1000
+            r"\$(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)",
             r"(\d{1,3}(?:,\d{3})*(?:\.\d{2})?)\s*(?:USD|dollars|bounty)",
             r"(?:award|bounty|paid|payout)\s*(?:of|:)?\s*\$?(\d{1,3}(?:,\d{3})*)",
         ]
@@ -316,105 +176,146 @@ class XScraper:
         return None
 
     def _score_tweet(self, item: dict) -> float:
-        """Compute confidence score 0.0–1.0."""
-        score = 0.30  # base
-
-        # +0.15 per CVE
+        score = 0.30
         score += min(len(item.get("cve_ids", [])) * 0.15, 0.30)
-
-        # +0.20 if award amount mentioned
         if item.get("award_amount") is not None:
             score += 0.20
-            # Bonus for large awards
             if item["award_amount"] >= self.config.award_threshold_immediate:
                 score += 0.10
-
-        # +0.10 per writeup link
-        writeup_keywords = ["writeup", "blog", "medium.com", "github.io"]
         links = " ".join(item.get("links", [])).lower()
-        for kw in writeup_keywords:
+        for kw in ["writeup", "blog", "medium.com", "github.io"]:
             if kw in links:
                 score += 0.10
                 break
-
-        # +0.05 per PoC link
-        poc_keywords = ["poc", "exploit", "github.com"]
-        for kw in poc_keywords:
+        for kw in ["poc", "exploit", "github.com"]:
             if kw in links:
                 score += 0.05
                 break
-
-        # +0.10 for reputable author
         if item.get("author_handle", "").lower() in [a.lower() for a in self.config.reputable_authors]:
             score += 0.10
-
-        # +0.05 per media
         if item.get("has_image") or item.get("has_video"):
             score += 0.05
-
-        # +0.05 per 100 likes (capped at +0.15)
-        likes = item.get("like_count", 0)
-        score += min(likes / 100 * 0.05, 0.15)
-
-        # +0.05 if "critical" or "high" severity mentioned
-        severity_keywords = ["critical", "high severity", "CVSS"]
+        score += min(item.get("like_count", 0) / 100 * 0.05, 0.15)
         text_lower = item.get("text", "").lower()
-        for kw in severity_keywords:
+        for kw in ["critical", "high severity", "CVSS"]:
             if kw in text_lower:
                 score += 0.05
                 break
-
         return min(round(score, 2), 1.0)
 
+    def _parse_tweet(self, entry: dict) -> Optional[dict]:
+        try:
+            item = entry.get("content", {}).get("itemContent", {})
+            result = item.get("tweet_results", {}).get("result", {})
+            if not result:
+                return None
+            legacy = result.get("legacy", result)
+            user = result.get("core", {}).get("user_results", {}).get("result", {}).get("legacy", {})
+
+            if not legacy.get("id_str") and not legacy.get("id"):
+                return None
+
+            tweet_id = str(legacy.get("id_str") or legacy.get("id", ""))
+            if tweet_id in self.seen_ids:
+                return None
+
+            created = legacy.get("created_at", "")
+            try:
+                ts = datetime.strptime(created, "%a %b %d %H:%M:%S %z %Y") if created else datetime.now(timezone.utc)
+            except:
+                try:
+                    ts = datetime.fromisoformat(created.replace("Z", "+00:00")) if created else datetime.now(timezone.utc)
+                except:
+                    ts = datetime.now(timezone.utc)
+
+            text = legacy.get("full_text", legacy.get("text", ""))
+            hashtags = [h["text"] for h in legacy.get("entities", {}).get("hashtags", [])]
+            urls = [u["expanded_url"] for u in legacy.get("entities", {}).get("urls", []) if not u.get("display_url", "").startswith("pic.")]
+            media = legacy.get("extended_entities", {}).get("media", []) or legacy.get("entities", {}).get("media", [])
+            media_urls = [m["media_url_https"] for m in media]
+            has_image = any(m.get("type") == "photo" for m in media)
+            has_video = any(m.get("type") in ("video", "animated_gif") for m in media)
+
+            cve_ids = re.findall(r"CVE-\d{4}-\d{4,}", text, re.IGNORECASE)
+
+            handle = user.get("screen_name", "") or legacy.get("screen_name", "")
+            display_name = user.get("name", "") or legacy.get("name", "")
+
+            return {
+                "tweet_id": tweet_id,
+                "author_handle": handle,
+                "author_display_name": display_name,
+                "text": text[:500],
+                "timestamp": ts.isoformat(),
+                "hashtags": list(set(hashtags)),
+                "links": list(set(urls)),
+                "media_urls": media_urls,
+                "has_image": has_image,
+                "has_video": has_video,
+                "like_count": int(legacy.get("favorite_count", 0)),
+                "retweet_count": int(legacy.get("retweet_count", 0)),
+                "reply_count": int(legacy.get("reply_count", 0)),
+                "is_thread": bool(legacy.get("self_thread")),
+                "thread_id": str(legacy.get("conversation_id_str", "")),
+                "cve_ids": cve_ids,
+                "award_amount": self._extract_award_amount(text),
+                "source_query": "",
+            }
+        except Exception as e:
+            log.debug(f"Parse error: {e}")
+            return None
+
+    async def _call_search_api(self, raw_query: str, count: int = 20) -> List[dict]:
+        variables = {
+            "rawQuery": raw_query,
+            "count": count,
+            "querySource": "typed_query",
+            "product": "Top",
+        }
+        params = {
+            "variables": json.dumps(variables),
+            "features": json.dumps(API_FEATURES),
+        }
+        url = f"https://x.com/i/api/graphql/{SEARCH_QUERY_ID}/SearchTimeline"
+        try:
+            resp = await self._client.get(url, params=params)
+            if resp.status_code != 200:
+                log.warning(f"API returned {resp.status_code}: {resp.text[:200]}")
+                return []
+            data = resp.json()
+            instructions = (data.get("data", {})
+                           .get("search_by_raw_query", {})
+                           .get("search_timeline", {})
+                           .get("timeline", {})
+                           .get("instructions", []))
+            entries = []
+            for instr in instructions:
+                if instr.get("type") in ("TimelineAddEntries", "TimelineReplaceEntry"):
+                    entries.extend(instr.get("entries", []))
+            return entries
+        except Exception as e:
+            log.warning(f"API call failed: {e}")
+            return []
+
     async def search(self, query: str = "") -> List[dict]:
-        """Public method: search X.com and return scored items."""
         search_query = query or self._build_search_query()
-        tweets_raw = await self._search_browser(search_query)
-
+        log.info(f"Searching API: {search_query[:120]}...")
+        entries = await self._call_search_api(search_query, count=self.config.max_tweets_per_search)
         results = []
-        for t in tweets_raw:
-            t["confidence_score"] = self._score_tweet(t)
-            t["source_query"] = query or "scheduled_search"
-            results.append(t)
-
+        for entry in entries:
+            tweet = self._parse_tweet(entry)
+            if tweet:
+                tweet["confidence_score"] = self._score_tweet(tweet)
+                tweet["source_query"] = query or "scheduled_search"
+                results.append(tweet)
+                self.seen_ids.add(tweet["tweet_id"])
         results.sort(key=lambda x: x["confidence_score"], reverse=True)
         log.info(f"Found {len(results)} new tweets (max score: {results[0]['confidence_score'] if results else 0})")
         return results
 
-    async def _search_browser(self, search_query: str) -> List[dict]:
-        """Scrape X.com using Playwright (browser automation)."""
-        try:
-            async with async_playwright() as pw:
-                browser = await pw.chromium.launch(
-                    headless=True,
-                    args=[
-                        "--no-sandbox",
-                        "--disable-dev-shm-usage",
-                        "--disable-blink-features=AutomationControlled",
-                    ],
-                )
-                context = await browser.new_context(
-                    viewport={"width": 1280, "height": 1024},
-                    user_agent=(
-                        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                        "AppleWebKit/537.36 (KHTML, like Gecko) "
-                        "Chrome/125.0.0.0 Safari/537.36"
-                    ),
-                )
-
-                if self.config.x_auth_token and self.config.x_csrf_token:
-                    await context.add_cookies([
-                        {"name": "auth_token", "value": self.config.x_auth_token, "domain": ".x.com", "path": "/"},
-                        {"name": "ct0", "value": self.config.x_csrf_token, "domain": ".x.com", "path": "/"},
-                    ])
-
-                page = await context.new_page()
-                tweets_raw = await self._navigate_and_extract(page, search_query)
-                await browser.close()
-                return tweets_raw
-        except Exception as e:
-            log.warning(f"Browser scraping failed: {e}")
-            return []
+    async def close(self):
+        await self._client.aclose()
+        self.db.close()
 
 
 # ─── SQLite Storage ────────────────────────────────────────────────────

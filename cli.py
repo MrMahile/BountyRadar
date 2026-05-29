@@ -151,7 +151,7 @@ def run(ctx, once, query, no_send, interval):
             return False
 
         should_exit = asyncio.run(_run())
-        scraper.db.close()
+        scraper.close()
 
         if once or should_exit:
             break
@@ -206,7 +206,7 @@ def digest(ctx):
         click.echo("Digest sent.")
 
     asyncio.run(_digest())
-    scraper.db.close()
+    scraper.close()
 
 
 @cli.command()
@@ -234,7 +234,7 @@ def query(ctx, search_query, limit):
         print(f"Total found: {len(results)}")
 
     asyncio.run(_query())
-    scraper.db.close()
+    scraper.close()
 
 
 @cli.command()
