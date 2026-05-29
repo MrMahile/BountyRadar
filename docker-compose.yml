@@ -1,0 +1,56 @@
+version: "3.9"
+
+services:
+  sentinel-daemon:
+    build: .
+    container_name: sentinel-daemon
+    command: run
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+      - ./config.yaml:/app/config.yaml:ro
+    environment:
+      - TZ=UTC
+      - PYTHONUNBUFFERED=1
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  sentinel-api:
+    build: .
+    container_name: sentinel-api
+    command: serve
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./data:/app/data
+      - ./config.yaml:/app/config.yaml:ro
+    environment:
+      - TZ=UTC
+      - PYTHONUNBUFFERED=1
+    depends_on:
+      - sentinel-daemon
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Optional: Redis for caching
+  redis:
+    image: redis:7-alpine
+    container_name: sentinel-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    profiles:
+      - cache
+
+volumes:
+  sqlite-data:
+  redis-data:

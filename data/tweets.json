@@ -1,0 +1,848 @@
+[
+  {
+    "tweet_id": "2060280139439894545",
+    "author_handle": "cherry4akuma",
+    "author_display_name": "Aditya BISHT",
+    "text": "17 year old  , got paid $1,500 to crash a popular monitoring agent with one packet. unauth remote memory exhaustion, got a cve too on my name\n#bugbounty #infosec #hackerone",
+    "timestamp": "2026-05-29T08:40:38+00:00",
+    "hashtags": [
+      "infosec",
+      "bugbounty",
+      "hackerone"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJeVpKiaQAAnDuY?format=png&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 2,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": "2060280139439894545",
+    "cve_ids": [],
+    "award_amount": 1500.0,
+    "confidence_score": 0.65,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:51"
+  },
+  {
+    "tweet_id": "2060276690274705648",
+    "author_handle": "iamdakejr",
+    "author_display_name": "I AM DAKE JR ",
+    "text": "Just requested another payout. Fingers crossed, prayer mode activated lol.",
+    "timestamp": "2026-05-29T08:26:55+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJeSfERWYAQFgcu?format=jpg&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 50,
+    "retweet_count": 1,
+    "reply_count": 15,
+    "is_thread": 0,
+    "thread_id": "2060276690274705648",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.38,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:58"
+  },
+  {
+    "tweet_id": "2060262387358257177",
+    "author_handle": "OrizonCyber",
+    "author_display_name": "Orizon",
+    "text": " CVE-2026-8732 \u2014 CVSS 9.8/10\n\n\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\nThe WP Maps Pro plugin for WordPress is vulnerable to Privilege Escalation via Administrator Account Creation in all...\n\nSeverity: CRITICAL\n\nPatch now.\n#cybersecurity #CVE",
+    "timestamp": "2026-05-29T07:30:05+00:00",
+    "hashtags": [
+      "CVE",
+      "cybersecurity"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJeFuO6WEAAmT9K?format=jpg&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": "2060262387358257177",
+    "cve_ids": [
+      "CVE-2026-8732"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:56"
+  },
+  {
+    "tweet_id": "2060258786493743309",
+    "author_handle": "ExTriage",
+    "author_display_name": "Triage",
+    "text": "4 NODES. AND GROWING \n\nAt the start of the week, we were 2.\nMidway through the week, we were already 3.\nAnd today\u2026 we're 4.\nWe're still few, but every node counts.\nMore nodes means more decentralization, more resilience, and Portugal more present on the Kaspa map.\n\nJoin us and",
+    "timestamp": "2026-05-29T07:15:47+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJeCG0jXIAYgbmt?format=jpg&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 14,
+    "retweet_count": 1,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": "2060258786493743309",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.36,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:59"
+  },
+  {
+    "tweet_id": "2060254972785099262",
+    "author_handle": "0xor0ne",
+    "author_display_name": "0xor0ne",
+    "text": "Exploiting the Synology BeeStation (BST150-4T) by abusing the sync service to write files and hijack cron for RCE \n\n\nhttps://\nkiddo-pwn.github.io/blog/2025-11-3\n0/writing-sync-popping-cron\n\u2026\n\n(\n@kiddo_pwn\n)\n\n#infosec",
+    "timestamp": "2026-05-29T07:00:37+00:00",
+    "hashtags": [
+      "infosec"
+    ],
+    "links": [
+      "https://t.co/5XndShYxFx"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJd--r9WsAAhXVa?format=jpg&name=small",
+      "https://pbs.twimg.com/media/HJd--vbXwAMZuJf?format=jpg&name=medium"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 20,
+    "retweet_count": 1,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": "2060254972785099262",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.36,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:59"
+  },
+  {
+    "tweet_id": "2060250751905964137",
+    "author_handle": "B0yplunger",
+    "author_display_name": " BOY-PLUNGER ",
+    "text": "Good morning fam   \n\nPayout approved successfully with \n@atlasfunded\n. This payout took 8 days, but at the end they paid. Yes, there was a delay, but their payouts are legit.\n\nWe call it Atlas for a reason  \n\nThank you \n@PipsCabal",
+    "timestamp": "2026-05-29T06:43:51+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJd7HX9XEAgEKlm?format=jpg&name=small",
+      "https://pbs.twimg.com/media/HJd7HYBXkAIDQlR?format=jpg&name=360x360",
+      "https://pbs.twimg.com/media/HIyJStvXsAA9JBL?format=jpg&name=240x240",
+      "https://pbs.twimg.com/media/HIyJSugWYAAxmy2?format=jpg&name=120x120"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 25,
+    "retweet_count": 16,
+    "reply_count": 8,
+    "is_thread": 0,
+    "thread_id": "2060250751905964137",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.36,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:49:00"
+  },
+  {
+    "tweet_id": "2060247602487050410",
+    "author_handle": "TRADEWITH_DAVID",
+    "author_display_name": "DAVID ",
+    "text": "My first payout on X \n\nAm so emotional  \nThank you Elon \n\n@diaa_tr3des\n send your wallet address lemme pay tithe ",
+    "timestamp": "2026-05-29T06:31:20+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJd4RZCWcAYvz1D?format=jpg&name=small",
+      "https://pbs.twimg.com/media/HJWtIfvXwAEsyWe?format=jpg&name=120x120",
+      "https://pbs.twimg.com/media/HJWtIftWwAEqNwd?format=jpg&name=360x360"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 76,
+    "retweet_count": 4,
+    "reply_count": 23,
+    "is_thread": 0,
+    "thread_id": "2060247602487050410",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.39,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:58"
+  },
+  {
+    "tweet_id": "2060242810541109574",
+    "author_handle": "y198_nt",
+    "author_display_name": "y198",
+    "text": "Found an 8 year old RCE in MongoDB. Sadly, MongoDB had already found it internally.\nTechnical writeup after the patch is released.\nSad Friday...\n#bugbounty #0day #rce",
+    "timestamp": "2026-05-29T06:12:18+00:00",
+    "hashtags": [
+      "rce",
+      "0day",
+      "bugbounty"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJdxwMrawAAmitC?format=jpg&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 27,
+    "retweet_count": 1,
+    "reply_count": 2,
+    "is_thread": 0,
+    "thread_id": "2060242810541109574",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.36,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:59"
+  },
+  {
+    "tweet_id": "2060231232927990261",
+    "author_handle": "RonTrd1",
+    "author_display_name": "Saal",
+    "text": "Let me reveal a secret to you, let tell you the real difference between you and that mentor/trader who is making $100ks in payout. It's not strategy i know some of you think that is what it is, neither is it knowledge, some of you have more intelligence and knowledge than the",
+    "timestamp": "2026-05-29T05:26:17+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 27,
+    "retweet_count": 8,
+    "reply_count": 10,
+    "is_thread": 0,
+    "thread_id": "2060231232927990261",
+    "cve_ids": [],
+    "award_amount": 100.0,
+    "confidence_score": 0.51,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:56"
+  },
+  {
+    "tweet_id": "2060204078257578251",
+    "author_handle": "bakwasfellow",
+    "author_display_name": "BAKWAS FELLOW",
+    "text": "Upgraded my car with a Dash Cam and a New Android System for my car with X Payout ",
+    "timestamp": "2026-05-29T03:38:23+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJdQrr8asAAeqs2?format=jpg&name=small",
+      "https://pbs.twimg.com/media/HJdQrr5aYAAvdgq?format=jpg&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 30,
+    "retweet_count": 2,
+    "reply_count": 20,
+    "is_thread": 0,
+    "thread_id": "2060204078257578251",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.36,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:49:00"
+  },
+  {
+    "tweet_id": "2060186888921559189",
+    "author_handle": "OrizonCyber",
+    "author_display_name": "Orizon",
+    "text": " CVE-2026-46822 \u2014 CVSS 9.9/10\n\n\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\nVulnerability in the Oracle iAssets product of Oracle E-Business Suite (component: Internal Operations).  Supported...\n\nSeverity: CRITICAL\n\nPatch now.\n#cybersecurity #CVE",
+    "timestamp": "2026-05-29T02:30:05+00:00",
+    "hashtags": [
+      "CVE",
+      "cybersecurity"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJdBDpRW8AIMT7z?format=jpg&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 2,
+    "is_thread": 0,
+    "thread_id": "2060186888921559189",
+    "cve_ids": [
+      "CVE-2026-46822"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:56"
+  },
+  {
+    "tweet_id": "2060149917298135389",
+    "author_handle": "ADKCyber",
+    "author_display_name": "ADK Cyber",
+    "text": "High-severity CVE-2026-9227 (CVSS 8.8) affects the GutenBee Gutenberg Blocks plugin for WordPress in versions up to 2.20.1. If your organization uses this plugin, update immediately. \nhttps://\nnvd.nist.gov/vuln/detail/CV\nE-2026-9227\n\u2026\n\nvia NVD Recent High CVSS\n\n#CyberSecurity #InfoSec #Vulnerability #AI",
+    "timestamp": "2026-05-29T00:03:10+00:00",
+    "hashtags": [
+      "CyberSecurity",
+      "InfoSec",
+      "Vulnerability",
+      "AI"
+    ],
+    "links": [
+      "https://t.co/3v7zrKKgTA"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJcfbt8aoAA7tfG?format=png&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": "2060149917298135389",
+    "cve_ids": [
+      "CVE-2026-9227"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.5,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:57"
+  },
+  {
+    "tweet_id": "2060130630671966428",
+    "author_handle": "itszn13",
+    "author_display_name": "itszn",
+    "text": "Chrome\u2019s JavaScript engine V8 is getting harder and harder to find bugs in..\n\nBut powerful models still find a way!\n\nYesterday\u2019s Chrome release fixed CVE-2026-9973; A JIT loop optimization bug we found using gpt-5.5 in Codex. It had been around for over 2 years\u2026",
+    "timestamp": "2026-05-28T22:46:32+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJcN5AfbAAA-qOT?format=jpg&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 239,
+    "retweet_count": 24,
+    "reply_count": 4,
+    "is_thread": 0,
+    "thread_id": "2060130630671966428",
+    "cve_ids": [
+      "CVE-2026-9973"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.62,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:52"
+  },
+  {
+    "tweet_id": "2060128231009689848",
+    "author_handle": "hetmehtaa",
+    "author_display_name": "Het Mehta",
+    "text": "found an XSS vulnerability\n\nvery proud\npayload worked perfectly in my browser\n\nsubmitted the report with full PoC\n\ntriage responded: \"please demonstrate impact\"\n\ni submitted a screenshot of an alert box that says \"XSS\"\n\nthey asked what an attacker could do with this in practice",
+    "timestamp": "2026-05-28T22:37:00+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 23,
+    "retweet_count": 4,
+    "reply_count": 4,
+    "is_thread": 0,
+    "thread_id": "2060128231009689848",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.31,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:49:00"
+  },
+  {
+    "tweet_id": "2060124619420414200",
+    "author_handle": "Dinosn",
+    "author_display_name": "Nicolas Krassas",
+    "text": "CVE-2025-61622: PyFory \u2013 Insecure Pickle Deserialization to Remote Code Execution",
+    "timestamp": "2026-05-28T22:22:39+00:00",
+    "hashtags": [],
+    "links": [
+      "https://t.co/jjaV5Eg0AI"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 11,
+    "retweet_count": 3,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": "2060124619420414200",
+    "cve_ids": [
+      "CVE-2025-61622"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.46,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:57"
+  },
+  {
+    "tweet_id": "2060100947611664846",
+    "author_handle": "IntCyberDigest",
+    "author_display_name": "International Cyber Digest",
+    "text": "  Hacked Fortinet FortiClient EMS servers are  pushing infostealer malware disguised as a Fortinet patch to every managed endpoint. \n\nAttackers exploit CVE-2026-35616 to take the server, then abuse FortiClient's own management channel to deploy it. Patch now!",
+    "timestamp": "2026-05-28T20:48:35+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJbyJkxW0AQIpbx?format=jpg&name=360x360",
+      "https://pbs.twimg.com/media/HJbyeqQXcAIojt8?format=png&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 256,
+    "retweet_count": 39,
+    "reply_count": 6,
+    "is_thread": 0,
+    "thread_id": "2060100947611664846",
+    "cve_ids": [
+      "CVE-2026-35616"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.63,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:52"
+  },
+  {
+    "tweet_id": "2060089718088273939",
+    "author_handle": "omespino",
+    "author_display_name": "Omar Espino \u2022",
+    "text": "cool cool cool, it was a variation of my previous LFI / arbitrary file read #Bugbounty \n@GoogleVRP",
+    "timestamp": "2026-05-28T20:03:58+00:00",
+    "hashtags": [
+      "Bugbounty"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJboiPnbEAA8aiu?format=png&name=small",
+      "https://pbs.twimg.com/media/HHqjc5hXIAEB37c?format=jpg&name=240x240"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 47,
+    "retweet_count": 1,
+    "reply_count": 2,
+    "is_thread": 0,
+    "thread_id": "2060089718088273939",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.37,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:58"
+  },
+  {
+    "tweet_id": "2060070214360822043",
+    "author_handle": "pdiscoveryio",
+    "author_display_name": "ProjectDiscovery",
+    "text": "Stop drowning in massive vulnerability backlogs filled with false positives. Neo integrates with tracking programs like Jira, Linear or Slack to ingest findings and triage them by thinking like a real attacker.\n\n\nhttps://\nprojectdiscovery.io/request-demo\n\n#Neo #AISecurityEngineer",
+    "timestamp": "2026-05-28T18:46:28+00:00",
+    "hashtags": [
+      "Neo",
+      "AISecurityEngineer"
+    ],
+    "links": [
+      "https://t.co/TshfnAi43Q"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 1,
+    "like_count": 2,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": "2060070214360822043",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:49:00"
+  },
+  {
+    "tweet_id": "2060059322738942058",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "Project Meridian drops on RatCTF May 31 \u2014 5 free OSCP-prep Linux privesc machines inside SolarGate Energy's network. SUID, cron, sudo, capabilities, and a multi-vector chain finale. \nhttps://\nratctf.com/meridian #infosec #OSCP #ctf",
+    "timestamp": "2026-05-28T18:03:11+00:00",
+    "hashtags": [
+      "infosec",
+      "OSCP",
+      "ctf"
+    ],
+    "links": [
+      "https://t.co/1ipi93LjEC"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 2,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": "2060059322738942058",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:49:01"
+  },
+  {
+    "tweet_id": "2060058587381027001",
+    "author_handle": "OrizonCyber",
+    "author_display_name": "Orizon",
+    "text": " CVE-2026-24444 \u2014 CVSS 9.8/10\n\n\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\nSDMC NE6037 cable modem routers running firmware 7.1.6.0.25 and 7.1.6.1.9_B9 contain a hardcoded password vulnerability...\n\nSeverity: CRITICAL\n\nPatch now.\n#cybersecurity #CVE",
+    "timestamp": "2026-05-28T18:00:15+00:00",
+    "hashtags": [
+      "CVE",
+      "cybersecurity"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJbMXipX0AUkrnG?format=jpg&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": "2060058587381027001",
+    "cve_ids": [
+      "CVE-2026-24444"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:53"
+  },
+  {
+    "tweet_id": "2060058558683570524",
+    "author_handle": "0xJin",
+    "author_display_name": "N0t0d4y",
+    "text": "#BugBounty #CyberSecurity #InfoSec #WhiteHat",
+    "timestamp": "2026-05-28T18:00:09+00:00",
+    "hashtags": [
+      "CyberSecurity",
+      "InfoSec",
+      "WhiteHat",
+      "BugBounty"
+    ],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": "2060058558683570524",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:49:02"
+  },
+  {
+    "tweet_id": "2060038184499581042",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "That time an Agentic AI pentester beat me in CAPIE \n\nSpoiler: AI is closer to real bug hunting than most people think. Wrote up the whole story \n\n\nhttps://\nthexssrat.medium.com/that-time-an-a\ngentic-ai-pentester-beat-me-in-capie-9ef6097c3c33\n\u2026\n\n#infosec #bugbounty #AI",
+    "timestamp": "2026-05-28T16:39:11+00:00",
+    "hashtags": [
+      "infosec",
+      "bugbounty",
+      "AI"
+    ],
+    "links": [
+      "https://t.co/UTTh9FuSr2"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": "2060038184499581042",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:49:01"
+  },
+  {
+    "tweet_id": "2060030346113040833",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "Fresh in the repo: the 2026 Practical Bug Bounty Guide \n\nMindset \u2192 recon \u2192 Burp \u2192 XSS/SSTI/SQLi/IDOR/SSRF/XXE \u2192 GraphQL, OAuth, prototype pollution \u2192 WAF bypass \u2192 chaining \u2192 reporting.\n\nOpinionated, practical, built on real hunts.\n\n\nhttps://\ngithub.com/The-XSS-Rat/Se\ncurityTesting/blob/master/Checklists/2026-bug-bounty-guide.md\n\u2026\n\n#infosec",
+    "timestamp": "2026-05-28T16:08:02+00:00",
+    "hashtags": [
+      "infosec"
+    ],
+    "links": [
+      "https://t.co/s72ZEfSNUw"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 12,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": "2060030346113040833",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.31,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:49:34"
+  },
+  {
+    "tweet_id": "2060001771393577377",
+    "author_handle": "E8Andrew",
+    "author_display_name": "Andrew E8",
+    "text": "I\u2019m giving away 10 E8 Pro static accounts, each $5,000 size.\n\nE8 Pro\nStatic drawdown\nDaily payouts\nNo consistency rule\nNo payout caps\nSwing trading allowed\n\nAll you need to do is tell us why you haven\u2019t tried E8 yet. If you\u2019ve already had an account with us, let us know what we",
+    "timestamp": "2026-05-28T14:14:29+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 347,
+    "retweet_count": 142,
+    "reply_count": 392,
+    "is_thread": 0,
+    "thread_id": "2060001771393577377",
+    "cve_ids": [],
+    "award_amount": 5000.0,
+    "confidence_score": 0.75,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:50"
+  },
+  {
+    "tweet_id": "2059998046679875866",
+    "author_handle": "mysk_co",
+    "author_display_name": "Mysk ",
+    "text": "We had lengthy discussions explaining the bug to Apple. It was clear to us the bug was new to Apple Product Security. After 5 months, they informed us that the report was treated as a duplicate and it was addressed.\nWe just got this update for CVE-2026-28910: No bounty",
+    "timestamp": "2026-05-28T13:59:41+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJaTWzrbIAAI6tm?format=jpg&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 1200,
+    "retweet_count": 35,
+    "reply_count": 18,
+    "is_thread": 0,
+    "thread_id": "2059998046679875866",
+    "cve_ids": [
+      "CVE-2026-28910"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.65,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:51"
+  },
+  {
+    "tweet_id": "2059997881696985525",
+    "author_handle": "TheHackersNews",
+    "author_display_name": "The Hacker News",
+    "text": " Microsoft Slams Public Zero-Day Disclosures for putting Windows users at risk.\n\nA researcher recently disclosed multiple zero-days in Defender, BitLocker and other components. Three are now under active exploitation.\n\nGitHub removed the researcher\u2019s account. A new GitLab",
+    "timestamp": "2026-05-28T13:59:02+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJaU9lCbUAAFpBt?format=png&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 432,
+    "retweet_count": 125,
+    "reply_count": 25,
+    "is_thread": 0,
+    "thread_id": "2059997881696985525",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.5,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:57"
+  },
+  {
+    "tweet_id": "2059990574133092790",
+    "author_handle": "bashorunedward",
+    "author_display_name": "Mr. Bash ",
+    "text": "Update on How to earn $4-$25!\n\nRun this up as soon as possible if you need fast payout.\n\nEarn $4-$25 from this easily!\n\nYou can swap the Token earned  to Sol or usdc immediately!\n\n\n@WURKDOTFUN\n is a microjobs for humans and agents. \n\nStart earning below\n\nHow to Get",
+    "timestamp": "2026-05-28T13:30:00+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJaFILSWEAEVaTk?format=jpg&name=small",
+      "https://pbs.twimg.com/media/HJaFJyyXwAQxslO?format=jpg&name=360x360"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 297,
+    "retweet_count": 93,
+    "reply_count": 41,
+    "is_thread": 0,
+    "thread_id": "2059990574133092790",
+    "cve_ids": [],
+    "award_amount": 4.0,
+    "confidence_score": 0.7,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:50"
+  },
+  {
+    "tweet_id": "2059986675137163425",
+    "author_handle": "DoctorTrades1",
+    "author_display_name": "Doctor Trades",
+    "text": "Giving away 2 of my favorite lucid accounts!\nThe 25k pro is awesome 1 day pass 3 days to payout!\nFollow \nRetweet\nComment code NQ and tag a buddy\nPicking winner at Asia open!\n\nhttps://\nlucidtrading.com/ref/NQ",
+    "timestamp": "2026-05-28T13:14:30+00:00",
+    "hashtags": [],
+    "links": [
+      "https://t.co/iq3SeNPCvr"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJaK9rkXoAQIu7f?format=jpg&name=small",
+      "https://pbs.twimg.com/media/HJaK9rkWoAASPUK?format=jpg&name=360x360"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 294,
+    "retweet_count": 299,
+    "reply_count": 322,
+    "is_thread": 0,
+    "thread_id": "2059986675137163425",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.5,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:57"
+  },
+  {
+    "tweet_id": "2059976405899935987",
+    "author_handle": "joho_no_todai",
+    "author_display_name": "\u60c5\u5831\u306e\u706f\u53f0",
+    "text": "A vulnerability CVE-2026-48095 has been disclosed where opening a compressed file with 7-Zip alone can execute arbitrary code.\n\nCVSS score 8.8. It can be triggered even by attack files disguised as .zip or .rar, and doesn't even require extraction.\nThe patched version 26.01 was",
+    "timestamp": "2026-05-28T12:33:42+00:00",
+    "hashtags": [],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJaBkvMaUAAqMA7?format=jpg&name=small"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 2700,
+    "retweet_count": 2000,
+    "reply_count": 2,
+    "is_thread": 0,
+    "thread_id": "2059976405899935987",
+    "cve_ids": [
+      "CVE-2026-48095"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.65,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:51"
+  },
+  {
+    "tweet_id": "2059864296901738600",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "Myth: \"You need a CS degree to do bug bounty.\"\n\nTruth: You need curiosity, patience, and a map.\n\nThe Big Beautiful Bug Bounty Bundle is the map. Discount on the link \n\n\nhttps://\nthexssrat.podia.com/big-beautiful-\nbug-bounty-bundle?coupon=DISCOUNT\n\u2026\n\n#bugbounty",
+    "timestamp": "2026-05-28T05:08:13+00:00",
+    "hashtags": [
+      "bugbounty"
+    ],
+    "links": [
+      "https://t.co/dKkRd8odEC"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 5,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": "2059864296901738600",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:49:01"
+  },
+  {
+    "tweet_id": "2059863856269127791",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "You've been telling yourself you'll start \"next month\" for like 3 months now \n\nThe 901 Beginner Web Hacking Guide Bundle is your zero-to-day-one kit. Discount baked into the link.\n\nToday's a good day to actually start.\n\n \nhttps://\nthexssrat.podia.com/901-beginner-w\neb-hacking-guide-bundle?coupon=DISCOUNT\n\u2026\n\n#bugbounty #infosec",
+    "timestamp": "2026-05-28T05:06:28+00:00",
+    "hashtags": [
+      "infosec",
+      "bugbounty"
+    ],
+    "links": [
+      "https://t.co/QUkGhFdey9"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": "2059863856269127791",
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:49:01"
+  },
+  {
+    "tweet_id": "2059812390019940470",
+    "author_handle": "Dinosn",
+    "author_display_name": "Nicolas Krassas",
+    "text": "FortiClient EMS Exploited via CVE-2026-35616 to Deliver EKZ Infostealer Disguised as a Fortinet Patch",
+    "timestamp": "2026-05-28T01:41:57+00:00",
+    "hashtags": [],
+    "links": [
+      "https://t.co/xq1QGElUkw"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 9,
+    "retweet_count": 3,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": "2059812390019940470",
+    "cve_ids": [
+      "CVE-2026-35616"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.45,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-29 08:48:58"
+  }
+]

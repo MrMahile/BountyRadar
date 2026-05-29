@@ -1,0 +1,225 @@
+# ─── config.yaml ────────────────────────────────────────────────────────
+# Main Configuration
+# Copy to sentinel.yaml and customize.
+
+# ─── Search Configuration ──────────────────────────────────────────────
+search:
+  hashtags:
+    - BugBounty
+    - CyberSecurity
+    - InfoSec
+    - EthicalHacking
+    - Pentesting
+    - BugBountyTips
+    - WebSecurity
+    - Vulnerability
+    - AppSec
+    - RedTeam
+    - HackerOne
+    - Bugcrowd
+    - YesWeHack
+    - 0day
+    - CVE
+    - exploit
+    - bugbountytips
+    - bugbountytip
+
+  keywords:
+    - "bounty awarded"
+    - "payout"
+    - "disclosed"
+    - "writeup"
+    - "PoC"
+    - "proof of concept"
+    - "CVE"
+    - "responsible disclosure"
+    - "triage"
+    - "severity critical"
+    - "severity high"
+    - "pwned"
+    - "bounty paid"
+    - "payout"
+    - "CVSS"
+
+  excluded_keywords:
+    - "hiring"
+    - "job"
+    - "recruitment"
+    - "internship"
+    - "follow for follow"
+    - "giveaway"
+    - "lottery"
+
+  # Search mode: top | latest | people
+  mode: top
+
+  # How often to poll (minutes)
+  interval_minutes: 30
+
+  # Max tweets to fetch per query
+  max_per_query: 50
+
+  # Accounts to always track
+  prioritized_accounts:
+    - hackerone
+    - bugcrowd
+    - yeswehack
+    - intigriti
+    - sehacure
+    - renaudragen
+    - samwcyo
+    - naglinagli
+    - amonsecurity
+
+  # Accounts to ignore
+  blocked_accounts: []
+
+# ─── X.com Authentication ──────────────────────────────────────────────
+# Required for stable scraping. Obtain from browser cookies after login.
+auth:
+  auth_token: ""   # Set via env X_AUTH_TOKEN or edit here
+  ct0: ""          # Set via env X_CT0 or edit here
+
+# ─── Scoring ───────────────────────────────────────────────────────────
+scoring:
+  # Weights for each dimension (must sum to 1.0)
+  weights:
+    relevance: 0.35
+    evidence: 0.25
+    authority: 0.20
+    freshness: 0.10
+    richness: 0.10
+
+  # Thresholds
+  immediate_alert_score: 0.80
+  immediate_alert_award: 1000    # $1,000 minimum award for immediate alert
+  include_in_digest_score: 0.30  # Minimum score to include in daily digest
+
+  # Author reputation list (handle → tier)
+  # Tier 1: highly reputable, Tier 2: known, Tier 3: emerging
+  reputable_authors:
+    hackerone: 1
+    bugcrowd: 1
+    yeswehack: 1
+    intigriti: 1
+    sehacure: 1
+    renaudragen: 1
+    samwcyo: 1
+    naglinagli: 1
+    amonsecurity: 1
+    bogdantirca: 1
+    rez0: 2
+    d0nut: 2
+
+# ─── Storage ───────────────────────────────────────────────────────────
+storage:
+  # Database type: sqlite | postgres
+  type: sqlite
+  # For SQLite
+  sqlite_path: data/sentinel.db
+  # For Postgres (optional)
+  postgres_dsn: "postgresql://user:pass@localhost:5432/sentinel"
+
+  # Cache TTL in minutes
+  cache_ttl_minutes: 15
+
+# ─── Delivery Channels ─────────────────────────────────────────────────
+delivery:
+  # ── Slack ──
+  slack:
+    enabled: false
+    webhook_url: ""
+    channel: "#bug-bounty-alerts"
+
+  # ── Telegram ──
+  telegram:
+    enabled: false
+    bot_token: ""
+    chat_id: ""
+
+  # ── Email ──
+  email:
+    enabled: false
+    smtp_host: "smtp.gmail.com"
+    smtp_port: 587
+    smtp_user: ""
+    smtp_pass: ""
+    from: ""
+    to: ""
+
+  # ── Generic Webhook ──
+  webhook:
+    enabled: false
+    url: ""
+    headers:
+      Content-Type: "application/json"
+      X-API-Key: ""
+
+  # ── Custom Webhooks ──
+  custom_webhooks:
+    - url: ""
+      headers:
+        Authorization: "Bearer your-token"
+      transform: "passthrough"  # passthrough | slack-format
+
+# ─── Alert Rules ───────────────────────────────────────────────────────
+alerts:
+  # Immediate alerts: sent as soon as a qualifying item is found
+  immediate:
+    min_score: 0.80
+    min_award: 1000
+    channels: ["slack", "telegram"]
+
+  # Daily digest: sent once per day
+  daily_digest:
+    enabled: true
+    time: "09:00"           # 24h format in local time
+    timezone: "UTC"
+    channels: ["slack", "email"]
+    max_items: 10
+
+  # Weekly report: analytics + tuning suggestions
+  weekly_report:
+    enabled: true
+    day: "monday"
+    time: "10:00"
+    channels: ["email"]
+
+# ─── API Server (Optional) ─────────────────────────────────────────────
+api:
+  enabled: false
+  host: "0.0.0.0"
+  port: 8080
+  api_key: ""               # If empty, no auth required
+  cors_origins: ["*"]
+
+# ─── Advanced ──────────────────────────────────────────────────────────
+advanced:
+  # Rate limiting
+  min_delay_between_queries_seconds: 30
+  exponential_backoff_base: 2
+  max_retries: 5
+
+  # Headless browser
+  browser:
+    headless: true
+    viewport_width: 1280
+    viewport_height: 1024
+    user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36"
+
+  # Scrolling behavior
+  scroll_count: 3
+  scroll_delay_seconds: 2
+
+  # Logging
+  log_level: "INFO"        # DEBUG | INFO | WARNING | ERROR
+  log_file: "data/sentinel.log"
+
+# ─── User Preferences (loaded from saved user settings) ────────────────
+user:
+  # Per-user overrides (multi-tenant support)
+  min_award_filter: 0
+  preferred_hashtags: []
+  excluded_hashtags: []
+  delivery_channels: ["slack"]
+  feedback_enabled: true
