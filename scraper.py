@@ -162,20 +162,23 @@ class XScraper:
                 if idx >= 0:
                     snippet = js.text[max(0,idx-40):idx+120]
                     log.info(f"Found SearchTimeline at offset {idx}: ...{snippet}...")
+                # Find ALL query IDs near (word-boundarized) SearchTimeline
+                for op in re.finditer(r'operationName:"(\w*SearchTimeline\w*)"[^}]*?queryId:"([a-zA-Z0-9_-]+)"', js.text):
+                    log.info(f"  operation '{op.group(1)}' -> query ID: {op.group(2)}")
+                    if op.group(1) == "SearchTimeline":
+                        log.info(f"  -> EXACT MATCH for SearchTimeline!")
+                        return op.group(2)
+                for op in re.finditer(r'queryId:"([a-zA-Z0-9_-]+)"[^}]*?operationName:"(\w*SearchTimeline\w*)"', js.text):
+                    log.info(f"  query ID {op.group(1)} -> operation '{op.group(2)}'")
+                    if op.group(2) == "SearchTimeline":
+                        log.info(f"  -> EXACT MATCH for SearchTimeline!")
+                        return op.group(1)
+                for op in re.finditer(r'\b(\w*SearchTimeline\w*)\b\s*:\s*\{[^}]*?queryId:\s*"([a-zA-Z0-9_-]+)"', js.text):
+                    log.info(f"  operation '{op.group(1)}' -> query ID: {op.group(2)}")
+                    if op.group(1) == "SearchTimeline":
+                        log.info(f"  -> EXACT MATCH for SearchTimeline!")
+                        return op.group(2)
 
-                patterns = [
-                    r'"SearchTimeline"\s*:\s*"([a-zA-Z0-9_-]{20,30})"',
-                    r'SearchTimeline:"([a-zA-Z0-9_-]{20,30})"',
-                    r'SearchTimeline:\s*\{[^}]*?queryId:\s*"([a-zA-Z0-9_-]+)"',
-                    r'operationName:"SearchTimeline"[^}]*?queryId:"([a-zA-Z0-9_-]+)"',
-                    r'queryId:"([a-zA-Z0-9_-]{20,30})"[^}]*?operationName:"SearchTimeline"',
-                ]
-                for i, pat in enumerate(patterns):
-                    m2 = re.search(pat, js.text)
-                    if m2:
-                        qid = m2.group(1)
-                        log.info(f"Pattern {i} matched: {qid}")
-                        return qid
                 if idx == -1:
                     log.warning("SearchTimeline not found anywhere in JS bundle")
                     # Try alternative search: look for all query IDs near operation names
