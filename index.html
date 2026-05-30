@@ -160,7 +160,6 @@ header .stats-row strong { color:var(--text); }
     <option value="7">Last 7 days</option>
     <option value="30">Last 30 days</option>
   </select>
-  <label><input type="checkbox" id="hide-low" onchange="fetchAndRender()"> Hide low (&lt;0.15)</label>
 </div>
 
 <div class="charts-row" id="charts"><div class="chart-card"><h3>&#128202; Score Distribution</h3><canvas id="chart-score"></canvas></div><div class="chart-card"><h3>&#127991; Top Hashtags</h3><canvas id="chart-hashtag"></canvas></div><div class="chart-card"><h3>&#128202; Tweets Over Time</h3><canvas id="chart-time"></canvas></div></div>
@@ -191,14 +190,12 @@ function fetchAndRender() {
       var awardF = document.getElementById('filter-award').value;
       var daysF = document.getElementById('filter-days').value;
       var sort = document.getElementById('sort').value;
-      var hideLow = document.getElementById('hide-low').checked;
       var cutoff = daysF === 'all' ? 0 : Date.now() - parseInt(daysF) * 86400000;
 
       var filtered = allTweets.filter(function(t) {
         if (q && (t.text||'').toLowerCase().indexOf(q)===-1 && (t.author_handle||'').toLowerCase().indexOf(q)===-1 && !(t.hashtags||[]).some(function(h){return h.toLowerCase().indexOf(q)!==-1}) && !(t.cve_ids||[]).some(function(c){return c.toLowerCase().indexOf(q)!==-1})) return false;
         if (cveF === 'has-cve' && (!t.cve_ids||!t.cve_ids.length)) return false;
         if (awardF === 'has-award' && !t.award_amount) return false;
-        if (hideLow && (t.confidence_score||0) < 0.15) return false;
         if (daysF !== 'all' && new Date(t.timestamp).getTime() < cutoff) return false;
         return true;
       });
