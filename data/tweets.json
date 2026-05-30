@@ -1,5 +1,201 @@
 [
   {
+    "tweet_id": "2060784738810400814",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "\ud83d\udc00 New on RatCTF: Neuravex \u2014 a hands-on AI assistant hacking lab. The engineers shipped it fast. Nobody asked the hard questions. Can you make it spill?\n\n\ud83d\udc49 https://t.co/z8jG96BGdK\n\n#infosec #bugbounty #ctf #AIsec",
+    "timestamp": "2026-05-30T18:05:43+00:00",
+    "hashtags": [
+      "infosec",
+      "AIsec",
+      "ctf",
+      "bugbounty"
+    ],
+    "links": [
+      "https://ratctf.com/challenges/ai-lab"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 2,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
+  },
+  {
+    "tweet_id": "2060777233107603654",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "Today's HackXpert lab pick: IDOR \ud83c\udfaf\n\nIDORs are still one of the highest-paying and easiest-to-spot bug bounty findings. Sharpen your hunting eye with hands-on practice:\n\n\ud83d\udd17 https://t.co/MPHUHF3rjw\n\n#infosec #bugbounty",
+    "timestamp": "2026-05-30T17:35:54+00:00",
+    "hashtags": [
+      "infosec",
+      "bugbounty"
+    ],
+    "links": [
+      "https://labs.hackxpert.com/IDOR/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 2,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
+  },
+  {
+    "tweet_id": "2060769287946604622",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "New video: Very Simple Real Bug Bounty Exploit \u2014 API Scope Bypass \ud83d\udc00\n\nA clean, real-world walkthrough showing how an authorization slip exposes endpoints. Quick watch, sharp lesson.\n\nhttps://t.co/zRYfTkT0oh\n\n#infosec #bugbounty",
+    "timestamp": "2026-05-30T17:04:20+00:00",
+    "hashtags": [
+      "infosec",
+      "bugbounty"
+    ],
+    "links": [
+      "https://www.youtube.com/watch?v=X-NLo9R3QKE"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
+  },
+  {
+    "tweet_id": "2060768241568334215",
+    "author_handle": "disclosedh1",
+    "author_display_name": "publiclyDisclosed",
+    "text": "phpBB disclosed a bug submitted by @misop00p: https://t.co/TatuVfKSxv #hackerone #bugbounty https://t.co/linJajyHOt",
+    "timestamp": "2026-05-30T17:00:10+00:00",
+    "hashtags": [
+      "hackerone",
+      "bugbounty"
+    ],
+    "links": [
+      "https://hackerone.com/reports/3608558"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJlRy7XWAAAaHR_.png"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 3,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
+  },
+  {
+    "tweet_id": "2060763830108483820",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "I built CAPIE to challenge even the smartest AI. Then Shinobi Security's agentic AI absolutely aced it. Here's why I think this isn't man vs machine \u2014 it's the start of something better. https://t.co/UTTh9FuSr2 #infosec #bugbounty",
+    "timestamp": "2026-05-30T16:42:38+00:00",
+    "hashtags": [
+      "infosec",
+      "bugbounty"
+    ],
+    "links": [
+      "https://thexssrat.medium.com/that-time-an-agentic-ai-pentester-beat-me-in-capie-9ef6097c3c33"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.4,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
+  },
+  {
+    "tweet_id": "2060754953400930817",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "\ud83d\udd25 New: 2026 Practical Bug Bounty Guide. Recon \u2192 Burp deep dive \u2192 XSS/SSTI/SQLi/IDOR/SSRF/XXE \u2192 GraphQL, OAuth, prototype pollution \u2192 WAF bypass \u2192 chaining \u2192 reporting. Opinionated, real-world, no fluff. \ud83d\udc00 https://t.co/s72ZEfSNUw #infosec #bugbounty",
+    "timestamp": "2026-05-30T16:07:22+00:00",
+    "hashtags": [
+      "infosec",
+      "bugbounty"
+    ],
+    "links": [
+      "https://github.com/The-XSS-Rat/SecurityTesting/blob/master/Checklists/2026-bug-bounty-guide.md"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 13,
+    "retweet_count": 1,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.36,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
+  },
+  {
+    "tweet_id": "2060748725673464257",
+    "author_handle": "EHackerNews",
+    "author_display_name": "CySecurity News",
+    "text": "AI Is Ruining Bug Bounty Programs with Flood of Fake Reports https://t.co/7s75R2pOor #AIThreat #BugBounty #FakeReport https://t.co/cxKcHqy25f",
+    "timestamp": "2026-05-30T15:42:37+00:00",
+    "hashtags": [
+      "AIThreat",
+      "BugBounty",
+      "FakeReport"
+    ],
+    "links": [
+      "https://www.cysecurity.news/2026/05/ai-is-ruining-bug-bounty-programs-with.html?utm_source=dlvr.it&utm_medium=twitter"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJlAC58aQAA74uP.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 1,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
+  },
+  {
     "tweet_id": "2060709026241855523",
     "author_handle": "mr_V4nd3r",
     "author_display_name": "V4nd3R",
@@ -27,7 +223,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:48"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060708325549875677",
@@ -58,7 +254,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:48"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060704185809801261",
@@ -84,7 +280,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:48"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060695561863344270",
@@ -115,7 +311,7 @@
     "award_amount": 1000.0,
     "confidence_score": 0.65,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:47"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060689385897566700",
@@ -146,7 +342,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060683162582430090",
@@ -177,7 +373,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060672646598250892",
@@ -207,7 +403,7 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060648308226371834",
@@ -238,7 +434,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060647805874749950",
@@ -266,7 +462,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060633001462263935",
@@ -298,7 +494,7 @@
     "award_amount": null,
     "confidence_score": 0.37,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060631560794030522",
@@ -328,7 +524,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060622556281876750",
@@ -361,7 +557,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060613979790352538",
@@ -393,7 +589,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060604509097795594",
@@ -423,7 +619,7 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060588788070400017",
@@ -449,7 +645,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:48"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060573330789253412",
@@ -476,7 +672,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060559996593869009",
@@ -504,7 +700,7 @@
     "award_amount": null,
     "confidence_score": 0.41,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060549389006053533",
@@ -531,7 +727,7 @@
     "award_amount": 1500.0,
     "confidence_score": 0.62,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060495590392283319",
@@ -555,7 +751,7 @@
     "award_amount": 200.0,
     "confidence_score": 0.56,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060490869661106214",
@@ -587,7 +783,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060490735267242283",
@@ -619,7 +815,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060481362742722957",
@@ -643,7 +839,35 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
+  },
+  {
+    "tweet_id": "2060465542033469593",
+    "author_handle": "dvniel_exe",
+    "author_display_name": "Daniel",
+    "text": "Day 29 \u269c\ufe0f\nDOM Xss \n\n- How it works, how's it's different, sources and sinks, effective payloads, secure code and fixes. \n- No labs though. Been prepping for something else \n\n#cybersecurity #xss #bugbountytips https://t.co/4MwUeOswfj",
+    "timestamp": "2026-05-29T20:57:21+00:00",
+    "hashtags": [
+      "bugbountytips",
+      "xss",
+      "cybersecurity"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJg-exVXQAAH0bb.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 5,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
   },
   {
     "tweet_id": "2060462253883687052",
@@ -671,7 +895,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060457274435346745",
@@ -706,7 +930,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060441881096442283",
@@ -733,7 +957,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060440248773972110",
@@ -764,7 +988,7 @@
     "award_amount": null,
     "confidence_score": 0.52,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060428488767603018",
@@ -793,7 +1017,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060426771187564983",
@@ -832,7 +1056,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060415355827130573",
@@ -859,7 +1083,35 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
+  },
+  {
+    "tweet_id": "2060413510308212822",
+    "author_handle": "Cover6Solutions",
+    "author_display_name": "Cover6 Solutions",
+    "text": "Nonprofits store sensitive data. Attackers know they don't have security teams.\n\nWe published a guide on penetration testing for mission-driven orgs \u2014 what it covers, what you learn, and why it matters.\n\n\ud83d\udcd6 https://t.co/SW8Jf0meCl\n\n#NonprofitSecurity #PenTesting #BreakingN2Cyber",
+    "timestamp": "2026-05-29T17:30:36+00:00",
+    "hashtags": [
+      "NonprofitSecurity",
+      "PenTesting",
+      "BreakingN2Cyber"
+    ],
+    "links": [
+      "https://www.cover6solutions.com/penetration-testing-nonprofits/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
   },
   {
     "tweet_id": "2060407085615947792",
@@ -886,7 +1138,7 @@
     "award_amount": 999999.0,
     "confidence_score": 0.61,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060401643749822898",
@@ -914,7 +1166,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:47"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060401447041196078",
@@ -942,7 +1194,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:47"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060400321654858039",
@@ -969,7 +1221,35 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
+  },
+  {
+    "tweet_id": "2060396170854486255",
+    "author_handle": "k_wijewardhane",
+    "author_display_name": "Kawindu Wijewardhane",
+    "text": "Want to find what's hiding in a website's source code?\n\nWe built Inst Recon, a passive recon platform that detects technologies, extracts API endpoints, finds exposed secrets, and scores security posture.\n\nFast. Free. Built for hunters. https://t.co/w4SH8GHUd8\n\n#bugbounty https://t.co/JUk7xeoWUq",
+    "timestamp": "2026-05-29T16:21:42+00:00",
+    "hashtags": [
+      "bugbounty"
+    ],
+    "links": [
+      "https://www.instrecon.site"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJf_OYWbAAArob0.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 22,
+    "retweet_count": 2,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.36,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
   },
   {
     "tweet_id": "2060393732487164046",
@@ -997,7 +1277,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060391134304546873",
@@ -1025,7 +1305,34 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:48"
+    "created_at": "2026-05-30 19:13:38"
+  },
+  {
+    "tweet_id": "2060388284543451425",
+    "author_handle": "sudosu01",
+    "author_display_name": "Gabriel (Umanhonlen | Sudo \ud83e\udd9c)",
+    "text": "Testing with #AI will not only place the company at a huge risk but also #BugBounty platforms.\n\n&gt; ATO (got the payload) and then got a pingback on webhook.\n\n&gt; Not sure it was the payload I triggered so who triggered this and what IP was it coming from.\n\nAI - 1\nHumans - 0\n\n\ud83e\udd9c https://t.co/CB12HwAqGo",
+    "timestamp": "2026-05-29T15:50:21+00:00",
+    "hashtags": [
+      "BugBounty",
+      "AI"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJf3nhnXEAcF918.png"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 4,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
   },
   {
     "tweet_id": "2060387075740823601",
@@ -1053,7 +1360,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060367573280236001",
@@ -1084,7 +1391,7 @@
     "award_amount": null,
     "confidence_score": 0.44,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060363595855396993",
@@ -1111,7 +1418,7 @@
     "award_amount": 100.0,
     "confidence_score": 0.57,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060352317082231012",
@@ -1140,7 +1447,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060352293258854409",
@@ -1169,7 +1476,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060348145553359078",
@@ -1196,7 +1503,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060346175849455667",
@@ -1224,7 +1531,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060345937579348148",
@@ -1256,7 +1563,38 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:48"
+    "created_at": "2026-05-30 19:13:38"
+  },
+  {
+    "tweet_id": "2060345564105932899",
+    "author_handle": "NFCkill",
+    "author_display_name": "NFC kill",
+    "text": "\u26a1\ufe0fInstantly deactivate LF (125\u2013134kHz) &amp; HF (13.56MHz) RFID badges. The world\u2019s only RFID tag deactivation tool. \nGet yours now\ud83d\udd17 https://t.co/Z0E6ugbm5b \n#NFCKill #pentesting #RFID #NFC https://t.co/bEB8EVPMQf",
+    "timestamp": "2026-05-29T13:00:36+00:00",
+    "hashtags": [
+      "pentesting",
+      "NFCKill",
+      "RFID",
+      "NFC"
+    ],
+    "links": [
+      "https://l.nfckill.com/DbdI0"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJfDnajXUAIgoXf.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
   },
   {
     "tweet_id": "2060342548946616661",
@@ -1285,7 +1623,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:48"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060331738380058802",
@@ -1316,7 +1654,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060324620654493886",
@@ -1351,7 +1689,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060301678776091024",
@@ -1380,7 +1718,37 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
+  },
+  {
+    "tweet_id": "2060287679846068315",
+    "author_handle": "Secuaudit",
+    "author_display_name": "Secuaudit",
+    "text": "Hey bug bounty hunters \ud83d\udc4bApache log4j is not dead. Before you skip Apache log4j targets in 2026 \u2014 read this : https://t.co/tJ5lHaoFcv\nWe documented exactly where, how, and how to report it clean.Drop everything and read:\n\n#BugBounty #Log4Shell #BugBountyTips https://t.co/ooZToJ8z8N",
+    "timestamp": "2026-05-29T09:10:35+00:00",
+    "hashtags": [
+      "Log4Shell",
+      "BugBounty",
+      "BugBountyTips"
+    ],
+    "links": [
+      "https://pingback.sh/article-log4j-2026.html"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJeclZlW0Ak0XQY.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 77,
+    "retweet_count": 10,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.39,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 19:13:41"
   },
   {
     "tweet_id": "2060282429005255117",
@@ -1409,7 +1777,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060280139439894545",
@@ -1437,7 +1805,7 @@
     "award_amount": 1500.0,
     "confidence_score": 0.8,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060276255375638867",
@@ -1471,7 +1839,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:48"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060274947583324601",
@@ -1501,7 +1869,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060260720181182897",
@@ -1536,7 +1904,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060242810541109574",
@@ -1564,7 +1932,7 @@
     "award_amount": null,
     "confidence_score": 0.43,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060232983152583153",
@@ -1593,7 +1961,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060227653962170583",
@@ -1623,7 +1991,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060217982421549193",
@@ -1656,7 +2024,7 @@
     "award_amount": null,
     "confidence_score": 0.46,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060217971532775889",
@@ -1686,7 +2054,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060199236935758313",
@@ -1714,7 +2082,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060186888921559189",
@@ -1743,7 +2111,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:47"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060154309858267426",
@@ -1773,7 +2141,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:45"
+    "created_at": "2026-05-30 19:13:38"
   },
   {
     "tweet_id": "2060149712724852865",
@@ -1808,6 +2176,6 @@
     "award_amount": null,
     "confidence_score": 0.6,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 13:26:47"
+    "created_at": "2026-05-30 19:13:38"
   }
 ]
