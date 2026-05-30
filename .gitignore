@@ -2,4 +2,6 @@ __pycache__/
 *.pyc
 .venv/
 data/sentinel.db
+data/x_empty_debug.png
+data/x_empty_debug.html
 data/x_login_wall.png

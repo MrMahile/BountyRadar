@@ -53,8 +53,13 @@ def make_scraper_config(cfg: dict) -> ScraperConfig:
         search_mode=s.get("mode", "top"),
         search_interval_mins=s.get("interval_minutes", 60),
         max_tweets_per_search=s.get("max_per_query", 50),
+        since_days=s.get("since_days", 1),
+        since_date=s.get("since_date", ""),
+        until_date=s.get("until_date", ""),
         x_auth_token=a.get("auth_token", "") or os.environ.get("X_AUTH_TOKEN", ""),
         x_csrf_token=a.get("ct0", "") or os.environ.get("X_CT0", ""),
+        x_kdt=a.get("kdt", "") or os.environ.get("X_KDT", ""),
+        x_auth_multi=a.get("auth_multi", "") or os.environ.get("X_AUTH_MULTI", ""),
         db_path=st.get("sqlite_path", "bountyradar.db"),
         award_threshold_immediate=cfg.get("alerts", {}).get("immediate", {}).get("min_award", 1000),
         score_threshold_immediate=cfg.get("scoring", {}).get("immediate_alert_score", 0.80),
@@ -151,7 +156,7 @@ def run(ctx, once, query, no_send, interval):
             return False
 
         should_exit = asyncio.run(_run())
-        scraper.close()
+        scraper.db.close()
 
         if once or should_exit:
             break
@@ -206,7 +211,7 @@ def digest(ctx):
         click.echo("Digest sent.")
 
     asyncio.run(_digest())
-    scraper.close()
+    scraper.db.close()
 
 
 @cli.command()
@@ -234,7 +239,7 @@ def query(ctx, search_query, limit):
         print(f"Total found: {len(results)}")
 
     asyncio.run(_query())
-    scraper.close()
+    scraper.db.close()
 
 
 @cli.command()
