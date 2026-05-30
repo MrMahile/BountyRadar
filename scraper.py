@@ -277,16 +277,18 @@ class XScraper:
         return results
 
     async def _search_graphql(self, search_query: str) -> List[dict]:
-        """Call X.com GraphQL SearchTimeline API directly."""
-        header_cookies = {}
-        if self.config.x_auth_token:
-            header_cookies["auth_token"] = self.config.x_auth_token
-        if self.config.x_csrf_token:
-            header_cookies["ct0"] = self.config.x_csrf_token
-        if self.config.x_kdt:
-            header_cookies["kdt"] = self.config.x_kdt
-        if self.config.x_auth_multi:
-            header_cookies["auth_multi"] = self.config.x_auth_multi.replace('"', '')
+        """Execute GraphQL SearchTimeline query with pagination."""
+        all_tweets = []
+        seen = set()
+        cursor = None
+        max_results = self.config.max_tweets_per_search
+
+        header_cookies = {
+            "auth_token": self.config.x_auth_token or "",
+            "ct0": self.config.x_csrf_token or "",
+            "kdt": self.config.x_kdt or "",
+            "auth_multi": (self.config.x_auth_multi or "").strip('"'),
+        }
         header_cookies["twid"] = "u%3D1164212928913932288"
 
         cookie_str = "; ".join(f"{k}={v}" for k, v in header_cookies.items())
@@ -294,55 +296,71 @@ class XScraper:
         product_map = {"top": "Top", "latest": "Latest", "people": "People"}
         product = product_map.get(self.config.search_mode, "Top")
 
-        variables = {
-            "rawQuery": search_query,
-            "count": self.config.max_tweets_per_search,
-            "cursor": None,
-            "product": product,
-            "querySource": "typed_query",
-        }
-
-        payload = {
-            "variables": json.dumps(variables),
-            "features": json.dumps(self.SEARCH_FEATURES),
-            "fieldToggles": json.dumps(self.SEARCH_FIELD_TOGGLES),
-        }
-
         url = f"{self.GRAPHQL_API}/{self.SEARCH_TIMELINE_QUERY}/SearchTimeline"
-        headers = {
-            "authorization": f"Bearer {self.BEARER_TOKEN}",
-            "x-csrf-token": self.config.x_csrf_token or "",
-            "content-type": "application/json",
-            "cookie": cookie_str,
-            "origin": "https://x.com",
-            "referer": "https://x.com/search",
-            "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
-        }
 
-        try:
-            async with httpx.AsyncClient(timeout=30.0) as client:
-                resp = await client.post(url, json=payload, headers=headers)
-                log.info(f"GraphQL API: {resp.status_code} ({len(resp.content)} bytes)")
+        for attempt in range(5):
+            variables = {
+                "rawQuery": search_query,
+                "count": min(50, max_results),
+                "cursor": cursor,
+                "product": product,
+                "querySource": "typed_query",
+            }
 
-                if resp.status_code != 200:
-                    log.warning(f"API error: {resp.text[:300]}")
-                    return []
+            payload = {
+                "variables": json.dumps(variables),
+                "features": json.dumps(self.SEARCH_FEATURES),
+                "fieldToggles": json.dumps(self.SEARCH_FIELD_TOGGLES),
+            }
 
-                data = resp.json()
-                return self._parse_search_results(data)
+            headers = {
+                "authorization": f"Bearer {self.BEARER_TOKEN}",
+                "x-csrf-token": self.config.x_csrf_token or "",
+                "content-type": "application/json",
+                "cookie": cookie_str,
+                "origin": "https://x.com",
+                "referer": "https://x.com/search",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+            }
 
-        except Exception as e:
-            log.warning(f"GraphQL API call failed: {e}")
-            return []
+            try:
+                async with httpx.AsyncClient(timeout=30.0) as client:
+                    resp = await client.post(url, json=payload, headers=headers)
+                    log.info(f"GraphQL API: {resp.status_code} ({len(resp.content)} bytes) page={attempt+1} cursor={cursor is not None}")
 
-    def _parse_search_results(self, data: dict) -> List[dict]:
-        """Parse tweets from SearchTimeline GraphQL response."""
+                    if resp.status_code != 200:
+                        log.warning(f"API error: {resp.text[:300]}")
+                        break
+
+                    data = resp.json()
+                    tweets, next_cursor = self._parse_search_results(data, seen)
+                    all_tweets.extend(tweets)
+
+                    if len(all_tweets) >= max_results:
+                        all_tweets = all_tweets[:max_results]
+                        break
+
+                    if not next_cursor or next_cursor == cursor:
+                        break
+
+                    cursor = next_cursor
+
+            except Exception as e:
+                log.warning(f"GraphQL API call failed: {e}")
+                break
+
+        return all_tweets
+
+    def _parse_search_results(self, data: dict, seen: set = None) -> tuple:
+        """Parse tweets from SearchTimeline GraphQL response.
+        Returns (tweets_list, next_cursor_string)."""
         tweets = []
+        next_cursor = None
 
         try:
             instructions = data["data"]["search_by_raw_query"]["search_timeline"]["timeline"]["instructions"]
         except (KeyError, TypeError):
-            return []
+            return tweets, None
 
         entries = []
         for instr in instructions:
@@ -351,6 +369,17 @@ class XScraper:
                 break
 
         for entry in entries:
+            entry_id = entry.get("entryId", "")
+
+            # Extract cursor
+            if entry_id.startswith("cursor-bottom") or entry_id.startswith("cursor-top"):
+                content = entry.get("content", {})
+                if content.get("cursorType") in ("Bottom", "Top"):
+                    val = content.get("value", "")
+                    if val:
+                        next_cursor = val
+                continue
+
             content = entry.get("content", {})
             item_content = content.get("itemContent", {})
             tweet_result = item_content.get("tweet_results", {})
@@ -361,8 +390,11 @@ class XScraper:
                 continue
 
             tweet_id = legacy["id_str"]
-            if tweet_id in self.seen_ids:
+            if tweet_id in self.seen_ids or (seen is not None and tweet_id in seen):
                 continue
+            self.seen_ids.add(tweet_id)
+            if seen is not None:
+                seen.add(tweet_id)
 
             # User info from core.user_results.result.core
             core = result.get("core", {})
@@ -407,9 +439,8 @@ class XScraper:
                 "source_query": "",
             }
             tweets.append(tweet)
-            self.seen_ids.add(tweet_id)
 
-        return tweets[: self.config.max_tweets_per_search]
+        return tweets[: self.config.max_tweets_per_search], next_cursor
 
 
 # ─── SQLite Storage ────────────────────────────────────────────────────
