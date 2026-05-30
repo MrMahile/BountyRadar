@@ -1,5 +1,67 @@
 [
   {
+    "tweet_id": "2060689385897566700",
+    "author_handle": "BRuteLogic",
+    "author_display_name": "BRute Logic",
+    "text": "Last call, ending this weekend.\n\nKNOXSS - Comprehensive XSS Tool\nhttps://t.co/E8YxCpXX5i\n\nEbooks - First Bounty, SSRF, Bypass\nhttps://t.co/UsCEtILhmv \n\nBrute One - Tool Enabled AI Assistant \nhttps://t.co/VM52wu5BGh\n\n#BugBounty #PenTesting https://t.co/3gtC03Xq98",
+    "timestamp": "2026-05-30T11:46:50+00:00",
+    "hashtags": [
+      "BugBounty",
+      "PenTesting"
+    ],
+    "links": [
+      "http://brutelogic.net/brute-one",
+      "http://knoxss.pro",
+      "http://brutelogic.net/ebooks"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJkKE36XcAEKCrP.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
+  },
+  {
+    "tweet_id": "2060683162582430090",
+    "author_handle": "FireCompass",
+    "author_display_name": "FireCompass",
+    "text": "FireCompass was named across all 3 #Gartner reports. Continuous Offensive Security is no longer a future state. Gartner now treats it as the direction the entire market is moving in. \n\nRun a free AI pen test: https://t.co/tGSuzPWpUC\n\n#CyberSecurity #PenTesting #AppSec #Gartner https://t.co/eieTK8f9mD",
+    "timestamp": "2026-05-30T11:22:06+00:00",
+    "hashtags": [
+      "Gartner",
+      "CyberSecurity",
+      "AppSec",
+      "PenTesting"
+    ],
+    "links": [
+      "https://na2.hubs.ly/H05MZQk0"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/ext_tw_video_thumb/2060683135097171968/pu/img/Ta-l64mLd3WNnBHE.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 1,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
+  },
+  {
     "tweet_id": "2060672646598250892",
     "author_handle": "thetirthparmar",
     "author_display_name": "Tirth Parmar \ud83e\udeef",
@@ -27,7 +89,38 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:08"
+    "created_at": "2026-05-30 11:52:45"
+  },
+  {
+    "tweet_id": "2060648308226371834",
+    "author_handle": "DailyCVEBrief",
+    "author_display_name": "CVE Brief",
+    "text": "Saturday's CVE Brief is live:\n\n\ud83d\udd34 5 actively exploited\n\ud83d\udfe0 18 critical\n\ud83d\udfe1 63 high priority\n\nStay protected \u2192 https://t.co/OQYTZQ20A6\n\n#cybersecurity #infosec #CVE #vulnerability https://t.co/1OCDzYpQo1",
+    "timestamp": "2026-05-30T09:03:36+00:00",
+    "hashtags": [
+      "CVE",
+      "cybersecurity",
+      "vulnerability",
+      "infosec"
+    ],
+    "links": [
+      "http://cvebrief.com"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJjkt2_X0AAsg2K.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.4,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
   },
   {
     "tweet_id": "2060647805874749950",
@@ -55,7 +148,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:08"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060633001462263935",
@@ -87,7 +180,7 @@
     "award_amount": null,
     "confidence_score": 0.37,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060631560794030522",
@@ -117,7 +210,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060622556281876750",
@@ -150,7 +243,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060613979790352538",
@@ -182,7 +275,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:08"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060604509097795594",
@@ -212,7 +305,7 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:08"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060573330789253412",
@@ -239,7 +332,35 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
+  },
+  {
+    "tweet_id": "2060559996593869009",
+    "author_handle": "bugbountywizard",
+    "author_display_name": "Bug bounty wizard",
+    "text": "Broken Rate Limit: From Non-Issue to Valid Vulnerability Worth $$$ https://t.co/rplgnKXqiB #bugbounty #bugbountytips #bugbountytip",
+    "timestamp": "2026-05-30T03:12:41+00:00",
+    "hashtags": [
+      "bugbountytip",
+      "bugbountytips",
+      "bugbounty"
+    ],
+    "links": [
+      "https://medium.com/@bhavishthakral123/broken-rate-limit-from-non-issue-to-valid-vulnerability-worth-692fdc4fa8e7"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 15,
+    "retweet_count": 3,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.41,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
   },
   {
     "tweet_id": "2060549389006053533",
@@ -266,7 +387,31 @@
     "award_amount": 1500.0,
     "confidence_score": 0.62,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
+  },
+  {
+    "tweet_id": "2060495590392283319",
+    "author_handle": "DuckyWantDucky",
+    "author_display_name": "DuckywantDucky",
+    "text": "Day 189/365 of the Until get 10.0 Critical report\n\ud83d\udce4 Reports Submitted:- 0\n\ud83d\udfe0  triaged - 3\n\ud83d\udfe6 program review - 0\n\ud83d\udfe4 Duplicate - 0\n\ud83d\udfe3 New - 1\n\u26aa\ufe0f Info - 0 \n\ud83d\udcb0 Paid - $200   \n\ud83d\udcbb Worked- 10 HOUR  \n#BugBounty",
+    "timestamp": "2026-05-29T22:56:45+00:00",
+    "hashtags": [
+      "BugBounty"
+    ],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 16,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": 200.0,
+    "confidence_score": 0.56,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
   },
   {
     "tweet_id": "2060490869661106214",
@@ -298,7 +443,39 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
+  },
+  {
+    "tweet_id": "2060490735267242283",
+    "author_handle": "CVEannounce",
+    "author_display_name": "CVE Announcements",
+    "text": "All of the videos from \u201cVulnCon 2026\u201d are now available on YouTube!  \n \nhttps://t.co/zABnGINRL8 \n  \n#cwe #cve #first #vulnerabilitymanagement #vulnerability #cybersecurity #informationsecurity",
+    "timestamp": "2026-05-29T22:37:28+00:00",
+    "hashtags": [
+      "informationsecurity",
+      "cybersecurity",
+      "vulnerabilitymanagement",
+      "first",
+      "cwe",
+      "vulnerability",
+      "cve"
+    ],
+    "links": [
+      "https://www.youtube.com/playlist?list=PLWfD9RQVdJ6cKuu4Gr1uglJv_E5zfWh9R"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
   },
   {
     "tweet_id": "2060481362742722957",
@@ -322,7 +499,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060462253883687052",
@@ -350,7 +527,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:08"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060457274435346745",
@@ -385,7 +562,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060441881096442283",
@@ -412,7 +589,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060440248773972110",
@@ -443,7 +620,36 @@
     "award_amount": null,
     "confidence_score": 0.52,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:08"
+    "created_at": "2026-05-30 11:52:45"
+  },
+  {
+    "tweet_id": "2060428488767603018",
+    "author_handle": "OrizonCyber",
+    "author_display_name": "Orizon",
+    "text": "\ud83d\udea8 CVE-2026-4290 \u2014 CVSS 9.1/10\n\n\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\n\nThe WP Travel Pro plugin for WordPress is vulnerable to arbitrary user deletion via the...\n\nSeverity: CRITICAL\n\nPatch now.\n#cybersecurity #CVE https://t.co/GcanhEJyU4",
+    "timestamp": "2026-05-29T18:30:07+00:00",
+    "hashtags": [
+      "CVE",
+      "cybersecurity"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJgcyn6XkAMPom5.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 2,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-4290"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
   },
   {
     "tweet_id": "2060426771187564983",
@@ -482,7 +688,34 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
+  },
+  {
+    "tweet_id": "2060415355827130573",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "Today's featured HackXpert lab: SSRF \ud83c\udfaf\nPractice one of the highest-impact bug bounty vulns with real, hands-on scenarios \u2014 free and browser-based. Tutorial + guide included.\n\ud83d\udc49 https://t.co/k9zvimkVgN\n#infosec #bugbounty",
+    "timestamp": "2026-05-29T17:37:56+00:00",
+    "hashtags": [
+      "infosec",
+      "bugbounty"
+    ],
+    "links": [
+      "https://labs.hackxpert.com/SSRF/index.html"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 5,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
   },
   {
     "tweet_id": "2060407085615947792",
@@ -509,7 +742,90 @@
     "award_amount": 999999.0,
     "confidence_score": 0.61,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
+  },
+  {
+    "tweet_id": "2060400321654858039",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "I built CAPIE to be brutal \u2014 business logic flaws, IDORs, broken access control. Then an agentic AI walked in and aced it. Here's what that loss taught me about the future of pentesting \ud83d\udc47 https://t.co/UTTh9FuSr2 #infosec #bugbounty",
+    "timestamp": "2026-05-29T16:38:11+00:00",
+    "hashtags": [
+      "infosec",
+      "bugbounty"
+    ],
+    "links": [
+      "https://thexssrat.medium.com/that-time-an-agentic-ai-pentester-beat-me-in-capie-9ef6097c3c33"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 4,
+    "retweet_count": 1,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.4,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
+  },
+  {
+    "tweet_id": "2060393732487164046",
+    "author_handle": "xer0dayz",
+    "author_display_name": "xer0dayz",
+    "text": "\ud83c\udf11 Dark mode. \u2705 \ud83c\udfaf Workspace Navigator. \u2705 \ud83d\udcca Per-host &amp; per-workspace reports. \u2705 \ud83d\udce4 CSV / Excel / PDF export on every table. \u2705\nSn1per Professional 2026 finally feels like 2026. \ud83d\ude80\n\ud83d\udcd6 https://t.co/SRvMcP8kd7\n#PenTesting #RedTeam #OffSec",
+    "timestamp": "2026-05-29T16:12:00+00:00",
+    "hashtags": [
+      "OffSec",
+      "RedTeam",
+      "PenTesting"
+    ],
+    "links": [
+      "https://sn1persecurity.com/wordpress/sn1per-professional-2026-release/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 2,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
+  },
+  {
+    "tweet_id": "2060387075740823601",
+    "author_handle": "dailycve",
+    "author_display_name": "DailyCVE",
+    "text": "\ud83d\udd34 InHand Networks IR Series, Command Injection, #CVE-2026-38702 (Critical) -DC-May2026-47\n\nhttps://t.co/FZqDmvJTZ1",
+    "timestamp": "2026-05-29T15:45:33+00:00",
+    "hashtags": [
+      "CVE"
+    ],
+    "links": [
+      "https://dailycve.com/inhand-networks-ir-series-command-injection-cve-2026-38702-critical-dc-may2026-47/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-38702"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.5,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
   },
   {
     "tweet_id": "2060367573280236001",
@@ -540,7 +856,92 @@
     "award_amount": null,
     "confidence_score": 0.44,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:08"
+    "created_at": "2026-05-30 11:52:45"
+  },
+  {
+    "tweet_id": "2060363595855396993",
+    "author_handle": "3ugman",
+    "author_display_name": "TheHatedOne",
+    "text": "Yay, I was awarded a $100 bounty on @Hacker0x01!  #TogetherWeHitHarder  #bugbounty https://t.co/qplpFzqZwk",
+    "timestamp": "2026-05-29T14:12:15+00:00",
+    "hashtags": [
+      "TogetherWeHitHarder",
+      "bugbounty"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJfhvDza4AAoSaW.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 40,
+    "retweet_count": 0,
+    "reply_count": 3,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": 100.0,
+    "confidence_score": 0.57,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
+  },
+  {
+    "tweet_id": "2060352317082231012",
+    "author_handle": "UndercodeUpdate",
+    "author_display_name": "UNDERCODE TESTING",
+    "text": "\ud83d\udea8 Critical OpenVPN Connect #macOS Flaw (#CVE-2026-9560) Allows Root Command Injection \u2013 Patch Now! + Video\n\nhttps://t.co/yQ81w4viaQ\nEducational Purposes!",
+    "timestamp": "2026-05-29T13:27:26+00:00",
+    "hashtags": [
+      "CVE",
+      "macOS"
+    ],
+    "links": [
+      "https://undercodetesting.com/critical-openvpn-connect-macos-flaw-cve-2026-9560-allows-root-command-injection-patch-now-video/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-9560"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.5,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
+  },
+  {
+    "tweet_id": "2060352293258854409",
+    "author_handle": "siva2005393495",
+    "author_display_name": "shiva2550",
+    "text": "Happy to reach Top 72 on HackerOne Hacktivity by report upvotes.\n\nGrateful for the support from the security community. Still learning and sharing more research ahead.\n\n#bugbounty #cybersecurity #hackerone #infosec https://t.co/dLd2buqIp0",
+    "timestamp": "2026-05-29T13:27:20+00:00",
+    "hashtags": [
+      "cybersecurity",
+      "hackerone",
+      "infosec",
+      "bugbounty"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJfXfeubMAAWLnH.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
   },
   {
     "tweet_id": "2060348145553359078",
@@ -567,7 +968,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060346175849455667",
@@ -595,7 +996,38 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
+  },
+  {
+    "tweet_id": "2060331738380058802",
+    "author_handle": "praveen_gururaj",
+    "author_display_name": "Praveen Gururaj",
+    "text": "Moving to TPM+PIN for your endpoints after Yellowkey via Intune. I have something for you.\n\nValidate and enforce PIN using Custom Compliance policy using Intune.\n\nhttps://t.co/vrK4J0JyZq\n\n\\#CVE-2026-45585 #Intune #Bitlocker #TPMPIN",
+    "timestamp": "2026-05-29T12:05:40+00:00",
+    "hashtags": [
+      "CVE",
+      "TPMPIN",
+      "Bitlocker",
+      "Intune"
+    ],
+    "links": [
+      "https://insideconfigmgr.wordpress.com/2026/05/28/intune-validate-whether-pin-is-set-for-bitlocker-via-custom-compliance-policy/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-45585"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.45,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
   },
   {
     "tweet_id": "2060324620654493886",
@@ -630,7 +1062,65 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
+  },
+  {
+    "tweet_id": "2060301678776091024",
+    "author_handle": "OptimumWeb_com",
+    "author_display_name": "Optimum Web | AI Business Automation",
+    "text": "When did your API last get pentested? \ud83d\udc40\n\nAPIs are a top attack vector. We do manual REST &amp; GraphQL pentests (OWASP Top 10) for SOC 2/ISO 27001 compliance.\n\ud83d\udcb6 \u20ac539 price\n\ud83d\udcc5 7 business days\n\ud83d\udee1\ufe0f 14-day warranty\n\nDetails here: https://t.co/gIdruEMOVi \n#pentesting #apisecurity https://t.co/Wa1yFYDEAK",
+    "timestamp": "2026-05-29T10:06:13+00:00",
+    "hashtags": [
+      "apisecurity",
+      "pentesting"
+    ],
+    "links": [
+      "https://www.optimum-web.com/compliance/penetration-test-api/"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJepdZyW8AYeyqD.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
+  },
+  {
+    "tweet_id": "2060282429005255117",
+    "author_handle": "UndercodeUpdate",
+    "author_display_name": "UNDERCODE TESTING",
+    "text": "\ud83d\udea8 #GitHub Enterprise Under Fire: Critical SSRF Flaw (#CVE-2026-9312) Demands Immediate Patch Rotation \u2013 Here's How to Secure Your Instance\n\nhttps://t.co/KUwgM2M9k6\nEducational Purposes!",
+    "timestamp": "2026-05-29T08:49:43+00:00",
+    "hashtags": [
+      "CVE",
+      "GitHub"
+    ],
+    "links": [
+      "https://undercodetesting.com/github-enterprise-under-fire-critical-ssrf-flaw-cve-2026-9312-demands-immediate-patch-rotation-heres-how-to-secure-your-instance/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-9312"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.5,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
   },
   {
     "tweet_id": "2060280139439894545",
@@ -658,7 +1148,72 @@
     "award_amount": 1500.0,
     "confidence_score": 0.8,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:08"
+    "created_at": "2026-05-30 11:52:45"
+  },
+  {
+    "tweet_id": "2060274947583324601",
+    "author_handle": "onlysecurityuk",
+    "author_display_name": "Only Security",
+    "text": "Three real vulnerabilities. Replicable. Reportable. Earnable.\n\nLearn how to find, triage, and report bugs that actually get paid \u2014 from hunters who\u2019ve done it.\n\n#BugBounty #Pentesting #VulnResearch\n\nhttps://t.co/lPurHWF5rH https://t.co/jU8iTJkP8c",
+    "timestamp": "2026-05-29T08:20:00+00:00",
+    "hashtags": [
+      "VulnResearch",
+      "BugBounty",
+      "Pentesting"
+    ],
+    "links": [
+      "https://onlysecurity.com/courses/3-bugs-thats-pay-book-v1/"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJO0cXzXQAA9IKp.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
+  },
+  {
+    "tweet_id": "2060260720181182897",
+    "author_handle": "HackingTeam77",
+    "author_display_name": "Hacking Team",
+    "text": "\ud83d\udee1\ufe0f Vigolium \u2014 AI-Powered Vulnerability Scanner\n\nVigolium combines high-speed vulnerability scanning with AI-driven security testing.\n\n\ud83d\udd17 GitHub repo link  \n\nhttps://t.co/g8BTdUbttz\n\n#cybersecurity #Pentesting #bugbounty #AppSec #securityresearch https://t.co/qZLn0ed1wh",
+    "timestamp": "2026-05-29T07:23:28+00:00",
+    "hashtags": [
+      "Pentesting",
+      "cybersecurity",
+      "AppSec",
+      "securityresearch",
+      "bugbounty"
+    ],
+    "links": [
+      "https://github.com/vigolium/vigolium"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJeEMtjWMAM2_PC.jpg",
+      "https://pbs.twimg.com/media/HJeEMwkWEAYat79.jpg",
+      "https://pbs.twimg.com/media/HJeEMzCX0AQu_8U.jpg",
+      "https://pbs.twimg.com/media/HJeEM5zW4AMIhzh.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.4,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
   },
   {
     "tweet_id": "2060242810541109574",
@@ -686,7 +1241,7 @@
     "award_amount": null,
     "confidence_score": 0.43,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060232983152583153",
@@ -715,7 +1270,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
   },
   {
     "tweet_id": "2060227653962170583",
@@ -745,6 +1300,127 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:36:09"
+    "created_at": "2026-05-30 11:52:45"
+  },
+  {
+    "tweet_id": "2060217982421549193",
+    "author_handle": "obscaries",
+    "author_display_name": "obscaries \u2758 AppSec",
+    "text": "Claude-BugHunter a structured bug bounty workflow pack built for Claude Code.\n\nWorth exploring if you're experimenting with AI-assisted security research.\n\nSource: https://t.co/pGmxeCGCcp\n\n#BugBounty #CyberSecurity #AppSec #SecurityResearch #BugBountyHunter #AI https://t.co/sReXPGFgaw",
+    "timestamp": "2026-05-29T04:33:38+00:00",
+    "hashtags": [
+      "BugBountyHunter",
+      "AI",
+      "AppSec",
+      "CyberSecurity",
+      "SecurityResearch",
+      "BugBounty"
+    ],
+    "links": [
+      "https://github.com/elementalsouls/Claude-BugHunter"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJddAGOawAEEsPO.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 115,
+    "retweet_count": 23,
+    "reply_count": 2,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.46,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
+  },
+  {
+    "tweet_id": "2060217971532775889",
+    "author_handle": "BugBountyDEFCON",
+    "author_display_name": "Bug Bounty Village",
+    "text": "Volunteer with us August 6-9! https://t.co/0b7ykiIRtx  #DEFCON34 #BugBounty #EthicalHacker https://t.co/lzDnYaMBwK",
+    "timestamp": "2026-05-29T04:33:36+00:00",
+    "hashtags": [
+      "DEFCON34",
+      "EthicalHacker",
+      "BugBounty"
+    ],
+    "links": [
+      "https://www.bugbountydefcon.com/call-for-volunteers"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/ext_tw_video_thumb/2060217899193692163/pu/img/pyHQjxHUmdVGXJ99.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 1,
+    "like_count": 26,
+    "retweet_count": 3,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.36,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
+  },
+  {
+    "tweet_id": "2060199236935758313",
+    "author_handle": "crnpt0s",
+    "author_display_name": "krnpt0s \ud83c\udde6\ud83c\uddf7",
+    "text": "A former HackerOne triager made two confident claims this week. Both are questionable. Today we take them apart. EP46. #BugBounty #HackerOne #Triage \n\nhttps://t.co/QyIc3VU3Ty",
+    "timestamp": "2026-05-29T03:19:09+00:00",
+    "hashtags": [
+      "Triage",
+      "BugBounty",
+      "HackerOne"
+    ],
+    "links": [
+      "https://bit.ly/3PUFIea"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
+  },
+  {
+    "tweet_id": "2060154309858267426",
+    "author_handle": "ryancbarnett",
+    "author_display_name": "Ryan Barnett (B0N3)",
+    "text": "The @Hacker0x01 Vuln Vibes Event last year in Vegas at #hackersummercamp was awesome! Looking forward to this years event! I got to hang out with some #bugbounty friends \ud83d\ude00 \n@rez0__\n@0xacb\n@monkehack\n@bsysop\n@sw33tLie\n@Brumens2 https://t.co/abfpaS13if",
+    "timestamp": "2026-05-29T00:20:37+00:00",
+    "hashtags": [
+      "bugbounty",
+      "hackersummercamp"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJciZGnX0AI1KVZ.jpg",
+      "https://pbs.twimg.com/media/HJcjO8oXIAMD7uw.jpg",
+      "https://pbs.twimg.com/media/HJcjR1EWoAIA8WJ.jpg",
+      "https://pbs.twimg.com/media/HJcjUrKWkAMp55r.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 17,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.36,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:52:48"
   }
 ]
