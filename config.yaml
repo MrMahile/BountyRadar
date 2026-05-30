@@ -11,8 +11,33 @@ search:
     - Intigriti
     - bugbountytips
     - bugbountytip
-    - cve
     - bugbounty
+    - cve
+    - cybersecurity
+    - infosec
+    - vulnerabilitymanagement
+    - Vulnerability
+    - AppSec
+    - Pentesting
+    - securityresearch
+    - Windows
+    - bughunter
+    - security
+    - hacker
+    - EthicalHacking
+    - WebSecurity
+    - IDOR
+    - Openclaw
+    - CVEalert
+    - devsecops
+    - sysadmin
+    - devops
+    - cwe
+    - informationsecurity
+    - CyberSec
+    - infosecurity
+    - Developers
+    - DevOps
 
   keywords: []
 
