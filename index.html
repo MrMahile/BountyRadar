@@ -96,6 +96,13 @@ header .stats-row strong { color:var(--text); }
     <option value="all">Any Award</option>
     <option value="has-award">Has Award</option>
   </select>
+  <select id="filter-days" onchange="fetchAndRender()">
+    <option value="all">All Time</option>
+    <option value="1">Last 24 hours</option>
+    <option value="3">Last 3 days</option>
+    <option value="7">Last 7 days</option>
+    <option value="30">Last 30 days</option>
+  </select>
   <label><input type="checkbox" id="hide-low" onchange="fetchAndRender()"> Hide low (&lt;0.15)</label>
 </div>
 
@@ -125,14 +132,17 @@ function fetchAndRender() {
       var q = document.getElementById('search').value.trim().toLowerCase();
       var cveF = document.getElementById('filter-cve').value;
       var awardF = document.getElementById('filter-award').value;
+      var daysF = document.getElementById('filter-days').value;
       var sort = document.getElementById('sort').value;
       var hideLow = document.getElementById('hide-low').checked;
+      var cutoff = daysF === 'all' ? 0 : Date.now() - parseInt(daysF) * 86400000;
 
       var filtered = allTweets.filter(function(t) {
         if (q && (t.text||'').toLowerCase().indexOf(q)===-1 && (t.author_handle||'').toLowerCase().indexOf(q)===-1 && !(t.hashtags||[]).some(function(h){return h.toLowerCase().indexOf(q)!==-1}) && !(t.cve_ids||[]).some(function(c){return c.toLowerCase().indexOf(q)!==-1})) return false;
         if (cveF === 'has-cve' && (!t.cve_ids||!t.cve_ids.length)) return false;
         if (awardF === 'has-award' && !t.award_amount) return false;
         if (hideLow && (t.confidence_score||0) < 0.15) return false;
+        if (daysF !== 'all' && new Date(t.timestamp).getTime() < cutoff) return false;
         return true;
       });
 
