@@ -1,5 +1,123 @@
 [
   {
+    "tweet_id": "2060709026241855523",
+    "author_handle": "mr_V4nd3r",
+    "author_display_name": "V4nd3R",
+    "text": "KvitraX helps answer what actually matters:\nwhich assets are exposed, whether PoC/exploit context exists, and what remediation action should happen next.\n\nLess alert noise.\nMore exposure-driven decisions.\n\nhttps://t.co/dsf5o2YsxV\n\n#cybersecurity #infosec #CVE https://t.co/YWPDXmpkwb",
+    "timestamp": "2026-05-30T13:04:52+00:00",
+    "hashtags": [
+      "CVE",
+      "infosec",
+      "cybersecurity"
+    ],
+    "links": [
+      "http://kvitrax.com"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJkb6AfWoAQfr5m.png"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:48"
+  },
+  {
+    "tweet_id": "2060708325549875677",
+    "author_handle": "Lab_401",
+    "author_display_name": "Lab401",
+    "text": "Break new ground with the iCS Decoder! \ud83d\udd13 The world's ONLY tool for cloning iCLASS SE\u00ae and SEOS\u00ae tags. Plug it into your iCopy-X to instantly decode and clone secure badges. A must-have for LEA and pentesters. \ud83d\udee0\ufe0f\ud83d\udee1\ufe0f https://t.co/d1veETvkoY \n#iCopyX #RFID #Pentesting #Lab401 https://t.co/pvY1RCob5A",
+    "timestamp": "2026-05-30T13:02:05+00:00",
+    "hashtags": [
+      "iCopyX",
+      "Pentesting",
+      "Lab401",
+      "RFID"
+    ],
+    "links": [
+      "https://l.lab401.com/EO3im"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJkbTQ1WkAUX8my.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:48"
+  },
+  {
+    "tweet_id": "2060704185809801261",
+    "author_handle": "sairaj_mishal",
+    "author_display_name": "lolsaiii",
+    "text": "Secured LG....Got the letter!!\n#BugBounty https://t.co/nDsdZv4fwi",
+    "timestamp": "2026-05-30T12:45:38+00:00",
+    "hashtags": [
+      "BugBounty"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJkW_i0bwAAhpUm.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:48"
+  },
+  {
+    "tweet_id": "2060695561863344270",
+    "author_handle": "kassem_S94",
+    "author_display_name": "kassem",
+    "text": "\ud83d\udcb0 $1,000 Bug Bounty Reward\n\nOld but gold. \ud83c\udfc6\n\nA Secret Hunter user discovered exposed PayPal secrets, reported them, and got paid.\n\nThe methodology still works today.\n\nMore bug bounty tips &amp; case studies:\nhttps://t.co/Tkc7jU9KAo\n\n#BugBounty #CyberSecurity #hacking #hackers https://t.co/1JrZAPgnEO",
+    "timestamp": "2026-05-30T12:11:22+00:00",
+    "hashtags": [
+      "hacking",
+      "BugBounty",
+      "hackers",
+      "CyberSecurity"
+    ],
+    "links": [
+      "https://t.me/kassems94"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJkPr-nXQAEhQo4.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 3,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": 1000.0,
+    "confidence_score": 0.65,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:47"
+  },
+  {
     "tweet_id": "2060689385897566700",
     "author_handle": "BRuteLogic",
     "author_display_name": "BRute Logic",
@@ -28,7 +146,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060683162582430090",
@@ -59,7 +177,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060672646598250892",
@@ -89,7 +207,7 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060648308226371834",
@@ -120,7 +238,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060647805874749950",
@@ -148,7 +266,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060633001462263935",
@@ -180,7 +298,7 @@
     "award_amount": null,
     "confidence_score": 0.37,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060631560794030522",
@@ -210,7 +328,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060622556281876750",
@@ -243,7 +361,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060613979790352538",
@@ -275,7 +393,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060604509097795594",
@@ -305,7 +423,33 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
+  },
+  {
+    "tweet_id": "2060588788070400017",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "You can hack. Yes, you. \ud83d\udc00\n\nNo CS degree. No \"gifted kid\" nonsense.\nJust curiosity and a stubborn streak.\n\nIf Burp still looks like hieroglyphs, start here \u2014 built for the you-from-two-years-ago \ud83d\udc47\nhttps://t.co/QUkGhFdey9\n\nHappy hacking #bugbounty",
+    "timestamp": "2026-05-30T05:07:05+00:00",
+    "hashtags": [
+      "bugbounty"
+    ],
+    "links": [
+      "https://thexssrat.podia.com/901-beginner-web-hacking-guide-bundle?coupon=DISCOUNT"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 7,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:48"
   },
   {
     "tweet_id": "2060573330789253412",
@@ -332,7 +476,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060559996593869009",
@@ -360,7 +504,7 @@
     "award_amount": null,
     "confidence_score": 0.41,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060549389006053533",
@@ -387,7 +531,7 @@
     "award_amount": 1500.0,
     "confidence_score": 0.62,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060495590392283319",
@@ -411,7 +555,7 @@
     "award_amount": 200.0,
     "confidence_score": 0.56,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060490869661106214",
@@ -443,7 +587,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060490735267242283",
@@ -475,7 +619,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060481362742722957",
@@ -499,7 +643,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060462253883687052",
@@ -527,7 +671,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060457274435346745",
@@ -562,7 +706,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060441881096442283",
@@ -589,7 +733,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060440248773972110",
@@ -620,7 +764,7 @@
     "award_amount": null,
     "confidence_score": 0.52,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060428488767603018",
@@ -649,7 +793,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060426771187564983",
@@ -688,7 +832,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060415355827130573",
@@ -715,7 +859,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060407085615947792",
@@ -742,7 +886,63 @@
     "award_amount": 999999.0,
     "confidence_score": 0.61,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
+  },
+  {
+    "tweet_id": "2060401643749822898",
+    "author_handle": "dailycve",
+    "author_display_name": "DailyCVE",
+    "text": "\ud83d\udd34 axios, Prototype Pollution via Upstream Dependency, #CVE-2018-16487 (Critical) -DC-May2026-51\n\nhttps://t.co/RrOqTWbXzf",
+    "timestamp": "2026-05-29T16:43:26+00:00",
+    "hashtags": [
+      "CVE"
+    ],
+    "links": [
+      "https://dailycve.com/axios-prototype-pollution-via-upstream-dependency-cve-2018-16487-critical-dc-may2026-51/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2018-16487"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.5,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:47"
+  },
+  {
+    "tweet_id": "2060401447041196078",
+    "author_handle": "dailycve",
+    "author_display_name": "DailyCVE",
+    "text": "\ud83d\udfe0 (froxlor), Improper Neutralization of Special Elements in Output Used by a Downstream Component (Injection), #CVE-2026-30932 (Medium) -DC-May2026-52\n\nhttps://t.co/9QYJkwg7z0",
+    "timestamp": "2026-05-29T16:42:40+00:00",
+    "hashtags": [
+      "CVE"
+    ],
+    "links": [
+      "https://dailycve.com/froxlor-improper-neutralization-of-special-elements-in-output-used-by-a-downstream-component-injection-cve-2026-30932-medium-dc-may2026-52/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-30932"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.45,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:47"
   },
   {
     "tweet_id": "2060400321654858039",
@@ -769,7 +969,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060393732487164046",
@@ -797,7 +997,35 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
+  },
+  {
+    "tweet_id": "2060391134304546873",
+    "author_handle": "dailycve",
+    "author_display_name": "DailyCVE",
+    "text": "\ud83d\udfe0 Detect-It-Easy, Path Traversal, #CVE-2026-43616 (Medium) -DC-May2026-49\n\nhttps://t.co/VQKXHyx0Es",
+    "timestamp": "2026-05-29T16:01:41+00:00",
+    "hashtags": [
+      "CVE"
+    ],
+    "links": [
+      "https://dailycve.com/detect-it-easy-path-traversal-cve-2026-43616-medium-dc-may2026-49/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-43616"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.45,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:48"
   },
   {
     "tweet_id": "2060387075740823601",
@@ -825,7 +1053,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060367573280236001",
@@ -856,7 +1084,7 @@
     "award_amount": null,
     "confidence_score": 0.44,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060363595855396993",
@@ -883,7 +1111,7 @@
     "award_amount": 100.0,
     "confidence_score": 0.57,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060352317082231012",
@@ -912,7 +1140,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060352293258854409",
@@ -941,7 +1169,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060348145553359078",
@@ -968,7 +1196,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060346175849455667",
@@ -996,7 +1224,68 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
+  },
+  {
+    "tweet_id": "2060345937579348148",
+    "author_handle": "Lab_401",
+    "author_display_name": "Lab401",
+    "text": "The ultimate Flipper Zero upgrade! \ud83d\udc2c Experience 10x performance gains for RF, WiFi, BLE, IoT, and GPS. The only accessory you need for pro-grade field audits. \ud83d\ude80\u26a1 https://t.co/A2TL3v3z2V \n#FlipperZero #Pentesting #RF #Tech #Lab401 https://t.co/7rsNH8li1z",
+    "timestamp": "2026-05-29T13:02:05+00:00",
+    "hashtags": [
+      "FlipperZero",
+      "RF",
+      "Tech",
+      "Lab401",
+      "Pentesting"
+    ],
+    "links": [
+      "https://l.lab401.com/IIp0k"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJfRti4XIAYds73.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:48"
+  },
+  {
+    "tweet_id": "2060342548946616661",
+    "author_handle": "adulau",
+    "author_display_name": "Alexandre Dulaunoy @adulau@infosec.exchange",
+    "text": "Vulnerability-Lookup 5.0 Released: Making Coordinated Vulnerability Disclosure Easier for GCVE GNAs\n\n#gcve #cve #vulnerabilitymanagement #cybersecurity\n\nhttps://t.co/5yaaRwppxH",
+    "timestamp": "2026-05-29T12:48:37+00:00",
+    "hashtags": [
+      "cve",
+      "cybersecurity",
+      "vulnerabilitymanagement",
+      "gcve"
+    ],
+    "links": [
+      "https://gcve.eu/2026/05/29/vulnerability-lookup-5.0-released-making-coordinated-vulnerability-disclosure-easier-for-gcve-gnas/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:48"
   },
   {
     "tweet_id": "2060331738380058802",
@@ -1027,7 +1316,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060324620654493886",
@@ -1062,7 +1351,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060301678776091024",
@@ -1091,7 +1380,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060282429005255117",
@@ -1120,7 +1409,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060280139439894545",
@@ -1148,7 +1437,41 @@
     "award_amount": 1500.0,
     "confidence_score": 0.8,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
+  },
+  {
+    "tweet_id": "2060276255375638867",
+    "author_handle": "Cyber_Watchdogs",
+    "author_display_name": "Cyber Watchdogs",
+    "text": "Cyber threats are no longer targeting only large enterprises. SMEs &amp; SMBs are increasingly becoming prime targets for ransomware, phishing, credential theft, and network breaches.\nhttps://t.co/sxir1UML05\n#CyberSecurity #Pentesting #SMB #SME #SouthAfrica #DataProtection #CyberRisk https://t.co/dEA58jOPSb",
+    "timestamp": "2026-05-29T08:25:12+00:00",
+    "hashtags": [
+      "SMB",
+      "SME",
+      "SouthAfrica",
+      "CyberRisk",
+      "CyberSecurity",
+      "Pentesting",
+      "DataProtection"
+    ],
+    "links": [
+      "http://cyberwatchdogs.co.za"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJeSRdSWgAA2EVl.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:48"
   },
   {
     "tweet_id": "2060274947583324601",
@@ -1178,7 +1501,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060260720181182897",
@@ -1213,7 +1536,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060242810541109574",
@@ -1241,7 +1564,7 @@
     "award_amount": null,
     "confidence_score": 0.43,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060232983152583153",
@@ -1270,7 +1593,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060227653962170583",
@@ -1300,7 +1623,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:45"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060217982421549193",
@@ -1333,7 +1656,7 @@
     "award_amount": null,
     "confidence_score": 0.46,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060217971532775889",
@@ -1363,7 +1686,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
   },
   {
     "tweet_id": "2060199236935758313",
@@ -1391,7 +1714,36 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
+  },
+  {
+    "tweet_id": "2060186888921559189",
+    "author_handle": "OrizonCyber",
+    "author_display_name": "Orizon",
+    "text": "\ud83d\udea8 CVE-2026-46822 \u2014 CVSS 9.9/10\n\n\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\nVulnerability in the Oracle iAssets product of Oracle E-Business Suite (component: Internal Operations).  Supported...\n\nSeverity: CRITICAL\n\nPatch now.\n#cybersecurity #CVE https://t.co/iNPtJGW0WI",
+    "timestamp": "2026-05-29T02:30:05+00:00",
+    "hashtags": [
+      "CVE",
+      "cybersecurity"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJdBDpRW8AIMT7z.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 2,
+    "retweet_count": 0,
+    "reply_count": 2,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-46822"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:47"
   },
   {
     "tweet_id": "2060154309858267426",
@@ -1421,6 +1773,41 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:52:48"
+    "created_at": "2026-05-30 13:26:45"
+  },
+  {
+    "tweet_id": "2060149712724852865",
+    "author_handle": "blackstormsecbr",
+    "author_display_name": "Blackstorm Security",
+    "text": "Ghost CMS Mass Compromised via CVE-2026-26980, Now Fueling ClickFix Attacks:\n\nhttps://t.co/MHnhMJltdf\n\n#cms #informationsecurity #cve #threathunting #exploitation #exploit https://t.co/qOeS5Zl5xk",
+    "timestamp": "2026-05-29T00:02:21+00:00",
+    "hashtags": [
+      "informationsecurity",
+      "cms",
+      "exploit",
+      "exploitation",
+      "cve",
+      "threathunting"
+    ],
+    "links": [
+      "https://blog.xlab.qianxin.com/ghost-cms-mass-compromised-via-cve-2026-26980-now-fueling-clickfix-attacks/"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJbjokTXkAAuIMp.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-26980"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.6,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 13:26:47"
   }
 ]
