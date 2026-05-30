@@ -27,7 +27,7 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:28:32"
+    "created_at": "2026-05-30 11:36:08"
   },
   {
     "tweet_id": "2060647805874749950",
@@ -55,7 +55,102 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:28:32"
+    "created_at": "2026-05-30 11:36:08"
+  },
+  {
+    "tweet_id": "2060633001462263935",
+    "author_handle": "hackeriron1",
+    "author_display_name": "Aman Singh !!\ud83c\uddee\ud83c\uddf3!!",
+    "text": "Yeah, Got some bounty from self hosted. sometimes luckily we get the  good program.  \n\n#bugbounty #cybersecurity #bughunter #bounty #security #web #hacker https://t.co/zoRtuAT4UK",
+    "timestamp": "2026-05-30T08:02:46+00:00",
+    "hashtags": [
+      "bounty",
+      "bugbounty",
+      "bughunter",
+      "web",
+      "cybersecurity",
+      "security",
+      "hacker"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJjWyziacAAwSGR.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 35,
+    "retweet_count": 0,
+    "reply_count": 2,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.37,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
+  },
+  {
+    "tweet_id": "2060631560794030522",
+    "author_handle": "m0x_mw4_d",
+    "author_display_name": "m0x_mw4_d",
+    "text": "\ud83d\udecd\ufe0f Practice IDOR vulnerabilities like a pro\n\nJust spun up IDOR BugBounty Labs \u2013 a realistic e\u2011commerce app intentionally vulnerable to Insecure Direct Object Reference attacks.\nhttps://t.co/vuWRRSBi9o\n\n#IDOR #BugBounty #InfoSec #WebSecurity #EthicalHacking",
+    "timestamp": "2026-05-30T07:57:03+00:00",
+    "hashtags": [
+      "EthicalHacking",
+      "IDOR",
+      "InfoSec",
+      "WebSecurity",
+      "BugBounty"
+    ],
+    "links": [
+      "http://github.com/cyberjsonp/idor-express-lab.git"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
+  },
+  {
+    "tweet_id": "2060622556281876750",
+    "author_handle": "HugoValters",
+    "author_display_name": "Hugo | DevOps | Cybersecurity \ud83c\uddf1\ud83c\uddfb",
+    "text": "#Openclaw has an active #CVE #CVEalert More information, POC Labs based in isolated docker, SIGMA, YARA Rules and etc available https://t.co/Ib1ZypdrNO #devops #devsecops #sysadmin #infosec #cybersecurity",
+    "timestamp": "2026-05-30T07:21:16+00:00",
+    "hashtags": [
+      "Openclaw",
+      "infosec",
+      "cybersecurity",
+      "CVE",
+      "CVEalert",
+      "devsecops",
+      "sysadmin",
+      "devops"
+    ],
+    "links": [
+      "https://www.valtersit.com/cve/CVE-2026-35674/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
   },
   {
     "tweet_id": "2060613979790352538",
@@ -87,7 +182,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:28:32"
+    "created_at": "2026-05-30 11:36:08"
   },
   {
     "tweet_id": "2060604509097795594",
@@ -117,7 +212,117 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:28:32"
+    "created_at": "2026-05-30 11:36:08"
+  },
+  {
+    "tweet_id": "2060573330789253412",
+    "author_handle": "Bug_X_hunter",
+    "author_display_name": "Bug X Hunter \ud83d\udcbb",
+    "text": "\ud83d\udd17 Read more:\n\n\ud83d\udd12 Malicious npm Packages Abuse Dependency Confusion Technique\n\n\ud83d\udcdd Malicious npm packages imperso...\n\nhttps://t.co/s0FtGFQxKI\n\n\ud83d\udcf0 Microsoft Security Blog\n\n#BugBounty #DataBreach",
+    "timestamp": "2026-05-30T04:05:40+00:00",
+    "hashtags": [
+      "BugBounty",
+      "DataBreach"
+    ],
+    "links": [
+      "https://www.microsoft.com/en-us/security/blog/2026/05/29/33-malicious-npm-packages-abuse-dependency-confusion-profile-developer-environments/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.4,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
+  },
+  {
+    "tweet_id": "2060549389006053533",
+    "author_handle": "spencer_5cent",
+    "author_display_name": "Jon Nichols",
+    "text": "Yay, I was awarded a $1,500 bounty on @Hacker0x01! https://t.co/4is653sbYu #TogetherWeHitHarder #hackerone",
+    "timestamp": "2026-05-30T02:30:32+00:00",
+    "hashtags": [
+      "hackerone",
+      "TogetherWeHitHarder"
+    ],
+    "links": [
+      "https://hackerone.com/spencer5cent"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 44,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": 1500.0,
+    "confidence_score": 0.62,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
+  },
+  {
+    "tweet_id": "2060490869661106214",
+    "author_handle": "CweCapec",
+    "author_display_name": "CWE Program",
+    "text": "All of the videos from \u201cVulnCon 2026\u201d are now available on YouTube!\nhttps://t.co/3YcMOUbeM1\n#cwe #cve #first #vulnerabilitymanagement #vulnerability #cybersecurity #informationsecurity",
+    "timestamp": "2026-05-29T22:38:00+00:00",
+    "hashtags": [
+      "informationsecurity",
+      "first",
+      "cybersecurity",
+      "cwe",
+      "cve",
+      "vulnerabilitymanagement",
+      "vulnerability"
+    ],
+    "links": [
+      "https://www.youtube.com/playlist?list=PLWfD9RQVdJ6cKuu4Gr1uglJv_E5zfWh9R"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
+  },
+  {
+    "tweet_id": "2060481362742722957",
+    "author_handle": "cybermansec",
+    "author_display_name": "Cyberman",
+    "text": "Day 70/100\nTested a live target's search functionality- captured requests in Burp Suite and began tracing how user input is handled between the client, application and security controls.\n\nObserved modified search requests triggered a WAF block, which shifted the focus\n\n#BugBounty",
+    "timestamp": "2026-05-29T22:00:13+00:00",
+    "hashtags": [
+      "BugBounty"
+    ],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
   },
   {
     "tweet_id": "2060462253883687052",
@@ -145,7 +350,69 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:28:32"
+    "created_at": "2026-05-30 11:36:08"
+  },
+  {
+    "tweet_id": "2060457274435346745",
+    "author_handle": "HugoValters",
+    "author_display_name": "Hugo | DevOps | Cybersecurity \ud83c\uddf1\ud83c\uddfb",
+    "text": "#jetbrains #CVE https://t.co/q874awfrK0 #cvealert POC, Sigma, Yara rules available. Hope @jetbrains will patch it quickly and we will have Green fix in the database #CyberSec #cybersecurity #infosec #infosecurity #DevOps #Sysadmin #Developers",
+    "timestamp": "2026-05-29T20:24:30+00:00",
+    "hashtags": [
+      "Developers",
+      "jetbrains",
+      "infosec",
+      "cvealert",
+      "DevOps",
+      "cybersecurity",
+      "CyberSec",
+      "CVE",
+      "Sysadmin",
+      "infosecurity"
+    ],
+    "links": [
+      "https://www.valtersit.com/cve/CVE-2026-49384/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
+  },
+  {
+    "tweet_id": "2060441881096442283",
+    "author_handle": "moamenmahmodd",
+    "author_display_name": "Mo\u2019aa",
+    "text": "What should i do in this situation ? I do not have mediation request and h1 analyst everton is not responding since 23/4/2026 and i have posted too many comments. @Hacker0x01\n\n#bugbounty #hackerone https://t.co/L2Exy5QooS",
+    "timestamp": "2026-05-29T19:23:20+00:00",
+    "hashtags": [
+      "hackerone",
+      "bugbounty"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJgo96KWkAQz7BT.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
   },
   {
     "tweet_id": "2060440248773972110",
@@ -176,7 +443,73 @@
     "award_amount": null,
     "confidence_score": 0.52,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:28:32"
+    "created_at": "2026-05-30 11:36:08"
+  },
+  {
+    "tweet_id": "2060426771187564983",
+    "author_handle": "HugoValters",
+    "author_display_name": "Hugo | DevOps | Cybersecurity \ud83c\uddf1\ud83c\uddfb",
+    "text": "#Github has an #CVE #CveAlert workarround, yara, sigma and POC available https://t.co/Bz6o4cx7lo patch your systems before #hackernews #hackers havent hacked you #cybersecurity #infosecurity #InfoSec #DevSecOps #Devops #git #sysadmin #Developers #100DaysOfCode",
+    "timestamp": "2026-05-29T18:23:17+00:00",
+    "hashtags": [
+      "Developers",
+      "CveAlert",
+      "DevSecOps",
+      "InfoSec",
+      "cybersecurity",
+      "CVE",
+      "Devops",
+      "git",
+      "sysadmin",
+      "infosecurity",
+      "Github",
+      "hackers",
+      "hackernews",
+      "100DaysOfCode"
+    ],
+    "links": [
+      "https://www.valtersit.com/cve/CVE-2026-48501/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
+  },
+  {
+    "tweet_id": "2060407085615947792",
+    "author_handle": "theXSSrat",
+    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
+    "text": "Five business logic flaws. One chain. $999,999 cashed out.\n\nHere's exactly how it was done \u2192 https://t.co/P2MydBYUwk\n\n#infosec #bugbounty",
+    "timestamp": "2026-05-29T17:05:04+00:00",
+    "hashtags": [
+      "infosec",
+      "bugbounty"
+    ],
+    "links": [
+      "https://www.youtube.com/watch?v=GWCUtX4eju4"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 15,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": 999999.0,
+    "confidence_score": 0.61,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
   },
   {
     "tweet_id": "2060367573280236001",
@@ -207,7 +540,97 @@
     "award_amount": null,
     "confidence_score": 0.44,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:28:32"
+    "created_at": "2026-05-30 11:36:08"
+  },
+  {
+    "tweet_id": "2060348145553359078",
+    "author_handle": "v4rvl",
+    "author_display_name": "Vuk.Digital",
+    "text": "yay, I have received reputation points and increased my rating on the leaderboard on @HackenProof  https://t.co/l3naMNWtJx #hackenproofed #bugbounty",
+    "timestamp": "2026-05-29T13:10:51+00:00",
+    "hashtags": [
+      "bugbounty",
+      "hackenproofed"
+    ],
+    "links": [
+      "https://hackenproof.com/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
+  },
+  {
+    "tweet_id": "2060346175849455667",
+    "author_handle": "Sn1perSecurity",
+    "author_display_name": "Attack Surface Management | Sn1perSecurity",
+    "text": "\u23f0 Sn1per Professional 2026 is shipping NOW.\n\ud83c\udd93 Free upgrade for active license holders \ud83d\udc33 Docker-first install \ud83d\udd0c JSON API v1.0 \ud83c\udfaf Workspace Navigator\nFirst scan in under 20 minutes.\n\ud83d\udcd6 https://t.co/klZIi4JZoy\n#RedTeam #PenTesting #InfoSec",
+    "timestamp": "2026-05-29T13:03:02+00:00",
+    "hashtags": [
+      "RedTeam",
+      "InfoSec",
+      "PenTesting"
+    ],
+    "links": [
+      "https://sn1persecurity.com/wordpress/sn1per-professional-2026-release/"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
+  },
+  {
+    "tweet_id": "2060324620654493886",
+    "author_handle": "codevirussec",
+    "author_display_name": "Codevirus Security",
+    "text": "Ethical Hackers help organizations find security flaws before cybercriminals do.\n\n\ud83d\udd0d Pen Testing\n\ud83d\udd0d Vulnerability Assessment\n\n#EthicalHacking #CyberSecurity #PenTesting #InfoSec #NetworkSecurity #CyberDefense #CyberCareer #EthicalHacker #TechCareer #CodevirusAcademy https://t.co/vw4FQPtZcq",
+    "timestamp": "2026-05-29T11:37:23+00:00",
+    "hashtags": [
+      "EthicalHacking",
+      "CyberCareer",
+      "NetworkSecurity",
+      "CyberSecurity",
+      "InfoSec",
+      "EthicalHacker",
+      "CodevirusAcademy",
+      "CyberDefense",
+      "TechCareer",
+      "PenTesting"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJe-Tmha4AAGQPM.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
   },
   {
     "tweet_id": "2060280139439894545",
@@ -235,6 +658,93 @@
     "award_amount": 1500.0,
     "confidence_score": 0.8,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:28:32"
+    "created_at": "2026-05-30 11:36:08"
+  },
+  {
+    "tweet_id": "2060242810541109574",
+    "author_handle": "y198_nt",
+    "author_display_name": "y198",
+    "text": "Found an 8 year old RCE in MongoDB. Sadly, MongoDB had already found it internally.\nTechnical writeup after the patch is released.\nSad Friday...\n#bugbounty #0day #rce https://t.co/r6ZkEHVsqt",
+    "timestamp": "2026-05-29T06:12:18+00:00",
+    "hashtags": [
+      "0day",
+      "rce",
+      "bugbounty"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJdxwMrawAAmitC.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 170,
+    "retweet_count": 19,
+    "reply_count": 3,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.43,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
+  },
+  {
+    "tweet_id": "2060232983152583153",
+    "author_handle": "whithat444",
+    "author_display_name": "Ethical Hacker",
+    "text": "Discovered a High severity vulnerability on @AlibabaGroup @alibaba_cloud. Is there an active bug bounty program to report and get rewarded?\n\n#bugbounty #cybersecurity #Vulnerability #InfoSec #Hacking #SecurityResearch",
+    "timestamp": "2026-05-29T05:33:15+00:00",
+    "hashtags": [
+      "bugbounty",
+      "SecurityResearch",
+      "Vulnerability",
+      "InfoSec",
+      "cybersecurity",
+      "Hacking"
+    ],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 27,
+    "retweet_count": 0,
+    "reply_count": 5,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.36,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
+  },
+  {
+    "tweet_id": "2060227653962170583",
+    "author_handle": "SiliconITHub",
+    "author_display_name": "Silicon IT Hub",
+    "text": "AI-Powered Penetration Testing is redefining cybersecurity, faster threat detection, smarter defense, and zero room for cybercriminals! \n\n#cybersecurity #AIDevelopment #Pentesting\n\nhttps://t.co/3iz1gdtW9F https://t.co/S8pY1oboLh",
+    "timestamp": "2026-05-29T05:12:04+00:00",
+    "hashtags": [
+      "AIDevelopment",
+      "cybersecurity",
+      "Pentesting"
+    ],
+    "links": [
+      "https://bit.ly/4vkBPhW"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJdmIDlaMAASard.png"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:36:09"
   }
 ]
