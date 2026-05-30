@@ -1,14 +1,44 @@
 [
   {
+    "tweet_id": "2060672646598250892",
+    "author_handle": "thetirthparmar",
+    "author_display_name": "Tirth Parmar \ud83e\udeef",
+    "text": "After #CBSE, we found RCE + full server control including the database on another subdomain of Onmark\n\nWe didn\u2019t perform any harmful actions no data was touched or leaked.\n\nThis is just another proof that serious vulnerabilities still exist.\n\nReported responsibly.\n\n#cybersecurity https://t.co/2RiVgQOJeY",
+    "timestamp": "2026-05-30T10:40:19+00:00",
+    "hashtags": [
+      "CBSE",
+      "cybersecurity"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJj617UbEAA4y3y.jpg",
+      "https://pbs.twimg.com/media/HJj617UaUAARaQV.jpg",
+      "https://pbs.twimg.com/media/HJj617abMAAl0mH.jpg",
+      "https://pbs.twimg.com/media/HJj617dbgAAlTj2.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 60,
+    "retweet_count": 24,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.38,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:28:32"
+  },
+  {
     "tweet_id": "2060647805874749950",
     "author_handle": "IamGokulesh",
     "author_display_name": "hiddendomy",
     "text": "Forgot Password feature\n\nChanged only the Success to true parameter\n\nPassword reset link got delivered to another account\n\nNo token binding\nNo ownership validation\nJust trust\n\nSometimes account takeover\n\nstarts with a single overlooked parameter\n\n#bugbounty #appsec #cybersecurity https://t.co/VPqyyLk1eo",
     "timestamp": "2026-05-30T09:01:36+00:00",
     "hashtags": [
+      "appsec",
       "cybersecurity",
-      "bugbounty",
-      "appsec"
+      "bugbounty"
     ],
     "links": [],
     "media_urls": [
@@ -25,29 +55,31 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
+    "created_at": "2026-05-30 11:28:32"
   },
   {
-    "tweet_id": "2060631560794030522",
-    "author_handle": "m0x_mw4_d",
-    "author_display_name": "m0x_mw4_d",
-    "text": "\ud83d\udecd\ufe0f Practice IDOR vulnerabilities like a pro\n\nJust spun up IDOR BugBounty Labs \u2013 a realistic e\u2011commerce app intentionally vulnerable to Insecure Direct Object Reference attacks.\nhttps://t.co/vuWRRSBi9o\n\n#IDOR #BugBounty #InfoSec #WebSecurity #EthicalHacking",
-    "timestamp": "2026-05-30T07:57:03+00:00",
+    "tweet_id": "2060613979790352538",
+    "author_handle": "bsidesahmedabad",
+    "author_display_name": "Security BSides Ahmedabad",
+    "text": "\ud83d\udea8 1 Day Left. One Last Exploit. \u26a1\n\nEarly Bird access closes soon. Patch your FOMO before it\u2019s too late.\n\n\ud83c\udf9f\ufe0f Scan the QR or jack in here \u27a1\ufe0f https://t.co/3Aeti8F2QE\n\n#BSidesAhmedabad #CyberSecurity #InfoSec #RegistrationOpen #EarlyBirdSale https://t.co/7VNfgGFEGR",
+    "timestamp": "2026-05-30T06:47:11+00:00",
     "hashtags": [
-      "IDOR",
-      "BugBounty",
+      "RegistrationOpen",
       "InfoSec",
-      "WebSecurity",
-      "EthicalHacking"
+      "EarlyBirdSale",
+      "CyberSecurity",
+      "BSidesAhmedabad"
     ],
     "links": [
-      "http://github.com/cyberjsonp/idor-express-lab.git"
+      "https://secwiser.com/bsides-ahmedabad-2026"
     ],
-    "media_urls": [],
-    "has_image": 0,
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJjFfVGbwAEAWLL.jpg"
+    ],
+    "has_image": 1,
     "has_video": 0,
-    "like_count": 1,
-    "retweet_count": 0,
+    "like_count": 4,
+    "retweet_count": 3,
     "reply_count": 0,
     "is_thread": 0,
     "thread_id": null,
@@ -55,429 +87,127 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
+    "created_at": "2026-05-30 11:28:32"
   },
   {
-    "tweet_id": "2060622556281876750",
-    "author_handle": "HugoValters",
-    "author_display_name": "Hugo | DevOps | Cybersecurity \ud83c\uddf1\ud83c\uddfb",
-    "text": "#Openclaw has an active #CVE #CVEalert More information, POC Labs based in isolated docker, SIGMA, YARA Rules and etc available https://t.co/Ib1ZypdrNO #devops #devsecops #sysadmin #infosec #cybersecurity",
-    "timestamp": "2026-05-30T07:21:16+00:00",
+    "tweet_id": "2060604509097795594",
+    "author_handle": "GrapheneOS",
+    "author_display_name": "GrapheneOS",
+    "text": "Auditor app version 92 released:\n\nhttps://t.co/PCP7t19e2n\n\nSee the linked release notes for a summary of the improvements over the previous release and a link to the full changelog.\n\nForum discussion thread:\n\nhttps://t.co/U55EvLlAaz\n\n#GrapheneOS #privacy #security #android",
+    "timestamp": "2026-05-30T06:09:33+00:00",
     "hashtags": [
-      "cybersecurity",
-      "CVEalert",
-      "devops",
-      "CVE",
-      "devsecops",
-      "infosec",
-      "sysadmin",
-      "Openclaw"
+      "GrapheneOS",
+      "security",
+      "android",
+      "privacy"
     ],
     "links": [
-      "https://www.valtersit.com/cve/CVE-2026-35674/"
+      "https://github.com/GrapheneOS/Auditor/releases/tag/92",
+      "https://discuss.grapheneos.org/d/35939-auditor-app-version-92-released"
     ],
     "media_urls": [],
     "has_image": 0,
     "has_video": 0,
-    "like_count": 0,
-    "retweet_count": 0,
-    "reply_count": 0,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [],
-    "award_amount": null,
-    "confidence_score": 0.3,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060615187187798189",
-    "author_handle": "aislabsai",
-    "author_display_name": "AISLabs",
-    "text": "Plan B scoring subtracts 10% for rejected or disputed CVEs.\n\nMost tools still rank them as-is.\n\nDon't burn a maintenance window on a CVE the vendor says isn't real.\n\nhttps://t.co/cZxn7wvr2W\n\n#vulnerabilitymanagement #CVE",
-    "timestamp": "2026-05-30T06:51:59+00:00",
-    "hashtags": [
-      "vulnerabilitymanagement",
-      "CVE"
-    ],
-    "links": [
-      "https://aislabs.ai/cve-priority-kit/"
-    ],
-    "media_urls": [],
-    "has_image": 0,
-    "has_video": 0,
-    "like_count": 0,
-    "retweet_count": 0,
-    "reply_count": 0,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [],
-    "award_amount": null,
-    "confidence_score": 0.3,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060559996593869009",
-    "author_handle": "bugbountywizard",
-    "author_display_name": "Bug bounty wizard",
-    "text": "Broken Rate Limit: From Non-Issue to Valid Vulnerability Worth $$$ https://t.co/rplgnKXqiB #bugbounty #bugbountytips #bugbountytip",
-    "timestamp": "2026-05-30T03:12:41+00:00",
-    "hashtags": [
-      "bugbountytip",
-      "bugbounty",
-      "bugbountytips"
-    ],
-    "links": [
-      "https://medium.com/@bhavishthakral123/broken-rate-limit-from-non-issue-to-valid-vulnerability-worth-692fdc4fa8e7"
-    ],
-    "media_urls": [],
-    "has_image": 0,
-    "has_video": 0,
-    "like_count": 14,
+    "like_count": 55,
     "retweet_count": 3,
-    "reply_count": 0,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [],
-    "award_amount": null,
-    "confidence_score": 0.41,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060558166270546074",
-    "author_handle": "DFIR_Lab",
-    "author_display_name": "DFIR Lab",
-    "text": "\ud83d\udea8 HIGH severity Linux kernel CVE-2026-31395 (CVSS 7.1)\n\nOOB access in bnxt_en driver allows malicious NIC to corrupt kernel memory via unbounded firmware trace type field.\n\nPatch immediately.\n\n#CVE #Vulnerability #PatchNow https://t.co/xRnrkIt01l",
-    "timestamp": "2026-05-30T03:05:24+00:00",
-    "hashtags": [
-      "CVE",
-      "Vulnerability",
-      "PatchNow"
-    ],
-    "links": [],
-    "media_urls": [
-      "https://pbs.twimg.com/media/HJiSu4PXAAIiPwD.jpg"
-    ],
-    "has_image": 1,
-    "has_video": 0,
-    "like_count": 0,
-    "retweet_count": 0,
-    "reply_count": 0,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [
-      "CVE-2026-31395"
-    ],
-    "award_amount": null,
-    "confidence_score": 0.55,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060553109605163237",
-    "author_handle": "DFIR_Lab",
-    "author_display_name": "DFIR Lab",
-    "text": "\ud83d\udea8 HIGH: CVE-2026-31389 (CVSS 7.8)\n\nLinux kernel SPI subsystem use-after-free flaw enables local privilege escalation. Affects controller registration failure path.\n\nPatch immediately.\n\n#CVE #Vulnerability #PatchNow #Linux https://t.co/GwvKHM0CKz",
-    "timestamp": "2026-05-30T02:45:19+00:00",
-    "hashtags": [
-      "Linux",
-      "CVE",
-      "Vulnerability",
-      "PatchNow"
-    ],
-    "links": [],
-    "media_urls": [
-      "https://pbs.twimg.com/media/HJiOIkNXUAQLu63.jpg"
-    ],
-    "has_image": 1,
-    "has_video": 0,
-    "like_count": 0,
-    "retweet_count": 0,
-    "reply_count": 0,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [
-      "CVE-2026-31389"
-    ],
-    "award_amount": null,
-    "confidence_score": 0.5,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060549389006053533",
-    "author_handle": "spencer_5cent",
-    "author_display_name": "Jon Nichols",
-    "text": "Yay, I was awarded a $1,500 bounty on @Hacker0x01! https://t.co/4is653sbYu #TogetherWeHitHarder #hackerone",
-    "timestamp": "2026-05-30T02:30:32+00:00",
-    "hashtags": [
-      "hackerone",
-      "TogetherWeHitHarder"
-    ],
-    "links": [
-      "https://hackerone.com/spencer5cent"
-    ],
-    "media_urls": [],
-    "has_image": 0,
-    "has_video": 0,
-    "like_count": 43,
-    "retweet_count": 0,
-    "reply_count": 1,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [],
-    "award_amount": 1500.0,
-    "confidence_score": 0.62,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060548086322106824",
-    "author_handle": "DFIR_Lab",
-    "author_display_name": "DFIR Lab",
-    "text": "\ud83d\udea8 HIGH SEVERITY: CVE-2026-23466 (CVSS 7.8)\n\nLinux kernel drm/xe driver flaw allows local privilege escalation via GGTT MMIO access protection bypass.\n\nAffected: Linux kernel drm/xe module\nPatch available.\n\n#CVE #Vulnerability #PatchNow https://t.co/Gr4qWqt3S6",
-    "timestamp": "2026-05-30T02:25:21+00:00",
-    "hashtags": [
-      "CVE",
-      "Vulnerability",
-      "PatchNow"
-    ],
-    "links": [],
-    "media_urls": [
-      "https://pbs.twimg.com/media/HJiJkLVXoAEk4N_.jpg"
-    ],
-    "has_image": 1,
-    "has_video": 0,
-    "like_count": 0,
-    "retweet_count": 0,
-    "reply_count": 0,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [
-      "CVE-2026-23466"
-    ],
-    "award_amount": null,
-    "confidence_score": 0.55,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060490869661106214",
-    "author_handle": "CweCapec",
-    "author_display_name": "CWE Program",
-    "text": "All of the videos from \u201cVulnCon 2026\u201d are now available on YouTube!\nhttps://t.co/3YcMOUbeM1\n#cwe #cve #first #vulnerabilitymanagement #vulnerability #cybersecurity #informationsecurity",
-    "timestamp": "2026-05-29T22:38:00+00:00",
-    "hashtags": [
-      "cybersecurity",
-      "informationsecurity",
-      "first",
-      "vulnerability",
-      "vulnerabilitymanagement",
-      "cve",
-      "cwe"
-    ],
-    "links": [
-      "https://www.youtube.com/playlist?list=PLWfD9RQVdJ6cKuu4Gr1uglJv_E5zfWh9R"
-    ],
-    "media_urls": [],
-    "has_image": 0,
-    "has_video": 0,
-    "like_count": 0,
-    "retweet_count": 0,
-    "reply_count": 0,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [],
-    "award_amount": null,
-    "confidence_score": 0.3,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060457274435346745",
-    "author_handle": "HugoValters",
-    "author_display_name": "Hugo | DevOps | Cybersecurity \ud83c\uddf1\ud83c\uddfb",
-    "text": "#jetbrains #CVE https://t.co/q874awfrK0 #cvealert POC, Sigma, Yara rules available. Hope @jetbrains will patch it quickly and we will have Green fix in the database #CyberSec #cybersecurity #infosec #infosecurity #DevOps #Sysadmin #Developers",
-    "timestamp": "2026-05-29T20:24:30+00:00",
-    "hashtags": [
-      "Sysadmin",
-      "cybersecurity",
-      "DevOps",
-      "CyberSec",
-      "jetbrains",
-      "CVE",
-      "infosec",
-      "cvealert",
-      "Developers",
-      "infosecurity"
-    ],
-    "links": [
-      "https://www.valtersit.com/cve/CVE-2026-49384/"
-    ],
-    "media_urls": [],
-    "has_image": 0,
-    "has_video": 0,
-    "like_count": 0,
-    "retweet_count": 0,
-    "reply_count": 0,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [],
-    "award_amount": null,
-    "confidence_score": 0.3,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060428488767603018",
-    "author_handle": "OrizonCyber",
-    "author_display_name": "Orizon",
-    "text": "\ud83d\udea8 CVE-2026-4290 \u2014 CVSS 9.1/10\n\n\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\n\nThe WP Travel Pro plugin for WordPress is vulnerable to arbitrary user deletion via the...\n\nSeverity: CRITICAL\n\nPatch now.\n#cybersecurity #CVE https://t.co/GcanhEJyU4",
-    "timestamp": "2026-05-29T18:30:07+00:00",
-    "hashtags": [
-      "CVE",
-      "cybersecurity"
-    ],
-    "links": [],
-    "media_urls": [
-      "https://pbs.twimg.com/media/HJgcyn6XkAMPom5.jpg"
-    ],
-    "has_image": 1,
-    "has_video": 0,
-    "like_count": 0,
-    "retweet_count": 0,
     "reply_count": 2,
     "is_thread": 0,
     "thread_id": null,
-    "cve_ids": [
-      "CVE-2026-4290"
-    ],
-    "award_amount": null,
-    "confidence_score": 0.55,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060426771187564983",
-    "author_handle": "HugoValters",
-    "author_display_name": "Hugo | DevOps | Cybersecurity \ud83c\uddf1\ud83c\uddfb",
-    "text": "#Github has an #CVE #CveAlert workarround, yara, sigma and POC available https://t.co/Bz6o4cx7lo patch your systems before #hackernews #hackers havent hacked you #cybersecurity #infosecurity #InfoSec #DevSecOps #Devops #git #sysadmin #Developers #100DaysOfCode",
-    "timestamp": "2026-05-29T18:23:17+00:00",
-    "hashtags": [
-      "hackers",
-      "cybersecurity",
-      "infosecurity",
-      "100DaysOfCode",
-      "InfoSec",
-      "CVE",
-      "git",
-      "hackernews",
-      "Github",
-      "Devops",
-      "Developers",
-      "CveAlert",
-      "DevSecOps",
-      "sysadmin"
-    ],
-    "links": [
-      "https://www.valtersit.com/cve/CVE-2026-48501/"
-    ],
-    "media_urls": [],
-    "has_image": 0,
-    "has_video": 0,
-    "like_count": 1,
-    "retweet_count": 0,
-    "reply_count": 0,
-    "is_thread": 0,
-    "thread_id": null,
     "cve_ids": [],
     "award_amount": null,
-    "confidence_score": 0.3,
+    "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
+    "created_at": "2026-05-30 11:28:32"
   },
   {
-    "tweet_id": "2060407085615947792",
-    "author_handle": "theXSSrat",
-    "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
-    "text": "Five business logic flaws. One chain. $999,999 cashed out.\n\nHere's exactly how it was done \u2192 https://t.co/P2MydBYUwk\n\n#infosec #bugbounty",
-    "timestamp": "2026-05-29T17:05:04+00:00",
+    "tweet_id": "2060462253883687052",
+    "author_handle": "SuperMeisty",
+    "author_display_name": "Meisty",
+    "text": "I am really enjoying working through the mini pro labs from Hack the Box.  Tea was a fun mix of git, active directory and windows updates.  Really enjoyed the devops aspect of this one and using what you find to escalate privileges.  #hackthebox #ethicalhacking #pentesting https://t.co/c3HhVpgqAJ",
+    "timestamp": "2026-05-29T20:44:17+00:00",
     "hashtags": [
-      "infosec",
-      "bugbounty"
-    ],
-    "links": [
-      "https://www.youtube.com/watch?v=GWCUtX4eju4"
-    ],
-    "media_urls": [],
-    "has_image": 0,
-    "has_video": 0,
-    "like_count": 15,
-    "retweet_count": 0,
-    "reply_count": 1,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [],
-    "award_amount": 999999.0,
-    "confidence_score": 0.61,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060348145553359078",
-    "author_handle": "v4rvl",
-    "author_display_name": "Vuk.Digital",
-    "text": "yay, I have received reputation points and increased my rating on the leaderboard on @HackenProof  https://t.co/l3naMNWtJx #hackenproofed #bugbounty",
-    "timestamp": "2026-05-29T13:10:51+00:00",
-    "hashtags": [
-      "hackenproofed",
-      "bugbounty"
-    ],
-    "links": [
-      "https://hackenproof.com/"
-    ],
-    "media_urls": [],
-    "has_image": 0,
-    "has_video": 0,
-    "like_count": 0,
-    "retweet_count": 0,
-    "reply_count": 1,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [],
-    "award_amount": null,
-    "confidence_score": 0.3,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060343822669037817",
-    "author_handle": "wanahmadqais007",
-    "author_display_name": "El Professor",
-    "text": "Since they downgraded my severity from P2 - High to P4 - Informational. I quickly don't give them a chance to deny my P2 severity by opening RaR for re-evaluate my report. \n\nNOW, they need to bear the consequence for my lastest P2 - Severity report.\ud83d\ude02\n\n#BugBounty #BugCrowd https://t.co/2Krru2EqfH",
-    "timestamp": "2026-05-29T12:53:41+00:00",
-    "hashtags": [
-      "BugBounty",
-      "BugCrowd"
+      "ethicalhacking",
+      "hackthebox",
+      "pentesting"
     ],
     "links": [],
     "media_urls": [
-      "https://pbs.twimg.com/media/HJfO2y2aoAAkK3I.jpg"
+      "https://pbs.twimg.com/media/HJg7dzbXsAIHBlD.jpg"
     ],
     "has_image": 1,
     "has_video": 0,
-    "like_count": 28,
-    "retweet_count": 0,
-    "reply_count": 0,
+    "like_count": 18,
+    "retweet_count": 1,
+    "reply_count": 2,
     "is_thread": 0,
     "thread_id": null,
     "cve_ids": [],
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
+    "created_at": "2026-05-30 11:28:32"
+  },
+  {
+    "tweet_id": "2060440248773972110",
+    "author_handle": "CISACyber",
+    "author_display_name": "CISA Cyber",
+    "text": "\ud83d\udee1\ufe0f We added Palo Alto Networks PAN-OS authentication bypass vulnerability CVE-2026-0257 to our KEV Catalog. Visit https://t.co/myxOwap1Tf for more information. #Cybersecurity #InfoSec https://t.co/iqNABP4rQ9",
+    "timestamp": "2026-05-29T19:16:51+00:00",
+    "hashtags": [
+      "Cybersecurity",
+      "InfoSec"
+    ],
+    "links": [
+      "https://go.dhs.gov/Z3Q"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJgneH6XoAQtmZ8.png"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 40,
+    "retweet_count": 14,
+    "reply_count": 4,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-0257"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.52,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:28:32"
+  },
+  {
+    "tweet_id": "2060367573280236001",
+    "author_handle": "OriginalSicksec",
+    "author_display_name": "SickSec \ud83c\uddf2\ud83c\udde6 \ud83c\uddf5\ud83c\uddf8",
+    "text": "It just works every-time\ud83e\udd23\ud83e\udd23\nhttps://t.co/pNPyatnwk1 \n\nSignup and \"start hacking smarter not harder \"\n#hackerone #bugbounty https://t.co/amn9Nfftai",
+    "timestamp": "2026-05-29T14:28:03+00:00",
+    "hashtags": [
+      "bugbounty",
+      "hackerone"
+    ],
+    "links": [
+      "https://bountylens.com"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJflGw6aMAAd008.jpg",
+      "https://pbs.twimg.com/media/HJflBfXbMAATuyf.jpg",
+      "https://pbs.twimg.com/media/HJflBfcaQAAj8Yx.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 181,
+    "retweet_count": 9,
+    "reply_count": 7,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.44,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-30 11:28:32"
   },
   {
     "tweet_id": "2060280139439894545",
@@ -486,8 +216,8 @@
     "text": "17 year old  , got paid $1,500 to crash a popular monitoring agent with one packet. unauth remote memory exhaustion, got a cve too on my name\n#bugbounty #infosec #hackerone https://t.co/H0y5a9E3iM",
     "timestamp": "2026-05-29T08:40:38+00:00",
     "hashtags": [
-      "hackerone",
       "infosec",
+      "hackerone",
       "bugbounty"
     ],
     "links": [],
@@ -496,7 +226,7 @@
     ],
     "has_image": 1,
     "has_video": 0,
-    "like_count": 343,
+    "like_count": 344,
     "retweet_count": 10,
     "reply_count": 12,
     "is_thread": 0,
@@ -505,93 +235,6 @@
     "award_amount": 1500.0,
     "confidence_score": 0.8,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060232983152583153",
-    "author_handle": "whithat444",
-    "author_display_name": "Ethical Hacker",
-    "text": "Discovered a High severity vulnerability on @AlibabaGroup @alibaba_cloud. Is there an active bug bounty program to report and get rewarded?\n\n#bugbounty #cybersecurity #Vulnerability #InfoSec #Hacking #SecurityResearch",
-    "timestamp": "2026-05-29T05:33:15+00:00",
-    "hashtags": [
-      "SecurityResearch",
-      "cybersecurity",
-      "InfoSec",
-      "Hacking",
-      "bugbounty",
-      "Vulnerability"
-    ],
-    "links": [],
-    "media_urls": [],
-    "has_image": 0,
-    "has_video": 0,
-    "like_count": 26,
-    "retweet_count": 0,
-    "reply_count": 5,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [],
-    "award_amount": null,
-    "confidence_score": 0.36,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060193846063923370",
-    "author_handle": "dailycve",
-    "author_display_name": "DailyCVE",
-    "text": "\ud83d\udd34 #Windows Admin Center, Missing Authorization, #CVE-2026-35438 (High) -DC-May2026-39\n\nhttps://t.co/yt6lsZBl5O",
-    "timestamp": "2026-05-29T02:57:44+00:00",
-    "hashtags": [
-      "CVE",
-      "Windows"
-    ],
-    "links": [
-      "https://dailycve.com/windows-admin-center-missing-authorization-cve-2026-35438-high-dc-may2026-39/"
-    ],
-    "media_urls": [],
-    "has_image": 0,
-    "has_video": 0,
-    "like_count": 0,
-    "retweet_count": 0,
-    "reply_count": 0,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [
-      "CVE-2026-35438"
-    ],
-    "award_amount": null,
-    "confidence_score": 0.45,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
-  },
-  {
-    "tweet_id": "2060186888921559189",
-    "author_handle": "OrizonCyber",
-    "author_display_name": "Orizon",
-    "text": "\ud83d\udea8 CVE-2026-46822 \u2014 CVSS 9.9/10\n\n\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\nVulnerability in the Oracle iAssets product of Oracle E-Business Suite (component: Internal Operations).  Supported...\n\nSeverity: CRITICAL\n\nPatch now.\n#cybersecurity #CVE https://t.co/iNPtJGW0WI",
-    "timestamp": "2026-05-29T02:30:05+00:00",
-    "hashtags": [
-      "CVE",
-      "cybersecurity"
-    ],
-    "links": [],
-    "media_urls": [
-      "https://pbs.twimg.com/media/HJdBDpRW8AIMT7z.jpg"
-    ],
-    "has_image": 1,
-    "has_video": 0,
-    "like_count": 2,
-    "retweet_count": 0,
-    "reply_count": 2,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [
-      "CVE-2026-46822"
-    ],
-    "award_amount": null,
-    "confidence_score": 0.55,
-    "source_query": "scheduled_search",
-    "created_at": "2026-05-30 11:25:15"
+    "created_at": "2026-05-30 11:28:32"
   }
 ]
