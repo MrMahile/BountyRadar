@@ -131,6 +131,9 @@ def run(ctx, once, query, no_send, interval):
         scorer = TweetScorer()
         dispatcher = Dispatcher(make_dispatcher_config(cfg))
 
+        # Load existing tweets from JSON so they're not lost on each run
+        load_existing_tweets(scraper.db)
+
         async def _run():
             results = await scraper.search(query=query)
             new_count = scraper.db.insert_tweets_batch(results)
@@ -165,6 +168,17 @@ def run(ctx, once, query, no_send, interval):
         import time
         time.sleep(interval_mins * 60)
 
+
+def load_existing_tweets(store):
+    """Load tweets from data/tweets.json into DB so old tweets survive reruns."""
+    import os
+    if not os.path.exists("data/tweets.json"):
+        return
+    with open("data/tweets.json") as f:
+        existing = json.load(f)
+    for t in existing:
+        store.insert_tweet(t)
+    click.echo(f"Loaded {len(existing)} existing tweets into DB")
 
 def export_tweets_json(store):
     """Export all tweets from SQLite to data/tweets.json for the dashboard."""
