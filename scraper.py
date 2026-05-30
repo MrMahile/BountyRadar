@@ -44,7 +44,7 @@ class ScraperConfig:
     ])
     search_mode: str = "top"  # "top" | "latest" | "people"
     search_interval_mins: int = 30
-    max_tweets_per_search: int = 50
+    max_tweets_per_search: int = 150
     since_days: int = 1
     since_date: str = ""
     until_date: str = ""
