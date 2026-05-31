@@ -1,5 +1,440 @@
 [
   {
+    "tweet_id": "2060928819209633825",
+    "author_handle": "dirtycoder0124",
+    "author_display_name": "dirty0124",
+    "text": "Always open to hunt together. Dm for collab.\n#bugbounty",
+    "timestamp": "2026-05-31T03:38:15+00:00",
+    "hashtags": [
+      "bugbounty"
+    ],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060920539120603569",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH SEVERITY: CVE-2026-45251 (CVSS 7.8)\n\nUse-after-free vulnerability in file descriptor handling allows unprivileged local users to escalate to superuser privileges. Affects poll(2)/select(2) system calls.\n\nPatch immediately.\n\n#CVE #Vulnerability #PatchNow https://t.co/wcRBzukP7T",
+    "timestamp": "2026-05-31T03:05:21+00:00",
+    "hashtags": [
+      "CVE",
+      "PatchNow",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJncTyPWwAMxvVM.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-45251"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060919845995372562",
+    "author_handle": "saurabhh_11",
+    "author_display_name": "Saurabh Tripathi",
+    "text": "I earned $1,000 for my submission on @bugcrowd. Same program and they again downgraded P2 to P3 without any solid reasoning. \n#ItTakesACrowd #bughunting #bugbountytips https://t.co/xZFZxSbdhm",
+    "timestamp": "2026-05-31T03:02:35+00:00",
+    "hashtags": [
+      "bugbountytips",
+      "bughunting",
+      "ItTakesACrowd"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJnbYvma0AA4ykI.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 2,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": 1000.0,
+    "confidence_score": 0.65,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060915504831672788",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH severity CVE-2026-39461 (CVSS 8.8) affects libcasper(3) in FreeBSD. Stack corruption flaw allows local privilege escalation to root via file descriptor manipulation. Patch immediately if running setuid root apps. #CVE #Vulnerability #PatchNow #ThreatIntel https://t.co/TBKpV3svZN",
+    "timestamp": "2026-05-31T02:45:20+00:00",
+    "hashtags": [
+      "ThreatIntel",
+      "CVE",
+      "PatchNow",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJnXuvDWoAEYro-.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-39461"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060910456705822933",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH severity CVE-2026-28764 (CVSS 7.8)\n\nHeap-based buffer overflow in MediaArea MediaInfoLib LXF element parsing. Local attack vector, no privileges required.\n\nPatch immediately if using MediaInfoLib.\n\n#CVE #Vulnerability #PatchNow https://t.co/TjDlOVkZCY",
+    "timestamp": "2026-05-31T02:25:17+00:00",
+    "hashtags": [
+      "CVE",
+      "PatchNow",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJnTI5LWgAAZMXc.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-28764"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060905437549994195",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH: CVE-2026-45250 (CVSS 7.8) - Stack buffer overflow in setcred(2) system call allows unprivileged local users to gain elevated privileges via kernel code execution. Patch immediately. #CVE #Vulnerability #PatchNow #ThreatIntel https://t.co/Rvy7f1dPFm",
+    "timestamp": "2026-05-31T02:05:20+00:00",
+    "hashtags": [
+      "ThreatIntel",
+      "CVE",
+      "PatchNow",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJnOkwYXMAEElO4.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-45250"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.5,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060900400681586864",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH SEVERITY: CVE-2026-44068 (CVSS 7.6)\n\nNetatalk 2.1.0-4.4.2 vulnerable to path traversal via crafted extended attributes. Remote authenticated attackers can write files outside intended namespace.\n\nPatch immediately.\n\n#CVE #Vulnerability #PatchNow https://t.co/ddrN8UVH5X",
+    "timestamp": "2026-05-31T01:45:19+00:00",
+    "hashtags": [
+      "CVE",
+      "PatchNow",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJnJ_jyX0AM_WMo.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-44068"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060895364371132471",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH Severity: CVE-2026-44066 (CVSS 7.1)\n\nHeap out-of-bounds reads in Netatalk 3.1.0-4.4.2 Spotlight RPC code. Remote authenticated attackers can steal sensitive data or disrupt service. Patch immediately.\n\n#CVE #Vulnerability #PatchNow #ThreatIntel https://t.co/THrizoS8B9",
+    "timestamp": "2026-05-31T01:25:19+00:00",
+    "hashtags": [
+      "ThreatIntel",
+      "CVE",
+      "PatchNow",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJnFaajXMAEuWwu.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-44066"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060890330627485961",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH Severity: CVE-2026-44064 (CVSS 7.1)\n\nOut-of-bounds read in Netatalk 1.3-4.4.2 ASP session handling. Adjacent attackers can cause DoS or info disclosure via crafted requests. Patch immediately.\n\n#CVE #Vulnerability #PatchNow #ThreatIntel #DFIR https://t.co/AggSkDFbKe",
+    "timestamp": "2026-05-31T01:05:18+00:00",
+    "hashtags": [
+      "CVE",
+      "ThreatIntel",
+      "Vulnerability",
+      "DFIR",
+      "PatchNow"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJnA1aTXAAMXzE-.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-44064"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060885627470504169",
+    "author_handle": "DuckyWantDucky",
+    "author_display_name": "DuckywantDucky",
+    "text": "Day 190/365 of the Until get 10.0 Critical report\n\ud83d\udce4 Reports Submitted:- 0\n\ud83d\udfe0  triaged - 3\n\ud83d\udfe6 program review - 0\n\ud83d\udfe4 Duplicate - 0\n\ud83d\udfe3 New - 1\n\u26aa\ufe0f Info - 0 \n\ud83d\udcb0 Paid - $200   \n\ud83d\udcbb Worked- 10 HOUR  \n#BugBounty",
+    "timestamp": "2026-05-31T00:46:37+00:00",
+    "hashtags": [
+      "BugBounty"
+    ],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 4,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": 200.0,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060885299798954195",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH SEVERITY: CVE-2026-44062 (CVSS 7.5)\n\nNetatalk 2.0.4-4.4.2 vulnerable to RCE via missing bounds check. Remote authenticated attackers can execute arbitrary code.\n\nPatch immediately.\n\n#CVE #Vulnerability #PatchNow https://t.co/5Tn9CMbZCm",
+    "timestamp": "2026-05-31T00:45:19+00:00",
+    "hashtags": [
+      "CVE",
+      "PatchNow",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJm8QlBXYAEnjCJ.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-44062"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060884411772497934",
+    "author_handle": "FosoTweets",
+    "author_display_name": "FoSo | Cyber",
+    "text": "50 cybersecurity resources:\n\n#Bugbounty #Cybersecurity #hacking #OSINT \n\nhttps://t.co/BrMBdvFfln https://t.co/hyEOTSkbPm",
+    "timestamp": "2026-05-31T00:41:47+00:00",
+    "hashtags": [
+      "Bugbounty",
+      "OSINT",
+      "hacking",
+      "Cybersecurity"
+    ],
+    "links": [
+      "https://www.celerium.com/50-cybersecurity-resources"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJm7c1QWwAIZse2.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060860569343688745",
+    "author_handle": "BugBountyDEFCON",
+    "author_display_name": "Bug Bounty Village",
+    "text": "\ud83d\udea8Only 24 hours remain\ud83d\udea8to send in your CFP for Bug Bounty Village at @defcon 2026! We've had one extension. There will not be another! \u2620\ufe0f \n\nShare your knowledge, empower the bug bounty community! \n\n https://t.co/9ILCZzAfqd \n\n#bugbounty #defcon https://t.co/iUnMEoas52",
+    "timestamp": "2026-05-30T23:07:03+00:00",
+    "hashtags": [
+      "bugbounty",
+      "defcon"
+    ],
+    "links": [
+      "http://bugbountydefcon.com/call-for-papers"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/ext_tw_video_thumb/2060860558325223428/pu/img/DZmjzCwT-z3xGbR-.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 1,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060855196243079603",
+    "author_handle": "Ab1sOL4",
+    "author_display_name": "Abis",
+    "text": "Day 91/100 \ud83d\ude80\nToday, I honestly wasn't in the mood to hunt on any target. Instead, I spent my time reading vulnerability reports and bug bounty write-ups without reproducing them.\n\n#CyberSecurity #BugBounty #InfoSec #EthicalHacking #VulnerabilityResearch #LearningJourney",
+    "timestamp": "2026-05-30T22:45:42+00:00",
+    "hashtags": [
+      "InfoSec",
+      "BugBounty",
+      "CyberSecurity",
+      "VulnerabilityResearch",
+      "EthicalHacking",
+      "LearningJourney"
+    ],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060841666911653983",
+    "author_handle": "MatusK279",
+    "author_display_name": "MatusK",
+    "text": "I submitted a confirmed Critical Blockchain/DLT vuln to Immunefi. After validation, they applied an unpublished project change to decrease the reward by 10x. WTF?\n\nIf hidden terms override public bounty pages, researchers are not protected \u2014 projects are.\n\n#bugbounty #Immunefi",
+    "timestamp": "2026-05-30T21:51:56+00:00",
+    "hashtags": [
+      "bugbounty",
+      "Immunefi"
+    ],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 5,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
     "tweet_id": "2060784738810400814",
     "author_handle": "theXSSrat",
     "author_display_name": "The XSS Rat - Proud XSS N00b :-)",
@@ -26,7 +461,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060777233107603654",
@@ -53,7 +488,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060769287946604622",
@@ -80,7 +515,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060768241568334215",
@@ -109,7 +544,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060763830108483820",
@@ -136,7 +571,34 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
+  },
+  {
+    "tweet_id": "2060758330700623899",
+    "author_handle": "cobalt_io",
+    "author_display_name": "Cobalt",
+    "text": "How fast do you resolve vulnerabilities? Our 2026 State of Pentesting Report shows a 25x speed gap between leaders and others, plus a surge in AI-related risks. Get the insights: https://t.co/s3KjL980x9 #Cybersecurity #Pentesting",
+    "timestamp": "2026-05-30T16:20:47+00:00",
+    "hashtags": [
+      "Pentesting",
+      "Cybersecurity"
+    ],
+    "links": [
+      "https://hubs.la/Q04jrNkg0"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
   },
   {
     "tweet_id": "2060754953400930817",
@@ -163,7 +625,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060748725673464257",
@@ -193,7 +655,62 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
+  },
+  {
+    "tweet_id": "2060738518792695873",
+    "author_handle": "bugbountywizard",
+    "author_display_name": "Bug bounty wizard",
+    "text": "Rejected but Rewarded: What a GraphQL Misconfiguration Taught Me About Bug Bounty Triage by Aaryan https://t.co/tEG9ztSXpB #bugbounty #bugbountytips #bugbountytip",
+    "timestamp": "2026-05-30T15:02:04+00:00",
+    "hashtags": [
+      "bugbounty",
+      "bugbountytips",
+      "bugbountytip"
+    ],
+    "links": [
+      "https://infosecwriteups.com/rejected-but-rewarded-what-a-graphql-misconfiguration-taught-me-about-bug-bounty-triage-a69a9f42e12c"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 11,
+    "retweet_count": 1,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.41,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060724232754286752",
+    "author_handle": "zero_h4cks",
+    "author_display_name": "Zero Hacks",
+    "text": "Yay I earned close to 23K USD in may month. Thank you @Hacker0x01 #bugbounty #hacker https://t.co/QZb8SaykOq",
+    "timestamp": "2026-05-30T14:05:18+00:00",
+    "hashtags": [
+      "bugbounty",
+      "hacker"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJkpw-FbQAAm_xf.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
   },
   {
     "tweet_id": "2060709026241855523",
@@ -223,7 +740,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060708325549875677",
@@ -254,7 +771,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060704185809801261",
@@ -280,7 +797,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060695561863344270",
@@ -311,7 +828,7 @@
     "award_amount": 1000.0,
     "confidence_score": 0.65,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060689385897566700",
@@ -342,7 +859,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060683162582430090",
@@ -373,7 +890,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060672646598250892",
@@ -403,7 +920,7 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060648308226371834",
@@ -434,7 +951,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060647805874749950",
@@ -462,7 +979,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060633001462263935",
@@ -494,7 +1011,7 @@
     "award_amount": null,
     "confidence_score": 0.37,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060631560794030522",
@@ -524,7 +1041,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060622556281876750",
@@ -557,7 +1074,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060613979790352538",
@@ -589,7 +1106,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060604509097795594",
@@ -619,7 +1136,7 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060588788070400017",
@@ -645,7 +1162,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060573330789253412",
@@ -672,7 +1189,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060559996593869009",
@@ -700,7 +1217,68 @@
     "award_amount": null,
     "confidence_score": 0.41,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
+  },
+  {
+    "tweet_id": "2060558166270546074",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH severity Linux kernel CVE-2026-31395 (CVSS 7.1)\n\nOOB access in bnxt_en driver allows malicious NIC to corrupt kernel memory via unbounded firmware trace type field.\n\nPatch immediately.\n\n#CVE #Vulnerability #PatchNow https://t.co/xRnrkIt01l",
+    "timestamp": "2026-05-30T03:05:24+00:00",
+    "hashtags": [
+      "CVE",
+      "PatchNow",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJiSu4PXAAIiPwD.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-31395"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060553109605163237",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH: CVE-2026-31389 (CVSS 7.8)\n\nLinux kernel SPI subsystem use-after-free flaw enables local privilege escalation. Affects controller registration failure path.\n\nPatch immediately.\n\n#CVE #Vulnerability #PatchNow #Linux https://t.co/GwvKHM0CKz",
+    "timestamp": "2026-05-30T02:45:19+00:00",
+    "hashtags": [
+      "Linux",
+      "CVE",
+      "PatchNow",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJiOIkNXUAQLu63.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-31389"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.5,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
   },
   {
     "tweet_id": "2060549389006053533",
@@ -727,7 +1305,67 @@
     "award_amount": 1500.0,
     "confidence_score": 0.62,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
+  },
+  {
+    "tweet_id": "2060548086322106824",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH SEVERITY: CVE-2026-23466 (CVSS 7.8)\n\nLinux kernel drm/xe driver flaw allows local privilege escalation via GGTT MMIO access protection bypass.\n\nAffected: Linux kernel drm/xe module\nPatch available.\n\n#CVE #Vulnerability #PatchNow https://t.co/Gr4qWqt3S6",
+    "timestamp": "2026-05-30T02:25:21+00:00",
+    "hashtags": [
+      "CVE",
+      "PatchNow",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJiJkLVXoAEk4N_.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-23466"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
+  },
+  {
+    "tweet_id": "2060527947295945066",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH: CVE-2026-47100 (CVSS 7.5)\nFunnel Builder for WooCommerce &lt;3[.]15[.]0[.]3 allows unauthenticated attackers to inject malicious JavaScript on checkout pages via missing authorization flaw. Update immediately.\n#CVE #Vulnerability #PatchNow https://t.co/AqhYyAoM02",
+    "timestamp": "2026-05-30T01:05:20+00:00",
+    "hashtags": [
+      "CVE",
+      "PatchNow",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJh3P62WkAIj9WY.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-47100"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.5,
+    "source_query": "scheduled_search",
+    "created_at": "2026-05-31 03:42:23"
   },
   {
     "tweet_id": "2060495590392283319",
@@ -751,7 +1389,7 @@
     "award_amount": 200.0,
     "confidence_score": 0.56,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060490869661106214",
@@ -783,7 +1421,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060490735267242283",
@@ -815,7 +1453,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060481362742722957",
@@ -839,7 +1477,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060465542033469593",
@@ -867,7 +1505,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060462253883687052",
@@ -895,7 +1533,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060457274435346745",
@@ -930,7 +1568,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060441881096442283",
@@ -957,7 +1595,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060440248773972110",
@@ -988,7 +1626,7 @@
     "award_amount": null,
     "confidence_score": 0.52,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060428488767603018",
@@ -1017,7 +1655,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060426771187564983",
@@ -1056,7 +1694,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060415355827130573",
@@ -1083,7 +1721,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060413510308212822",
@@ -1111,7 +1749,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060407085615947792",
@@ -1138,7 +1776,7 @@
     "award_amount": 999999.0,
     "confidence_score": 0.61,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060401643749822898",
@@ -1166,7 +1804,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060401447041196078",
@@ -1194,7 +1832,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060400321654858039",
@@ -1221,7 +1859,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060396170854486255",
@@ -1249,7 +1887,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060393732487164046",
@@ -1277,7 +1915,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060391134304546873",
@@ -1305,7 +1943,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060388284543451425",
@@ -1332,7 +1970,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060387075740823601",
@@ -1360,7 +1998,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060367573280236001",
@@ -1391,7 +2029,7 @@
     "award_amount": null,
     "confidence_score": 0.44,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060363595855396993",
@@ -1418,7 +2056,7 @@
     "award_amount": 100.0,
     "confidence_score": 0.57,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060352317082231012",
@@ -1447,7 +2085,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060352293258854409",
@@ -1476,7 +2114,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060348145553359078",
@@ -1503,7 +2141,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060346175849455667",
@@ -1531,7 +2169,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060345937579348148",
@@ -1563,7 +2201,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060345564105932899",
@@ -1594,7 +2232,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060342548946616661",
@@ -1623,7 +2261,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060331738380058802",
@@ -1654,7 +2292,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060324620654493886",
@@ -1689,7 +2327,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060301678776091024",
@@ -1718,7 +2356,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060287679846068315",
@@ -1748,7 +2386,7 @@
     "award_amount": null,
     "confidence_score": 0.39,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:41"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060282429005255117",
@@ -1777,7 +2415,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060280139439894545",
@@ -1805,7 +2443,7 @@
     "award_amount": 1500.0,
     "confidence_score": 0.8,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060276255375638867",
@@ -1839,7 +2477,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060274947583324601",
@@ -1869,7 +2507,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060260720181182897",
@@ -1904,7 +2542,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060242810541109574",
@@ -1932,7 +2570,7 @@
     "award_amount": null,
     "confidence_score": 0.43,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060232983152583153",
@@ -1961,7 +2599,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060227653962170583",
@@ -1991,7 +2629,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060217982421549193",
@@ -2024,7 +2662,7 @@
     "award_amount": null,
     "confidence_score": 0.46,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060217971532775889",
@@ -2054,7 +2692,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060199236935758313",
@@ -2082,7 +2720,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060186888921559189",
@@ -2111,7 +2749,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060154309858267426",
@@ -2141,7 +2779,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   },
   {
     "tweet_id": "2060149712724852865",
@@ -2176,6 +2814,6 @@
     "award_amount": null,
     "confidence_score": 0.6,
     "source_query": "scheduled_search",
-    "created_at": "2026-05-30 19:13:38"
+    "created_at": "2026-05-31 03:42:19"
   }
 ]
