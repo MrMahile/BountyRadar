@@ -1,5 +1,469 @@
 [
   {
+    "tweet_id": "2062739641418346586",
+    "author_handle": "bugbountywizard",
+    "author_display_name": "Bug bounty wizard",
+    "text": "Exploiting Weak Configurations in Google Identity Platform by Appsecco https://t.co/MvDZvpK2rz #bugbounty #bugbountytips #bugbountytip",
+    "timestamp": "2026-06-05T03:33:49+00:00",
+    "hashtags": [
+      "bugbountytip",
+      "bugbounty",
+      "bugbountytips"
+    ],
+    "links": [
+      "https://blog.appsecco.com/exploiting-weak-configurations-in-google-identity-platform-cbddbd0e71e3"
+    ],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.45,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062728523052405175",
+    "author_handle": "CyberIntrix",
+    "author_display_name": "Intrix Cyber Security",
+    "text": "Security testing is no longer just an IT task. It's becoming a board-level requirement.\n\nOrganisations need proof that controls work, risks are understood, and weaknesses are identified before attackers find them.\n\nRead more:\nhttps://t.co/mcAoCOW3Qe\n\n#CyberSecurity #PenTesting https://t.co/QhLZK1OWQE",
+    "timestamp": "2026-06-05T02:49:38+00:00",
+    "hashtags": [
+      "CyberSecurity",
+      "PenTesting"
+    ],
+    "links": [
+      "https://intrix.com.au/blog/why-security-testing-has-become-a-board-level-requirement/"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HKBInsCbsAI-Nh7.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.45,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062716235402379464",
+    "author_handle": "hieyz6838",
+    "author_display_name": "Hi",
+    "text": "the new cPanel &amp; WHM pre-auth bypass is wild \u2014 basic auth header + CRLF injection writes a session file to disk as root. CVSS 9.8 sitting in production for months. classic example of \"auth is hard, stop rolling your own\" \ud83d\udc80 #bugbounty #cybersecurity",
+    "timestamp": "2026-06-05T02:00:48+00:00",
+    "hashtags": [
+      "cybersecurity",
+      "bugbounty"
+    ],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062716069261848937",
+    "author_handle": "OrizonCyber",
+    "author_display_name": "Orizon",
+    "text": "\ud83d\udea8 CVE-2026-48579 \u2014 CVSS 9.1/10\n\n\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2591\n\nImproper authorization in Microsoft Exchange Online allows an unauthorized attacker to disclose information over a...\n\nSeverity: CRITICAL\n\nPatch now.\n#cybersecurity #CVE https://t.co/mO4qqxGb4C",
+    "timestamp": "2026-06-05T02:00:08+00:00",
+    "hashtags": [
+      "cybersecurity",
+      "CVE"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HKA9VVdWEAA7Q4G.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-48579"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062715749374791682",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 CRITICAL: CVE-2025-67446 (CVSS 9.8)\n\nNeterbit NW-431F Router \u226420241014-IR03 has authentication bypass via predictable cookie manipulation. Attackers can gain full admin access remotely.\n\nPatch immediately if affected.\n\n#CVE #PatchNow #ThreatIntel https://t.co/5Cl5LfuHjx",
+    "timestamp": "2026-06-05T01:58:52+00:00",
+    "hashtags": [
+      "PatchNow",
+      "ThreatIntel",
+      "CVE"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HKA9Cx3WUAErP4w.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2025-67446"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062715708912320526",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH SEVERITY: CVE-2026-50213 (CVSS 7.5)\n\nUser validation endpoint exposes full profile data via predictable ID enumeration. Network-accessible, no auth required.\n\nPatch immediately or disable /v1/User/validate.\n\n#CVE #Vulnerability #PatchNow #ThreatIntel https://t.co/OvKOKJ5fux",
+    "timestamp": "2026-06-05T01:58:43+00:00",
+    "hashtags": [
+      "PatchNow",
+      "ThreatIntel",
+      "CVE",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HKA9AZsWEAAk-z7.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-50213"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062715667149709385",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 CRITICAL: CVE-2026-50211 (CVSS 9.8)\n\nLeftover diagnostic software in retail builds exposes internal NVRAM registers to malicious apps with write privileges.\n\nNetwork exploitable, no user interaction required.\n\n#CVE #Vulnerability #PatchNow #ThreatIntel https://t.co/bIj5i4j8aI",
+    "timestamp": "2026-06-05T01:58:33+00:00",
+    "hashtags": [
+      "PatchNow",
+      "ThreatIntel",
+      "CVE",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HKA89-QWcAAo0bH.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-50211"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062715627463163970",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH: CVE-2026-50210 (CVSS 7.5)\n\nDevice uses AES-CBC with static zero-filled IVs, enabling replay attacks &amp; known-plaintext decryption. Network exploitable, no auth required.\n\nMitigation: Replace with random IVs per encryption operation.\n\n#CVE #Vulnerability https://t.co/woomlxaFdF",
+    "timestamp": "2026-06-05T01:58:23+00:00",
+    "hashtags": [
+      "CVE",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HKA87pHW8AAC6OS.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-50210"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.5,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062710314244685876",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 CRITICAL: CVE-2026-25550 (CVSS 9.8)\n\nSeagull BarTender 2010/2016/2019 - Unauthenticated RCE via .NET Remoting (TCP 7375). Runs as SYSTEM. Patch immediately or disable service.\n\n#CVE #Vulnerability #PatchNow #ThreatIntel #DFIR https://t.co/5V2hL6KaV2",
+    "timestamp": "2026-06-05T01:37:16+00:00",
+    "hashtags": [
+      "CVE",
+      "PatchNow",
+      "Vulnerability",
+      "ThreatIntel",
+      "DFIR"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HKA4GZ3WQAAQgNj.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-25550"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062702279447183565",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH SEVERITY: CVE-2025-14101 (CVSS 7.1)\n\nAuthorization bypass in PaperWork by GG Soft (v5.2.0.9427 - &lt;6.0). Attackers can exploit trusted identifiers for unauthorized access.\n\nUpdate to v6.0+ immediately.\n\n#CVE #PatchNow #ThreatIntel https://t.co/ZWoeAXjlEJ",
+    "timestamp": "2026-06-05T01:05:21+00:00",
+    "hashtags": [
+      "PatchNow",
+      "ThreatIntel",
+      "CVE"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HKAwysaXkAEOoC8.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2025-14101"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062697232067911874",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH severity CVE-2025-13474 (CVSS 7.5): Authorization bypass in Menulux Mobile App &lt;9.5.8. Allows exploitation via user-controlled keys. Update immediately. #CVE #Vulnerability #PatchNow #ThreatIntel #CyberSecurity https://t.co/92KQRcxV1k",
+    "timestamp": "2026-06-05T00:45:17+00:00",
+    "hashtags": [
+      "CVE",
+      "PatchNow",
+      "Vulnerability",
+      "CyberSecurity",
+      "ThreatIntel"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HKAsM7YXEAAV23z.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2025-13474"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062695215660490981",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH Severity: CVE-2025-69755 (CVSS 8.2)\n\nNeterbit NW-431F Router vulnerable to remote code execution &amp; info disclosure via at_command[.]asp. No authentication required.\n\nPatch immediately if affected.\n\n#CVE #Vulnerability #PatchNow https://t.co/3T515zslMu",
+    "timestamp": "2026-06-05T00:37:17+00:00",
+    "hashtags": [
+      "PatchNow",
+      "CVE",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HKAqXjIWAAAMkiU.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2025-69755"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062692413223608415",
+    "author_handle": "DuckyWantDucky",
+    "author_display_name": "DuckywantDucky",
+    "text": "Day 194/365 of the Until get 10.0 Critical report\n\ud83d\udce4 Reports Submitted:- 0\n\ud83d\udfe0  triaged - 3\n\ud83d\udfe6 program review - 0\n\ud83d\udfe4 Duplicate - 0\n\ud83d\udfe3 New - 2\n\u26aa\ufe0f Info - 0 \n\ud83d\udcb0 Paid - $200   \n\ud83d\udcbb Worked- 10 HOUR  \n#BugBounty",
+    "timestamp": "2026-06-05T00:26:08+00:00",
+    "hashtags": [
+      "BugBounty"
+    ],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 8,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": 200.0,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062687182288990578",
+    "author_handle": "DFIR_Lab",
+    "author_display_name": "DFIR Lab",
+    "text": "\ud83d\udea8 HIGH severity CVE-2025-13124 (CVSS 7.6): Authorization bypass in Netiket ApplyLogic allows exploitation of trusted identifiers. All versions through Jan 2025 affected. Patch immediately. #CVE #Vulnerability #PatchNow https://t.co/AagYAXx7Ni",
+    "timestamp": "2026-06-05T00:05:21+00:00",
+    "hashtags": [
+      "PatchNow",
+      "CVE",
+      "Vulnerability"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HKAjD8hWsAAl8Ay.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2025-13124"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062678300401569874",
+    "author_handle": "OrizonCyber",
+    "author_display_name": "Orizon",
+    "text": "\ud83d\udea8 CVE-2026-48567 \u2014 CVSS 10/10\n\n\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\nAuthentication bypass by spoofing in Azure HorizonDB allows an unauthorized attacker to elevate privileges over a...\n\nSeverity: CRITICAL\n\nPatch now.\n#cybersecurity #CVE https://t.co/gkLemXYEdD",
+    "timestamp": "2026-06-04T23:30:04+00:00",
+    "hashtags": [
+      "cybersecurity",
+      "CVE"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HKAa-3xWoAAr_a4.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 1,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-48567"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062671659111231870",
+    "author_handle": "cybermansec",
+    "author_display_name": "Cyberman",
+    "text": "Day 76/100\nTested a targets API today; graphql mutations, address endpoints, and checkout flow.\nFound graphql introspection enabled on a production endpoint. Full schema exposed, no authentication required.\nNo critical finding yet...\n#BugBounty #CyberSecurity",
+    "timestamp": "2026-06-04T23:03:40+00:00",
+    "hashtags": [
+      "CyberSecurity",
+      "BugBounty"
+    ],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 2,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
     "tweet_id": "2062621604170125455",
     "author_handle": "odinshell",
     "author_display_name": "Asjid Kalam",
@@ -24,7 +488,65 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:52"
+    "created_at": "2026-06-05 03:38:50"
+  },
+  {
+    "tweet_id": "2062615133269201175",
+    "author_handle": "SamirKumar36741",
+    "author_display_name": "Samir Kumar",
+    "text": "One of the Finest Subdomain enumeration tool is coming guys, finest for bug bounty\n#BugBounty #recon\n\n  https://t.co/VEyGo1SDbD https://t.co/0MDyS7Qrm4",
+    "timestamp": "2026-06-04T19:19:03+00:00",
+    "hashtags": [
+      "BugBounty",
+      "recon"
+    ],
+    "links": [
+      "https://github.com/SAMIR897/Rust_Subdomain_tool"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJ_hgtubYAElrSG.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.4,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
+  },
+  {
+    "tweet_id": "2062602803118309410",
+    "author_handle": "OrizonCyber",
+    "author_display_name": "Orizon",
+    "text": "\ud83d\udea8 CVE-2026-25550 \u2014 CVSS 9.8/10\n\n\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\nSeagull Software BarTender 2010, 2016, and 2019 contain an unauthenticated remote code execution vulnerability in the...\n\nSeverity: CRITICAL\n\nPatch now.\n#cybersecurity #CVE https://t.co/uBUkYgnvP1",
+    "timestamp": "2026-06-04T18:30:04+00:00",
+    "hashtags": [
+      "cybersecurity",
+      "CVE"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJ_WUX8XUAAfxpw.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2026-25550"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.55,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
   },
   {
     "tweet_id": "2062595276506862055",
@@ -49,7 +571,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:52"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062590055193919610",
@@ -76,7 +598,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:52"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062586337664905471",
@@ -103,7 +625,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:52"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062585314758017212",
@@ -131,7 +653,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:52"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062570166437945793",
@@ -160,7 +682,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:52"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062564083178799614",
@@ -191,7 +713,7 @@
     "award_amount": null,
     "confidence_score": 0.56,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:52"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062537515735650416",
@@ -219,7 +741,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:52"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062536969981452366",
@@ -250,7 +772,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062529651126473137",
@@ -280,7 +802,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:52"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062528989273759835",
@@ -311,7 +833,33 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
+  },
+  {
+    "tweet_id": "2062526263428833791",
+    "author_handle": "wadgamaraldeen",
+    "author_display_name": "Mustafa Adam Gamaraldin Abdalla \ud83c\uddf8\ud83c\udde9\u2665\ufe0f",
+    "text": "I just reported CLF Injection enabled full HTTP response splitting. I  injected multiple arbitrary headers CSP / X-Frame-Options + Set-Cookie, and confirm cookies are stored client-side. Impact: session fixation, cache poisoning, security header override. \n\n#bugbountytips https://t.co/c254h8iOVy",
+    "timestamp": "2026-06-04T13:25:55+00:00",
+    "hashtags": [
+      "bugbountytips"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJ-Qsg5XEAAzUiD.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 28,
+    "retweet_count": 0,
+    "reply_count": 2,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.36,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
   },
   {
     "tweet_id": "2062522931050152125",
@@ -340,7 +888,35 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
+  },
+  {
+    "tweet_id": "2062512659996537099",
+    "author_handle": "xHackInSeconds",
+    "author_display_name": "xHackInSeconds",
+    "text": "One unvalidated parameter gave me access to 12,847 rows. Usernames. Emails. Hashed passwords. All gone in under a minute. #infosec #pentesting #sqli https://t.co/uHNQhpbkNn",
+    "timestamp": "2026-06-04T12:31:52+00:00",
+    "hashtags": [
+      "sqli",
+      "infosec",
+      "pentesting"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/amplify_video_thumb/2062512555168354304/img/v1c05Yal5J4tbxse.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 1,
+    "like_count": 2,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.35,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
   },
   {
     "tweet_id": "2062507887755211035",
@@ -370,7 +946,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062496595103698983",
@@ -396,7 +972,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062484945659195636",
@@ -424,7 +1000,7 @@
     "award_amount": 15.0,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:52"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062480072297082902",
@@ -451,7 +1027,7 @@
     "award_amount": null,
     "confidence_score": 0.41,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062479578753556636",
@@ -479,7 +1055,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062453471668781377",
@@ -506,7 +1082,31 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
+  },
+  {
+    "tweet_id": "2062440072176455867",
+    "author_handle": "_2os5",
+    "author_display_name": "Fares",
+    "text": "So ATO using punny-code, how can I exploit it on real user with like a user with \nAttacker@gmail.com\nI don\u2019t want to use the collaborator at this point (I test it on collab and validate it successfully)\n\nAny suggestions?\n#bugbounty",
+    "timestamp": "2026-06-04T07:43:26+00:00",
+    "hashtags": [
+      "bugbounty"
+    ],
+    "links": [],
+    "media_urls": [],
+    "has_image": 0,
+    "has_video": 0,
+    "like_count": 9,
+    "retweet_count": 0,
+    "reply_count": 1,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.3,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
   },
   {
     "tweet_id": "2062419178007785900",
@@ -533,7 +1133,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062412281066217847",
@@ -562,7 +1162,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062410204051038301",
@@ -591,7 +1191,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062402176744333549",
@@ -617,7 +1217,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062401842504417602",
@@ -643,7 +1243,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062400737439568147",
@@ -669,7 +1269,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062377097503375462",
@@ -697,7 +1297,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062376893555335283",
@@ -726,7 +1326,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062376680686051358",
@@ -752,7 +1352,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062376480252854504",
@@ -780,7 +1380,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062375667132518806",
@@ -808,7 +1408,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062375043355570303",
@@ -836,7 +1436,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062374392840020331",
@@ -864,7 +1464,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062374167714857393",
@@ -890,7 +1490,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062368868325044347",
@@ -918,7 +1518,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062362778984427638",
@@ -946,7 +1546,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062354970452627846",
@@ -974,7 +1574,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062341099096621375",
@@ -998,7 +1598,7 @@
     "award_amount": 200.0,
     "confidence_score": 0.56,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062339685788054009",
@@ -1026,7 +1626,40 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
+  },
+  {
+    "tweet_id": "2062338177310818328",
+    "author_handle": "5hady_",
+    "author_display_name": "Shady",
+    "text": "Just found &amp; reported Unauthorized  Panel access \n\n#BugBounty #BugBountyLife #EthicalHacking #CyberSecurity #InfoSec #SQLi #WebSecurity #KeepHacking @intigriti https://t.co/rJsbhcI0lj",
+    "timestamp": "2026-06-04T00:58:32+00:00",
+    "hashtags": [
+      "KeepHacking",
+      "CyberSecurity",
+      "SQLi",
+      "InfoSec",
+      "BugBountyLife",
+      "BugBounty",
+      "WebSecurity",
+      "EthicalHacking"
+    ],
+    "links": [],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJ7lpAnW8AA1eZ-.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 88,
+    "retweet_count": 1,
+    "reply_count": 7,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [],
+    "award_amount": null,
+    "confidence_score": 0.39,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:54"
   },
   {
     "tweet_id": "2062332134098964513",
@@ -1055,7 +1688,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062321654336807246",
@@ -1083,7 +1716,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062321459045814656",
@@ -1111,7 +1744,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062320659200344386",
@@ -1139,7 +1772,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062318301414305884",
@@ -1168,7 +1801,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062317662424752341",
@@ -1196,7 +1829,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062290696577454414",
@@ -1221,7 +1854,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062289164125770134",
@@ -1249,7 +1882,7 @@
     "award_amount": 7895.0,
     "confidence_score": 0.67,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062285143688012132",
@@ -1277,7 +1910,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062268203779100697",
@@ -1305,7 +1938,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062264428091895923",
@@ -1334,7 +1967,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062252423599501526",
@@ -1364,7 +1997,7 @@
     "award_amount": null,
     "confidence_score": 0.41,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062251179057250573",
@@ -1392,7 +2025,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062246857510703570",
@@ -1419,7 +2052,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062240925493989607",
@@ -1448,7 +2081,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062239447706447957",
@@ -1477,7 +2110,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062237656013029481",
@@ -1504,7 +2137,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062235978316624146",
@@ -1531,7 +2164,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062235820552077813",
@@ -1561,7 +2194,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062228519032152203",
@@ -1585,7 +2218,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062221642718216418",
@@ -1614,7 +2247,7 @@
     "award_amount": null,
     "confidence_score": 0.37,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062208135159279754",
@@ -1640,7 +2273,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062204089174241386",
@@ -1667,7 +2300,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062202326811603305",
@@ -1695,7 +2328,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062191444245258396",
@@ -1726,7 +2359,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062190137258151976",
@@ -1752,7 +2385,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062186793462620346",
@@ -1781,7 +2414,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062184225520935083",
@@ -1816,7 +2449,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062181258981970265",
@@ -1847,7 +2480,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062175695623852338",
@@ -1875,7 +2508,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062174340532129895",
@@ -1903,7 +2536,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062169123694452972",
@@ -1932,7 +2565,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062164947711213779",
@@ -1961,7 +2594,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062157363130290504",
@@ -1988,7 +2621,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062156100875493379",
@@ -2018,7 +2651,7 @@
     "award_amount": null,
     "confidence_score": 0.65,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062140867226292640",
@@ -2047,7 +2680,7 @@
     "award_amount": null,
     "confidence_score": 0.41,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062132999014269153",
@@ -2076,7 +2709,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062127389820551515",
@@ -2108,7 +2741,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062115857375854777",
@@ -2140,7 +2773,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062115601309446347",
@@ -2170,7 +2803,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062115497076822460",
@@ -2198,7 +2831,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062103385965473821",
@@ -2229,7 +2862,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062103243812159524",
@@ -2263,7 +2896,7 @@
     "award_amount": null,
     "confidence_score": 0.6,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062089611535384887",
@@ -2293,7 +2926,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062060365811458215",
@@ -2321,7 +2954,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062038797085487370",
@@ -2349,7 +2982,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062008246400098790",
@@ -2377,7 +3010,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2062000552314302834",
@@ -2404,7 +3037,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061999063353217030",
@@ -2432,7 +3065,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061998806292406631",
@@ -2460,7 +3093,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061997988067914227",
@@ -2488,7 +3121,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061949359734853702",
@@ -2513,7 +3146,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061938433287655438",
@@ -2541,7 +3174,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061933482511675757",
@@ -2570,7 +3203,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061927344688771486",
@@ -2595,7 +3228,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061923325266231318",
@@ -2624,7 +3257,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061920944143106412",
@@ -2653,7 +3286,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061920727205339414",
@@ -2682,7 +3315,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061920103411613754",
@@ -2711,7 +3344,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061919907743179250",
@@ -2741,7 +3374,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061919274092875863",
@@ -2770,7 +3403,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061908242410672515",
@@ -2799,7 +3432,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061884345632076189",
@@ -2827,7 +3460,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061883992287162550",
@@ -2859,7 +3492,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061881237086626297",
@@ -2891,7 +3524,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061871803622949216",
@@ -2921,7 +3554,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061865010570097016",
@@ -2949,7 +3582,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061857724795629733",
@@ -2973,7 +3606,7 @@
     "award_amount": null,
     "confidence_score": 0.31,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061856565561380902",
@@ -3000,7 +3633,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061856378398945638",
@@ -3028,7 +3661,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061856165957394591",
@@ -3056,7 +3689,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061855940907831672",
@@ -3084,7 +3717,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061855541786181829",
@@ -3112,7 +3745,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061854907682939363",
@@ -3140,7 +3773,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061849046973809051",
@@ -3167,7 +3800,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061842131598102801",
@@ -3194,7 +3827,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061833227900232096",
@@ -3225,7 +3858,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061833202994761885",
@@ -3252,7 +3885,7 @@
     "award_amount": 25.0,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061831036405772736",
@@ -3280,7 +3913,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061830972296040564",
@@ -3307,7 +3940,7 @@
     "award_amount": 750.0,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061829362044002764",
@@ -3335,7 +3968,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061814468435132732",
@@ -3362,7 +3995,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061814373111218593",
@@ -3389,7 +4022,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061811234136117374",
@@ -3417,7 +4050,7 @@
     "award_amount": null,
     "confidence_score": 0.41,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061802299064729830",
@@ -3454,7 +4087,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061797079341498769",
@@ -3483,7 +4116,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061796771890626714",
@@ -3521,7 +4154,7 @@
     "award_amount": null,
     "confidence_score": 0.6,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061795482737762617",
@@ -3553,7 +4186,39 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
+  },
+  {
+    "tweet_id": "2061785245784121446",
+    "author_handle": "evanderburg",
+    "author_display_name": "Eric Vanderburg",
+    "text": "Google fixes actively exploited #Android #vulnerability (#CVE-2025-48595) https://t.co/gz7xLZld1x https://t.co/6pzfvw3jGA",
+    "timestamp": "2026-06-02T12:21:23+00:00",
+    "hashtags": [
+      "vulnerability",
+      "Android",
+      "CVE"
+    ],
+    "links": [
+      "http://securitytc.com/TSqwKK"
+    ],
+    "media_urls": [
+      "https://pbs.twimg.com/media/HJzuwVrbgAApLNR.jpg"
+    ],
+    "has_image": 1,
+    "has_video": 0,
+    "like_count": 0,
+    "retweet_count": 0,
+    "reply_count": 0,
+    "is_thread": 0,
+    "thread_id": null,
+    "cve_ids": [
+      "CVE-2025-48595"
+    ],
+    "award_amount": null,
+    "confidence_score": 0.5,
+    "source_query": "scheduled_search",
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061785248157806720",
@@ -3587,39 +4252,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
-  },
-  {
-    "tweet_id": "2061785245784121446",
-    "author_handle": "evanderburg",
-    "author_display_name": "Eric Vanderburg",
-    "text": "Google fixes actively exploited #Android #vulnerability (#CVE-2025-48595) https://t.co/gz7xLZld1x https://t.co/6pzfvw3jGA",
-    "timestamp": "2026-06-02T12:21:23+00:00",
-    "hashtags": [
-      "vulnerability",
-      "Android",
-      "CVE"
-    ],
-    "links": [
-      "http://securitytc.com/TSqwKK"
-    ],
-    "media_urls": [
-      "https://pbs.twimg.com/media/HJzuwVrbgAApLNR.jpg"
-    ],
-    "has_image": 1,
-    "has_video": 0,
-    "like_count": 0,
-    "retweet_count": 0,
-    "reply_count": 0,
-    "is_thread": 0,
-    "thread_id": null,
-    "cve_ids": [
-      "CVE-2025-48595"
-    ],
-    "award_amount": null,
-    "confidence_score": 0.5,
-    "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061777713598497037",
@@ -3646,7 +4279,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061776412294709672",
@@ -3672,7 +4305,7 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061773431469740466",
@@ -3699,7 +4332,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061762787282506026",
@@ -3727,7 +4360,7 @@
     "award_amount": null,
     "confidence_score": 0.41,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061760308033503283",
@@ -3754,7 +4387,7 @@
     "award_amount": null,
     "confidence_score": 0.37,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061757684131492321",
@@ -3787,7 +4420,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061752706864152590",
@@ -3816,7 +4449,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061752320531079345",
@@ -3848,7 +4481,7 @@
     "award_amount": null,
     "confidence_score": 0.6,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061752270765638144",
@@ -3875,7 +4508,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061745869473350076",
@@ -3903,7 +4536,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061742647014748444",
@@ -3931,7 +4564,7 @@
     "award_amount": 3000.0,
     "confidence_score": 0.71,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061730737427239023",
@@ -3964,7 +4597,7 @@
     "award_amount": null,
     "confidence_score": 0.66,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061711916314055002",
@@ -3997,7 +4630,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061710032073265565",
@@ -4024,7 +4657,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061699217807061488",
@@ -4054,7 +4687,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061687488918560874",
@@ -4078,7 +4711,7 @@
     "award_amount": null,
     "confidence_score": 0.32,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061674525348270311",
@@ -4108,7 +4741,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061670361259803102",
@@ -4135,7 +4768,7 @@
     "award_amount": 1500.0,
     "confidence_score": 0.66,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061670039938629919",
@@ -4159,7 +4792,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061666025729593522",
@@ -4188,7 +4821,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061655339049591166",
@@ -4217,7 +4850,7 @@
     "award_amount": 1000.0,
     "confidence_score": 0.65,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061648038083297476",
@@ -4248,7 +4881,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061639782212489396",
@@ -4276,7 +4909,7 @@
     "award_amount": null,
     "confidence_score": 0.37,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061639099732164735",
@@ -4304,7 +4937,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061628582498074955",
@@ -4333,7 +4966,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061628543713370257",
@@ -4362,7 +4995,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061628501979980267",
@@ -4392,7 +5025,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061628463132361208",
@@ -4421,7 +5054,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061623137050022180",
@@ -4452,7 +5085,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061618104715591868",
@@ -4484,7 +5117,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061608038046335481",
@@ -4514,7 +5147,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061603007427490167",
@@ -4544,7 +5177,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061598801782047132",
@@ -4570,7 +5203,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061594446123106689",
@@ -4598,7 +5231,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061594246885277986",
@@ -4626,7 +5259,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061585553561161998",
@@ -4655,7 +5288,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061585336745025754",
@@ -4684,7 +5317,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061580875356119299",
@@ -4713,7 +5346,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061575908348031339",
@@ -4740,7 +5373,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061568508576534530",
@@ -4769,7 +5402,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061567688078500071",
@@ -4796,7 +5429,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061553922431439289",
@@ -4826,7 +5459,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061546472621957196",
@@ -4850,7 +5483,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061538256819286053",
@@ -4879,7 +5512,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061536941384802425",
@@ -4906,7 +5539,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061533173381542195",
@@ -4932,7 +5565,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061532097538302202",
@@ -4960,7 +5593,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061530752580300805",
@@ -4989,7 +5622,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061527444298043572",
@@ -5016,7 +5649,7 @@
     "award_amount": 1.0,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061525146742009987",
@@ -5044,7 +5677,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061509479011688588",
@@ -5072,7 +5705,7 @@
     "award_amount": null,
     "confidence_score": 0.31,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061507978398761217",
@@ -5103,7 +5736,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061505837760430478",
@@ -5131,7 +5764,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061502742426710509",
@@ -5158,7 +5791,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061497490306982303",
@@ -5184,7 +5817,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061494165846790381",
@@ -5211,7 +5844,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061493546465550494",
@@ -5238,7 +5871,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061487599659712824",
@@ -5265,7 +5898,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061486693664903287",
@@ -5289,7 +5922,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061484633049739367",
@@ -5316,7 +5949,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061481639998632285",
@@ -5346,7 +5979,7 @@
     "award_amount": null,
     "confidence_score": 0.66,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061480900466987080",
@@ -5377,7 +6010,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061479670135017532",
@@ -5404,7 +6037,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061476967724228712",
@@ -5432,7 +6065,7 @@
     "award_amount": 3000.0,
     "confidence_score": 0.67,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061467171960570062",
@@ -5460,7 +6093,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061459760780816422",
@@ -5487,7 +6120,7 @@
     "award_amount": null,
     "confidence_score": 0.42,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061455460423643537",
@@ -5517,7 +6150,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061453151111127462",
@@ -5544,7 +6177,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061451834183622786",
@@ -5572,7 +6205,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061450342366142813",
@@ -5599,7 +6232,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061450226339402003",
@@ -5627,7 +6260,7 @@
     "award_amount": null,
     "confidence_score": 0.41,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061449700427833713",
@@ -5654,7 +6287,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061443818612728036",
@@ -5686,7 +6319,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061440261088018744",
@@ -5715,7 +6348,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061436984208314509",
@@ -5743,7 +6376,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061433350439440840",
@@ -5774,7 +6407,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061430502272155940",
@@ -5807,7 +6440,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061425603492925904",
@@ -5845,7 +6478,7 @@
     "award_amount": null,
     "confidence_score": 0.6,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061414191995482251",
@@ -5877,7 +6510,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061407746608755141",
@@ -5903,7 +6536,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061405078288994742",
@@ -5932,7 +6565,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061401904203038811",
@@ -5960,7 +6593,7 @@
     "award_amount": 5000.0,
     "confidence_score": 0.65,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061401305994637492",
@@ -5987,7 +6620,7 @@
     "award_amount": 25.0,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061397888320856528",
@@ -6014,7 +6647,7 @@
     "award_amount": 150.0,
     "confidence_score": 0.59,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061388045618741251",
@@ -6043,7 +6676,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061384937098383624",
@@ -6071,7 +6704,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061380218825199677",
@@ -6098,7 +6731,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:50"
   },
   {
     "tweet_id": "2061369510188490830",
@@ -6131,7 +6764,7 @@
     "award_amount": 202.0,
     "confidence_score": 0.62,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061365383878394029",
@@ -6161,7 +6794,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061327076125233465",
@@ -6189,7 +6822,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061320651525488784",
@@ -6215,7 +6848,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061319826023309412",
@@ -6241,7 +6874,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061313604637376851",
@@ -6270,7 +6903,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061290891978088951",
@@ -6298,7 +6931,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061289703505330530",
@@ -6328,7 +6961,7 @@
     "award_amount": 5000.0,
     "confidence_score": 0.65,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061287547016479231",
@@ -6355,7 +6988,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061283621185659168",
@@ -6383,7 +7016,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061272849097122033",
@@ -6412,7 +7045,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061267832008999366",
@@ -6442,7 +7075,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061262786215239830",
@@ -6474,7 +7107,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061257843358232587",
@@ -6499,7 +7132,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061252193181741147",
@@ -6523,7 +7156,7 @@
     "award_amount": 200.0,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061242656219398369",
@@ -6553,7 +7186,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061241722861158493",
@@ -6578,7 +7211,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061241701663183128",
@@ -6605,7 +7238,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061237637256548457",
@@ -6635,7 +7268,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061220940986331405",
@@ -6665,7 +7298,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061213705870758162",
@@ -6691,7 +7324,7 @@
     "award_amount": null,
     "confidence_score": 0.42,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061202735580762535",
@@ -6719,7 +7352,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061192226839900543",
@@ -6746,7 +7379,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061160021245780046",
@@ -6771,7 +7404,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061145593213231333",
@@ -6807,7 +7440,7 @@
     "award_amount": null,
     "confidence_score": 0.65,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061142645104341224",
@@ -6838,7 +7471,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061139271466074504",
@@ -6865,7 +7498,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061132449455747119",
@@ -6895,7 +7528,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061132425221075184",
@@ -6923,7 +7556,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061129815126941747",
@@ -6959,7 +7592,7 @@
     "award_amount": null,
     "confidence_score": 0.6,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061129520602829028",
@@ -6985,7 +7618,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061126555859132445",
@@ -7013,7 +7646,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061125364479406267",
@@ -7040,7 +7673,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061121948805992673",
@@ -7079,7 +7712,7 @@
     "award_amount": null,
     "confidence_score": 0.6,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061118104919531839",
@@ -7103,7 +7736,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061117122785292316",
@@ -7130,7 +7763,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061116270905282629",
@@ -7163,7 +7796,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061112214577373382",
@@ -7191,7 +7824,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061111229985304907",
@@ -7218,7 +7851,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061107967303237698",
@@ -7247,7 +7880,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061102639266627905",
@@ -7273,7 +7906,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061100481745924232",
@@ -7301,7 +7934,7 @@
     "award_amount": null,
     "confidence_score": 0.46,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061078744371192089",
@@ -7331,7 +7964,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061056043178701173",
@@ -7359,7 +7992,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061050855932215699",
@@ -7390,7 +8023,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061040352170328435",
@@ -7415,7 +8048,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061036290599239755",
@@ -7441,7 +8074,7 @@
     "award_amount": 30.0,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061034470996595019",
@@ -7469,7 +8102,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061028556684034211",
@@ -7494,7 +8127,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2061005383905501316",
@@ -7523,7 +8156,7 @@
     "award_amount": 150.0,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060983875418087783",
@@ -7551,7 +8184,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060957908574109884",
@@ -7584,7 +8217,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060951727218606543",
@@ -7610,7 +8243,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060951529553588570",
@@ -7636,7 +8269,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060951313765019691",
@@ -7662,7 +8295,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060951115647078524",
@@ -7689,7 +8322,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060946199692324959",
@@ -7714,7 +8347,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060928819209633825",
@@ -7738,7 +8371,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060920539120603569",
@@ -7768,7 +8401,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060919845995372562",
@@ -7796,7 +8429,7 @@
     "award_amount": 1000.0,
     "confidence_score": 0.65,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060915504831672788",
@@ -7827,7 +8460,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060910456705822933",
@@ -7857,7 +8490,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060905437549994195",
@@ -7888,7 +8521,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060900400681586864",
@@ -7918,7 +8551,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060895364371132471",
@@ -7949,7 +8582,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060890330627485961",
@@ -7981,7 +8614,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060885627470504169",
@@ -8005,7 +8638,7 @@
     "award_amount": 200.0,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060885299798954195",
@@ -8035,7 +8668,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060884411772497934",
@@ -8066,7 +8699,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060880266147577887",
@@ -8096,7 +8729,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060875232986972415",
@@ -8126,7 +8759,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060860569343688745",
@@ -8155,7 +8788,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060855196243079603",
@@ -8184,7 +8817,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060841666911653983",
@@ -8209,7 +8842,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060784738810400814",
@@ -8238,7 +8871,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060777233107603654",
@@ -8265,7 +8898,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060769287946604622",
@@ -8292,7 +8925,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060768241568334215",
@@ -8321,7 +8954,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060763830108483820",
@@ -8348,7 +8981,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060758330700623899",
@@ -8375,7 +9008,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060754953400930817",
@@ -8402,7 +9035,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060748725673464257",
@@ -8432,7 +9065,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060742630707781908",
@@ -8462,7 +9095,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060738518792695873",
@@ -8490,7 +9123,7 @@
     "award_amount": null,
     "confidence_score": 0.41,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060735781082198174",
@@ -8519,7 +9152,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060725446182891889",
@@ -8547,7 +9180,7 @@
     "award_amount": 148.0,
     "confidence_score": 0.6,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060724232754286752",
@@ -8574,7 +9207,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060723021879373987",
@@ -8598,7 +9231,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060709026241855523",
@@ -8628,7 +9261,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060708325549875677",
@@ -8659,7 +9292,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060704185809801261",
@@ -8685,7 +9318,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060695561863344270",
@@ -8716,7 +9349,7 @@
     "award_amount": 1000.0,
     "confidence_score": 0.65,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060689385897566700",
@@ -8747,7 +9380,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060683162582430090",
@@ -8778,7 +9411,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060672646598250892",
@@ -8808,7 +9441,7 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060648308226371834",
@@ -8839,7 +9472,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060647805874749950",
@@ -8867,7 +9500,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060633744936239409",
@@ -8892,7 +9525,7 @@
     "award_amount": null,
     "confidence_score": 0.32,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060633001462263935",
@@ -8924,7 +9557,7 @@
     "award_amount": null,
     "confidence_score": 0.37,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060631560794030522",
@@ -8954,7 +9587,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060622556281876750",
@@ -8987,7 +9620,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060613979790352538",
@@ -9019,7 +9652,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060604509097795594",
@@ -9049,7 +9682,7 @@
     "award_amount": null,
     "confidence_score": 0.38,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060588788070400017",
@@ -9075,7 +9708,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060573330789253412",
@@ -9102,7 +9735,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060559996593869009",
@@ -9130,7 +9763,7 @@
     "award_amount": null,
     "confidence_score": 0.41,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060558166270546074",
@@ -9160,7 +9793,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060553109605163237",
@@ -9191,7 +9824,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060549389006053533",
@@ -9218,7 +9851,7 @@
     "award_amount": 1500.0,
     "confidence_score": 0.62,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060548086322106824",
@@ -9248,7 +9881,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060532975612170490",
@@ -9278,7 +9911,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060527947295945066",
@@ -9308,7 +9941,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060495590392283319",
@@ -9332,7 +9965,7 @@
     "award_amount": 200.0,
     "confidence_score": 0.56,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060490869661106214",
@@ -9364,7 +9997,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060490735267242283",
@@ -9396,7 +10029,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060481362742722957",
@@ -9420,7 +10053,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060465542033469593",
@@ -9448,7 +10081,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060462253883687052",
@@ -9476,7 +10109,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060457274435346745",
@@ -9511,7 +10144,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060441881096442283",
@@ -9538,7 +10171,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060440248773972110",
@@ -9569,7 +10202,7 @@
     "award_amount": null,
     "confidence_score": 0.52,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060428488767603018",
@@ -9598,7 +10231,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060426771187564983",
@@ -9637,7 +10270,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060415355827130573",
@@ -9664,7 +10297,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060413510308212822",
@@ -9692,7 +10325,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060407085615947792",
@@ -9719,7 +10352,7 @@
     "award_amount": 999999.0,
     "confidence_score": 0.61,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060401643749822898",
@@ -9747,7 +10380,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060401447041196078",
@@ -9775,7 +10408,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060400321654858039",
@@ -9802,7 +10435,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060396170854486255",
@@ -9830,7 +10463,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060393732487164046",
@@ -9858,7 +10491,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060391134304546873",
@@ -9886,7 +10519,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060388284543451425",
@@ -9913,7 +10546,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060387075740823601",
@@ -9941,7 +10574,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060367573280236001",
@@ -9972,7 +10605,7 @@
     "award_amount": null,
     "confidence_score": 0.44,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060363595855396993",
@@ -9999,7 +10632,7 @@
     "award_amount": 100.0,
     "confidence_score": 0.57,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060352317082231012",
@@ -10028,7 +10661,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060352293258854409",
@@ -10057,7 +10690,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060348145553359078",
@@ -10084,7 +10717,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060346175849455667",
@@ -10112,7 +10745,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060345937579348148",
@@ -10144,7 +10777,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060345564105932899",
@@ -10175,7 +10808,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060342548946616661",
@@ -10204,7 +10837,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060331738380058802",
@@ -10235,7 +10868,7 @@
     "award_amount": null,
     "confidence_score": 0.45,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060324620654493886",
@@ -10270,7 +10903,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060301678776091024",
@@ -10299,7 +10932,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060287679846068315",
@@ -10329,7 +10962,7 @@
     "award_amount": null,
     "confidence_score": 0.39,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060282429005255117",
@@ -10358,7 +10991,7 @@
     "award_amount": null,
     "confidence_score": 0.5,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060280139439894545",
@@ -10386,7 +11019,7 @@
     "award_amount": 1500.0,
     "confidence_score": 0.8,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060276255375638867",
@@ -10420,7 +11053,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060274947583324601",
@@ -10450,7 +11083,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060260720181182897",
@@ -10485,7 +11118,7 @@
     "award_amount": null,
     "confidence_score": 0.4,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060242810541109574",
@@ -10513,7 +11146,7 @@
     "award_amount": null,
     "confidence_score": 0.43,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060232983152583153",
@@ -10542,7 +11175,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060227653962170583",
@@ -10572,7 +11205,7 @@
     "award_amount": null,
     "confidence_score": 0.35,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060217982421549193",
@@ -10605,7 +11238,7 @@
     "award_amount": null,
     "confidence_score": 0.46,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060217971532775889",
@@ -10635,7 +11268,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060199236935758313",
@@ -10663,7 +11296,7 @@
     "award_amount": null,
     "confidence_score": 0.3,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060186888921559189",
@@ -10692,7 +11325,7 @@
     "award_amount": null,
     "confidence_score": 0.55,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060154309858267426",
@@ -10722,7 +11355,7 @@
     "award_amount": null,
     "confidence_score": 0.36,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   },
   {
     "tweet_id": "2060149712724852865",
@@ -10757,6 +11390,6 @@
     "award_amount": null,
     "confidence_score": 0.6,
     "source_query": "scheduled_search",
-    "created_at": "2026-06-04 20:04:49"
+    "created_at": "2026-06-05 03:38:51"
   }
 ]
